@@ -3,8 +3,13 @@
 @import "extends.scss";
 @import "mixins.scss";
 @import "reset.scss";
+// GENERAL
+@import "general/menu.scss";
+@import "general/header.scss";
+@import "general/footer.scss";
 //MAIN
-@import "main/header.scss";
+@import "main/banner.scss";
 @import "main/services.scss";
 @import "main/advantages.scss";
 @import "main/partners.scss";
+@import "main/responses.scss";

@@ -1,31 +1,45 @@
-var gulp = require('gulp');
-var sass  = require('gulp-sass');
-var tinypng = require('gulp-tinypng-compress');
-var iconfont = require('gulp-iconfont');
-var iconfontCss = require('gulp-iconfont-css');
-var fontName = 'myfont';
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    tinypng      = require('gulp-tinypng-compress'),
+    iconfont     = require('gulp-iconfont'),
+    iconfontCss  = require('gulp-iconfont-css'),
+    fontName     = 'myfont',
+	browserSync  = require('browser-sync'),
+	autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('sass', function(){
 	return gulp.src('scss/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(sass({outputStyle: 'expanded'}))
+	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 	.pipe(gulp.dest('css'))
+	.pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('tinypng', function () {
+gulp.task('browser-sync', function() {
+	browserSync({
+		server: {
+			baseDir: './'
+		},
+		notify: false
+	});
+});
+
+gulp.task('tinypng', function() {
     gulp.src('img/**/*.{png,jpg,jpeg}')
 	.pipe(tinypng({
 		key: 'xMgdrYZJjl2bhB8jZ8LK5tWWQmGRkP2N',
-		sigFile: 'images/.tinypng-sigs',
-		log: true
+		sigFile: 'img/.tinypng-sigs',
+		sameDest: true,
+		log: true,
+		summarize: true
 	}))
-	.pipe(gulp.dest('img/compressed'));
+	.pipe(gulp.dest('img'));
 });
 
-
 gulp.task('iconfont', function(){
-	var runTimestamp = Math.round(Date.now()/1000);
+	// var runTimestamp = Math.round(Date.now()/1000);
 	
 	gulp.src(['img/svg/*.svg'])
 	.pipe(iconfontCss({
@@ -46,6 +60,8 @@ gulp.task('iconfont', function(){
 	.pipe(gulp.dest('fonts/iconsfont/'));
 });
 
-gulp.task('sass-watch', function() {
-	gulp.watch('scss/**/*.scss', ['sass'])
+gulp.task('watch', ['browser-sync', 'sass'], function() {
+	gulp.watch('scss/**/*.scss', ['sass']);
+	gulp.watch('*.html', browserSync.reload);
+	gulp.watch('js/**/*.js', browserSync.reload);
 });

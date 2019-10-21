@@ -1,0 +1,109 @@
+.responses {
+    position: relative;
+    background-color: $gray_4;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 200px;
+        background-color: $gray_5;
+    }
+    
+    &_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: $site_width;
+        margin: auto;
+        height: 580px;
+        padding: 80px $main_horizontal_padding 120px;
+    }
+
+    &_title {
+        @include font(40px, 40px, 'PlayfairDisplay-Bold');
+
+        text-align: center;
+        z-index: 1;
+
+        &::first-letter {
+            color: $blue_3;
+        }
+    }
+
+    &_slider {
+        margin-bottom: 0;
+    }
+
+    &_slide {
+
+        &.slick-slide {
+            display: flex;
+        }
+    }
+
+// Slick slider
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: calc(100% + 190px);
+        right: 0;
+        width: auto;
+        height: 15px;
+        z-index: 1;
+
+        li {
+            width: 10px;
+            height: 10px;
+
+            button:before {
+                color: $gray_2;
+            }
+
+            &.slick-active button:before {
+                color: $blue_3;
+            }
+        }
+    }
+
+    .slick-prev {
+        background-color: blue;
+        top: unset;
+        left: 0;
+        bottom: calc(100% + 175px);
+        z-index: 1;
+    }
+
+    .slick-next {
+        background-color: blue;
+        top: unset;
+        left: 250px;
+        bottom: calc(100% + 175px);
+        z-index: 1;
+    }
+
+    &_photo {
+        margin-right: 15px;
+    }
+
+    &_description {
+
+        .title {
+            @include font(14px, 24px, 'Montserrat-Bold');
+
+            margin-bottom: 20px;
+        }
+
+        .paragraph {
+            @include font(14px, 24px, 'Montserrat-Light');
+
+            max-height: 220px;
+            font-style: italic;
+        }
+    }
+}

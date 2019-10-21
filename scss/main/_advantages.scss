@@ -1,17 +1,17 @@
-.advantages_section {
+.advantages {
     overflow: hidden;
 
-    .header {
-        @include background(url('../img/main/advantages_header.png'));
+    &_heading {
+        @include background(url('../img/main/advantages/advantages_header.png'));
 
         position: relative;
-        height: 18.49vw;
+        padding-bottom: 18.3%;
         background-color: $black_1;
 
         svg {
             width: 58%;
             position: absolute;
-            top: 50%;
+            bottom: 15%;
             left: 30.7%;
             fill: $gray_7;
         }
@@ -26,8 +26,8 @@
         background-color: $black_1;
     }
 
-    .description {
-        @include background(url('../img/main/advantages_bg.png'));
+    &_description {
+        @include background(url('../img/main/advantages/advantages_bg.png'));
 
         position: relative;
         background-size: 75% 120%;
@@ -38,7 +38,7 @@
             top: 0;
             left: 35%;
             width: 100%;
-            height: 10.42vw;
+            padding-bottom: 10.42%;
             transform: translateY(-45%);
             background-color: $white_1;
         }
@@ -52,7 +52,7 @@
             .advantages {
 
                 &_title {
-                    @include font-fluid(40px, 45px, 'PlayfairDisplay-Bold');
+                    @include font(40px, 45px, 'PlayfairDisplay-Bold');
                     
                     position: absolute;
                     top: 0;
@@ -74,6 +74,7 @@
 
                 &_item {
                     width: 25%;
+                    padding-left: 10px;
                     margin-bottom: 10.53%;
 
                     &::before {
@@ -86,7 +87,7 @@
                     }
                     
                     &_title {
-                        @include font-fluid(16px, 26px, 'Montserrat-Bold');
+                        @include font(16px, 26px, 'Montserrat-Bold');
 
                         color: $black_1;
                         margin-bottom: 7%;
@@ -98,14 +99,14 @@
                     }
 
                     &_number {
-                        @include font-fluid(24px, 24px, 'Montserrat-Bold');
+                        @include font(24px, 24px, 'Montserrat-Bold');
 
                         color: $black_1;
                         margin-bottom: 7%;
                     }
 
                     &_description {
-                        @include font-fluid(14px, 24px, 'Montserrat-Regular');
+                        @include font(14px, 24px, 'Montserrat-Regular');
 
                         color: $gray_7;
 
@@ -114,36 +115,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-// screen width >=1160px
-@media only screen and (min-width: $site_width) {
-
-    .advantages_section {
-
-        .description_inner .advantages_title {
-            font-size: 40px;
-            line-height: 45px;
-        }
-
-        .description_inner {
-            
-            .advantages_item_title {
-                font-size: 16px;
-                line-height: 26px;
-            }
-            
-            .advantages_item_number {
-                font-size: 24px;
-                line-height: 24px;
-            }
-            
-            .advantages_item_description {
-                font-size: 14px;
-                line-height: 24px;
             }
         }
     }

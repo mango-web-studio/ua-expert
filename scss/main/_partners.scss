@@ -1,4 +1,4 @@
-.partners_section {
+.partners {
     position: relative;
     background-color: $white_1;
     
@@ -16,10 +16,11 @@
         position: relative;
         max-width: $site_width;
         margin: auto;
+        padding: 0 $main_horizontal_padding;
     }
 
     &_title {
-        @include font-fluid(40px, 45px, 'PlayfairDisplay-Bold');
+        @include font(40px, 45px, 'PlayfairDisplay-Bold');
 
         position: absolute;
         bottom: 100%;
@@ -32,9 +33,10 @@
 
     &_list {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
-        padding: 12.9% $main_horizontal_padding;
+        padding: 12.9% 0;
     }
 
     &_item {
@@ -42,8 +44,9 @@
     }
 
     &_img {
-        width: 100%;
-        object-fit: scale-down;
+        max-width: 100%;
+        margin: auto;
+        object-fit: cover;
     }
 }
 
