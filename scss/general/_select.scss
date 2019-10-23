@@ -1,0 +1,72 @@
+.select_wrap {
+    position: relative;
+
+    /*hide original SELECT element:*/
+    select {
+        display: none;
+    }
+}
+
+/*style items (options):*/
+.select-items {
+    @include font(14px, 18px, 'Montserrat-Regular');
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 10%;
+    background-color: $blue_1;
+    border: 1px solid $blue_1;
+    border-top: 0;
+    z-index: 2;
+
+    /*style the items (options), including the selected item:*/
+    div {
+        @include font(14px, 18px, 'Montserrat-Regular');
+
+        padding: 10%;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.select-selected {
+    @include font(14px, 18px, 'Montserrat-Regular');
+
+    position: relative;
+    padding: 10%;
+    border: 1px solid $blue_1;
+    background-color: $blue_1;
+    cursor: pointer;
+    user-select: none;
+
+    /*style the arrow inside the select element:*/
+    // &::after {
+    //     position: absolute;
+    //     content: "";
+    //     top: 50%;
+    //     right: 25px;
+    //     width: 13px;
+    //     height: 13px;
+    //     border: 1px solid transparent;
+    //     border-color: transparent $gray_1 $gray_1 transparent;
+    //     transform-origin: center center;
+    //     transform: translateY(-75%) rotate(45deg);
+    //     transition: 0.5s;
+    // }
+
+    /*point the arrow upwards when the select box is open (active):*/
+    // &.select-arrow-active::after {
+    //     transform: translateY(-25%) rotate(-135deg);
+    // }
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}

@@ -64,9 +64,9 @@
 				</div>
 			</li>
 			<li class="header_item">
-				<label class="call" for="header_content_call_input">
+				<p class="call" for="header_content_call_input">
 					Замовити дзвінок
-				</label>
+				</p>
 			</li>
 			<li class="header_item">
 				<div class="search">
@@ -85,31 +85,27 @@
 				</div>
 			</li>
 			<li class="header_item">
-				<div class="language">
-					<div href="#" class="language_link language_active">
-						УКР
-						<div class="language_link_img">
-							<img src="./img/main/ua-flag.png" alt="ua">
-						</div>
-					</div>
-					<ul class="language_list">
-						<li class="language_item">
-							<a href="#" class="language_link">
-								ENG
-								<div class="language_link_img">
-									<img src="./img/main/uk-flag.png" alt="uk">
-								</div>
-							</a>
-						</li>
-						<li class="language_item">
-							<a href="#" class="language_link">
-								РУС
-								<div class="language_link_img">
-									<img src="./img/main/rus-flag.png" alt="rus">
-								</div>
-							</a>
-						</li>
-					</ul>
+				<div class="select_wrap">
+					<select name="language" id="language" class="language">
+						<option value="ua">
+							укр
+							<div class="language_img_wrap">
+								<img class="language_img" src="img/main/ua-flag.png" alt="ua">
+							</div>
+						</option>
+						<option value="uk">
+							eng
+							<div class="language_img_wrap">
+								<img class="language_img" src="img/main/uk-flag.png" alt="uk">
+							</div>
+						</option>
+						<option value="ru">
+							рус
+							<div class="language_img_wrap">
+								<img class="language_img" src="img/main/rus-flag.png" alt="rus">
+							</div>
+						</option>
+					</select>
 				</div>
 			</li>
 		</ul>
@@ -498,6 +494,9 @@
 			});
 		});
 	</script>
+
+	<!-- My-script -->
+	<script type="text/javascript" src="js/my-script.js"></script>
 
 </body>
 </html>

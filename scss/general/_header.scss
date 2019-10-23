@@ -1,5 +1,5 @@
 .header {
-    @include font(14px, 17px, 'Montserrat-Regular');
+    @include font(14px, 18px, 'Montserrat-Regular');
 
     position: sticky;
     top: 0;
@@ -27,24 +27,12 @@
     }
 
     &_item {
-        width: 5%;
-        flex-grow: 1;
         text-align: center;
-        
-        &:first-child,
-        &:last-child {
-            flex-grow: 0.5;
-        }
-
-        &:nth-child(4) {
-            flex-grow: 2;
-        }
     }
 
     .menu_button {
         display: flex;
         align-items: center;
-        width: 100%;
         cursor: pointer;
 
         &:hover svg {
@@ -52,8 +40,8 @@
         }
 
         svg {
-            width: 25%;
-            margin-right: 5%;
+            width: 25px;
+            margin-right: 10px;
             transition: 1s;
         }
 
@@ -66,16 +54,17 @@
 
     .services_button {
         position: relative;
-        padding-right: 10%;
+        padding-right: 15px;
         cursor: pointer;
 
         svg {
             position: absolute;
             top: 50%;
             right: 0;
-            width: 15%;
+            width: 10px;
             height: 100%;
             transform: translateY(-50%);
+            fill: $gray_1;
         }
 
         &_list {
@@ -121,131 +110,97 @@
 
         &_label {
             position: relative;
-            padding: 0 10%;
+            padding-left: 15px;
 
             svg {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 10%;
+                width: 10px;
                 height: 100%;
                 fill: $gray_1;
             }
         }
 
         &_input {
-            @include font(14px, 17px, 'Montserrat-Regular');
+            @include font(14px, 18px, 'Montserrat-Regular');
 
-            width: 50%;
-            text-align: center;
+            width: 100px;
             border: 0;
             background-color: $blue_1;
             color: $gray_1;
         }
     }
 
-    .language {
-        position: relative;
-        width: 60%;
-        margin: auto;
-        cursor: pointer;
-        
-        &:hover .language_list {
-            visibility: visible;
+    .select {
+
+        &_wrap {
+            @include font(14px, 18px, 'Montserrat-Regular');
         }
 
-        div {
-            margin-top: 0;
-        }
-        
-        &_list {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            widows: 100%;
-            visibility: hidden;
-        }
+        &-selected {
+            padding: 7px;
+            padding-right: 30px;
+            text-transform: uppercase;
 
-        &_active {
-            padding: 15% 5%;
-        }
-
-        &_item {
-            background-color: $blue_1;
-            padding: 15% 5%;
-
-            &:hover a {
-                transform: scale(1.1);
+            &::before {
+                content: "";
+                // background-image: url(../img/main/ua-flag.png);
+                background-size: cover;
+                position: absolute;
+                right: 7px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+                height: 10px;
             }
         }
 
-        &_link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $gray_1;
+        &-items {
+            padding: 0;
+            text-transform: uppercase;
 
-            &_img {
-                display: flex;
-                align-items: center;
-                width: 30%;
-                margin-left: 5%;
+            div {
+                position: relative;
+                padding: 7px;
+                padding-right: 30px;
 
-                img {
-                    width: 100%;
+                &:first-child::before {
+                    content: "";
+                    background-image: url(../img/main/ua-flag.png);
+                    background-size: cover;
+                    position: absolute;
+                    right: 7px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 16px;
+                    height: 10px;
+                }
+
+                &:nth-child(2)::before {
+                    content: "";
+                    background-image: url(../img/main/uk-flag.png);
+                    background-size: cover;
+                    position: absolute;
+                    right: 7px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 16px;
+                    height: 10px;
+                }
+
+                &:last-child::before {
+                    content: "";
+                    background-image: url(../img/main/rus-flag.png);
+                    background-size: cover;
+                    position: absolute;
+                    right: 7px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 16px;
+                    height: 10px;
                 }
             }
         }
     }
-}
-
-// screen width >=1160px
-@media only screen and (min-width: $site_width) {
-
-	.header {
-
-        .heading {
-            font-size: 14px;
-            line-height: 17px;
-            
-            .search {
-                
-                &_input {
-                    font-size: 14px;
-                    line-height: 17px;
-                }
-            }
-        }
-
-        .content {
-
-            &_title {
-                font-size: 40px;
-                line-height: 45px;
-            }
-            
-            &_description {
-                font-size: 14px;
-                line-height: 27px;
-            }
-            
-            &_link {
-                font-size: 14px;
-                line-height: 60px;
-            }
-        }
-
-        .footer {
-
-            &_title {
-                font-size: 14px;
-                line-height: 17px;
-            }
-            
-            &_description {
-                font-size: 12px;
-                line-height: 21px;
-            }
-        }
-	}
 }
