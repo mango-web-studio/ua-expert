@@ -1,19 +1,8 @@
 .header {
-    @include font(14px, 18px, 'Montserrat-Regular');
-
     position: sticky;
     top: 0;
     background-color: $blue_1;
-    color: $gray_1;
     z-index: 99;
-
-    .clicker {
-        display: none;
-    }
-
-    svg {
-        fill: $white_1;
-    }
 
     &_list {
         display: flex;
@@ -30,79 +19,67 @@
         text-align: center;
     }
 
-    .menu_button {
+    &_link {
+        @include font(14px, 18px, 'Montserrat-Regular');
+
+        position: relative;
         display: flex;
         align-items: center;
-        cursor: pointer;
-
-        &:hover svg {
-            transform: rotate(90deg);
-        }
-
-        svg {
-            width: 25px;
-            margin-right: 10px;
-            transition: 1s;
-        }
-
-        &_list {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
-
-    .services_button {
-        position: relative;
-        padding-right: 15px;
-        cursor: pointer;
-
-        svg {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 10px;
-            height: 100%;
-            transform: translateY(-50%);
-            fill: $gray_1;
-        }
-
-        &_list {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
-
-    .phone_number {
         color: $gray_1;
 
-        &:hover {
-            color: $blue_2;
-            text-decoration: underline;
-        }
-    }
-
-    .logo {
-
-        svg {
-            display: block;
-            width: 100%;
-        }
-    }
-
-    .call {
-        cursor: pointer;
-
-        &:hover {
-            color: $blue_2;
-            text-decoration: underline;
+        &_svg {
+            fill: $white_1;
         }
 
-        &_popup {
-            position: absolute;
-            top: 0;
-            left: 0;
+        &.menu {
+
+            .header_link_svg {
+                transition: 0.2s;
+                
+                &_wrap {
+                    width: 25px;
+                    margin-right: 10px;
+                }
+            }
+
+            &:hover .header_link_svg {
+                transform: rotate(90deg);
+            }
+        }
+
+        &.service {
+            padding-right: 15px;
+
+            .header_link_svg {
+                height: 100%;
+                fill: $gray_1;
+
+                &_wrap {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+
+        &.logo {
+
+            .header_link_svg_wrap {
+                width: 180px;
+            }
+        }
+
+        &.call {
+            // text-decoration: underline;
+            border-bottom: 1px solid $gray_1;
+
+            &:hover {
+                color: $blue_2;
+                border-bottom: 1px solid $blue_2;
+            }
         }
     }
 
@@ -136,6 +113,9 @@
 
         &_wrap {
             @include font(14px, 18px, 'Montserrat-Regular');
+
+            width: 70px;
+            color: $gray_1;
         }
 
         &-selected {
@@ -145,7 +125,7 @@
 
             &::before {
                 content: "";
-                // background-image: url(../img/main/ua-flag.png);
+                // background-image: url(../img/general/header/ua-flag.png);
                 background-size: cover;
                 position: absolute;
                 right: 7px;
@@ -167,7 +147,7 @@
 
                 &:first-child::before {
                     content: "";
-                    background-image: url(../img/main/ua-flag.png);
+                    background-image: url(../img/general/header/ua-flag.png);
                     background-size: cover;
                     position: absolute;
                     right: 7px;
@@ -179,7 +159,7 @@
 
                 &:nth-child(2)::before {
                     content: "";
-                    background-image: url(../img/main/uk-flag.png);
+                    background-image: url(../img/general/header/uk-flag.png);
                     background-size: cover;
                     position: absolute;
                     right: 7px;
@@ -191,7 +171,7 @@
 
                 &:last-child::before {
                     content: "";
-                    background-image: url(../img/main/rus-flag.png);
+                    background-image: url(../img/general/header/rus-flag.png);
                     background-size: cover;
                     position: absolute;
                     right: 7px;

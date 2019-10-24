@@ -63,7 +63,7 @@
         &_list {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             max-width: $site_width;
             margin: auto;
             padding: 2.86% $main_horizontal_padding;
@@ -91,6 +91,8 @@
         &_description {
             @include font(12px, 21px, 'Montserrat-Light');
 
+            overflow: hidden;
+            max-height: 43px;
             color: $gray_2;
         }
     }

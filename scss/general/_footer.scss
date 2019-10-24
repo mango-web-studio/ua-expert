@@ -1,0 +1,147 @@
+.footer {
+    background-color: $blue_1;
+
+    &_main {
+        max-width: $site_width;
+        margin: 0 auto;
+        padding: 2.6% 10px;
+    }
+
+    &_head {
+        margin-bottom: 3.5%;
+
+        &_logo {
+            width: 180px;
+
+            &_svg {
+                fill: $white_1;
+            }
+        }
+    }
+
+    &_content {
+
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &_item {
+            max-width: 31.5%;
+        }
+
+        &_title {
+            @include font(14px, 24px, 'Montserrat-Bold');
+
+            color: $white_1;
+            margin-bottom: 5.6%;
+        }
+
+        &_article {
+            border-bottom: 1px solid $gray_8;
+            padding-bottom: 5.6%;
+            margin-bottom: 10px;
+        }
+
+        &_paragraph {
+            @include font(12px, 24px, 'Montserrat-Regular');
+
+            color: $gray_1;
+
+            &.overflow {
+                max-height: 48px;
+                overflow: hidden;
+            }
+        }
+
+        &_link {
+            @include font(12px, 24px, 'Montserrat-Regular');
+
+            display: inline-block;
+            color: $gray_1;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.color {
+                color: $white_1;
+            }
+        }
+
+        &_arrow {
+            display: inline-block;
+            width: 17px;
+
+            &_svg {
+                fill: $white_1;
+            }
+        }
+    }
+
+    &_faq {
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &_link {
+            @include font(12px, 24px, 'Montserrat-Regular');
+
+            color: $gray_1;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &_bottom {
+        background-color: $black_2;
+
+        &_inner {
+            max-width: $site_width;
+            margin: 0 auto;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright {
+            @include font(14px, 24px, 'Montserrat-Regular');
+
+            color: $gray_8;
+
+            &_logo {
+                width: 5.7%;
+
+                &_svg {
+                    fill: $gray_8;
+                }
+            }
+        }
+    }
+}
+
+.privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &_link {
+        @include font(14px, 24px, 'Montserrat-Regular');
+
+        display: block;
+        color: $gray_8;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
