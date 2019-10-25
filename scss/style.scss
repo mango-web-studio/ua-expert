@@ -1,0 +1,17 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "extends.scss";
+@import "mixins.scss";
+@import "reset.scss";
+// GENERAL
+@import "general/header.scss";
+@import "general/menu.scss";
+@import "general/footer.scss";
+@import "general/404.scss";
+@import "general/select.scss";  // Styling the "selects" elements
+//MAIN
+@import "main/banner.scss";
+@import "main/services.scss";
+@import "main/advantages.scss";
+@import "main/partners.scss";
+@import "main/responses.scss";
