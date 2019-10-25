@@ -1,11 +1,21 @@
 .services {
     @include background(url("../img/main/services/bg_services.png"), no-repeat, top, right, contain);
 
+    position: relative;
     background-color: $gray_4;
     width: 100%;
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 34.1%;
+        padding-bottom: 10.4%;
+        background-color: $gray_5;
+    }
+
     &_inner {
-        position: relative;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -13,16 +23,6 @@
         max-width: $site_width;
         margin: auto;
         padding: 4.43% $main_horizontal_padding;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 76.3%;
-            width: 100%;
-            height: 32%;
-            background-color: $gray_5;
-        }
     }
 
     &_title_description_wrap {
@@ -50,10 +50,10 @@
             background-color: $blue_3;
         }
     }
-    
+
     &_description {
         @include font(14px, 26px, 'Montserrat-Regular');
-        
+
         width: 31.58%;
         margin: auto;
         color: $black_1;
@@ -62,14 +62,19 @@
     &_list {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &_item {
         position: relative;
-        width: 22.8%;
+        width: 22.9%;
     }
 
     &_link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 9.6% 11.5%;
         position: absolute;
         top: 0;
         left: 0;
@@ -82,11 +87,11 @@
             background: $blue_4;
         }
 
-        &:hover .services_link_fake {
+        &:hover .services_link_more {
             color: $white_1;
         }
 
-        &:hover svg {
+        &:hover .services_link_more_svg {
             fill: $white_1;
         }
 
@@ -98,32 +103,25 @@
         &_title {
             @include font(16px, 26px, 'Montserrat-Bold');
 
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            width: 80%;
-            transform: translateX(-50%);
             color: $white_1;
 
             span {
                 display: block;
             }
         }
-        
-        &_fake {
-            @include font(14px, 24px, 'Montserrat-Bold');
-            
-            position: absolute;
-            bottom: 10%;
-            left: 10%;
-            color: $blue_3;
-            white-space: nowrap;
 
-            svg {
-                position: relative;
-                left: 10px;
-                width: 25%;
+        &_more {
+            @include font(14px, 24px, 'Montserrat-Bold');
+
+            color: $blue_3;
+
+            &_svg {
+
                 fill: $blue_3;
+                &_wrap {
+                    display: inline-block;
+                    width: 30px;
+                }
             }
         }
     }

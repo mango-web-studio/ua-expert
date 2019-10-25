@@ -8,7 +8,8 @@
         top: 0;
         right: 0;
         width: 60%;
-        height: 200px;
+        padding-bottom: 10.5%;
+        // height: 200px;
         background-color: $gray_5;
     }
 
@@ -18,14 +19,15 @@
         justify-content: space-between;
         max-width: $site_width;
         margin: auto;
-        height: 580px;
-        padding: 80px $main_horizontal_padding 120px;
+        // min-height: 580px;
+        padding: 4.2% $main_horizontal_padding 6.25%;
     }
 
     &_title {
         @include font(40px, 40px, 'PlayfairDisplay-Bold');
 
         text-align: center;
+        margin-bottom: 15.5%;
         z-index: 1;
 
         &::first-letter {

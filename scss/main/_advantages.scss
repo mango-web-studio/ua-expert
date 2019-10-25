@@ -8,22 +8,23 @@
         padding-bottom: 18.3%;
         background-color: $black_1;
 
-        svg {
-            width: 58%;
+        &::before {
+            content: "";
             position: absolute;
-            bottom: 15%;
+            top: 0;
+            left: 0;
+            width: 34%;
+            height: 100%;
+            background-color: $black_1;
+        }
+
+        &_svg {
+            position: absolute;
+            bottom: 17.7%;
             left: 30.7%;
+            width: 58%;
             fill: $gray_7;
         }
-    }
-
-    .rectangle_black {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 34%;
-        height: 100%;
-        background-color: $black_1;
     }
 
     &_description {
@@ -33,13 +34,14 @@
         background-size: 75% 120%;
         background-color: $gray_4;
 
-        .rectangle_white {
+        &::before {
+            content: "";
             position: absolute;
             top: 0;
-            left: 35%;
-            width: 100%;
+            right: 0;
+            width: 64.37%;
             padding-bottom: 10.42%;
-            transform: translateY(-45%);
+            transform: translateY(-50%);
             background-color: $white_1;
         }
 
@@ -53,13 +55,13 @@
 
                 &_title {
                     @include font(40px, 45px, 'PlayfairDisplay-Bold');
-                    
+
                     position: absolute;
                     top: 0;
                     left: 50%;
                     transform: translate(-50%, -55%);
                     color: $black_1;
-                    
+
                     &::first-letter {
                         color: $blue_3;
                     }
@@ -85,7 +87,7 @@
                         width: 10%;
                         border-top: 2px solid $blue_3;
                     }
-                    
+
                     &_title {
                         @include font(16px, 26px, 'Montserrat-Bold');
 
