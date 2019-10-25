@@ -42,12 +42,10 @@
             align-self: flex-end;
             color: $white_1;
             background-color: $blue_2;
-            border: 2px solid $black_1;
             border-radius: 50px;
 
             &:hover {
                 background-color: $white_1;
-                border: 2px solid $white_1;
                 color: $black_1;
             }
         }
