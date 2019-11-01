@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     background-color: $blue_1;
-    z-index: 99;
+    z-index: $z99;
 
     &_list {
         display: flex;
@@ -33,23 +33,18 @@
             fill: $white_1;
         }
 
-        &.menu {
+        &.menu_open_label {
 
             .header_link_svg {
-                transition: 0.2s;
                 
                 &_wrap {
                     width: 25px;
                     margin-right: 10px;
                 }
             }
-
-            &:hover .header_link_svg {
-                transform: rotate(90deg);
-            }
         }
 
-        &.service {
+        &.service_open_label {
             padding-right: 15px;
 
             .header_link_svg {

@@ -1,0 +1,69 @@
+.menu_checkbox {
+
+    &:checked ~ .menu {
+        left: 0;
+    }
+}
+
+.menu {
+    position: fixed;
+    left: -50%;
+    top: 0;
+    height: 100vh;
+    padding: 3.125%;
+    padding-right: 7.81%;
+    background-color: $blue_1;
+    z-index: $z100;
+    transition: 0.5s;
+
+    &_inner {
+        position: relative;
+    }
+
+    &_close_label {
+        position: absolute;
+        top: 0;
+        left: 120%;
+        width: 24px;
+    }
+
+    &_close_svg {
+        fill: $white_1;
+    }
+
+    &_list {
+        position: relative;
+        padding-bottom: 1px;
+        margin-top: 30px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            border-bottom: 1px solid $gray_2;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+
+            &::before {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &_item {
+        margin-bottom: 30px;
+    }
+
+    &_link {
+        @include font(16px, 20px, 'Montserrat-Regular');
+
+        color: $white_1;
+    }
+}

@@ -35,7 +35,7 @@ html {
           box-sizing: border-box;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
+body, h1, h2, h3, h4, h5, h6, p, ul, li, menu {
   margin: 0;
   padding: 0;
 }
@@ -63,8 +63,18 @@ svg {
   height: auto;
 }
 
-input {
+input,
+button {
   outline: none;
+  margin: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+label {
+  cursor: pointer;
 }
 
 .header {
@@ -118,33 +128,21 @@ input {
   fill: #fff;
 }
 
-.header_link.menu .header_link_svg {
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.header_link.menu .header_link_svg_wrap {
+.header_link.menu_open_label .header_link_svg_wrap {
   width: 25px;
   margin-right: 10px;
 }
 
-.header_link.menu:hover .header_link_svg {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.header_link.service {
+.header_link.service_open_label {
   padding-right: 15px;
 }
 
-.header_link.service .header_link_svg {
+.header_link.service_open_label .header_link_svg {
   height: 100%;
   fill: #ABAEBD;
 }
 
-.header_link.service .header_link_svg_wrap {
+.header_link.service_open_label .header_link_svg_wrap {
   position: absolute;
   top: 50%;
   right: 0;
@@ -266,6 +264,71 @@ input {
           transform: translateY(-50%);
   width: 16px;
   height: 10px;
+}
+
+.menu_checkbox:checked ~ .menu {
+  left: 0;
+}
+
+.menu {
+  position: fixed;
+  left: -50%;
+  top: 0;
+  height: 100vh;
+  padding: 3.125%;
+  padding-right: 7.81%;
+  background-color: #00020E;
+  z-index: 100;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu_inner {
+  position: relative;
+}
+
+.menu_close_label {
+  position: absolute;
+  top: 0;
+  left: 120%;
+  width: 24px;
+}
+
+.menu_close_svg {
+  fill: #fff;
+}
+
+.menu_list {
+  position: relative;
+  padding-bottom: 1px;
+  margin-top: 30px;
+}
+
+.menu_list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  border-bottom: 1px solid #5D5F6B;
+}
+
+.menu_list:first-child {
+  margin-top: 0;
+}
+
+.menu_list:last-child::before {
+  border-bottom: 0;
+}
+
+.menu_item {
+  margin-bottom: 30px;
+}
+
+.menu_link {
+  font: 1.6rem/2rem "Montserrat-Regular";
+  color: #fff;
 }
 
 .footer {
@@ -565,6 +628,11 @@ input {
 
 /*hide the items when the select box is closed:*/
 .select-hide {
+  display: none;
+}
+
+.menu_checkbox,
+.services_checkbox {
   display: none;
 }
 

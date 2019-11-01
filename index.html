@@ -14,11 +14,16 @@
 </head>
   
 <body>
+	<!-- to open the menu -->
+	<input id="menu_checkbox" class="menu_checkbox" type="checkbox">
+	<!-- to open the services -->
+	<input id="services_checkbox" class="services_checkbox" type="checkbox">
+
 	<!-- HEADER -->
 	<header class="header">
 		<ul class="header_list">
 			<li class="header_item">
-				<a href="#" class="header_link menu">
+				<label for="menu_checkbox" class="header_link menu_open_label">
 					<div class="header_link_svg_wrap">
 						<svg class="header_link_svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56 56" xml:space="preserve">
 							<path d="M28,0C12.561,0,0,12.561,0,28s12.561,28,28,28s28-12.561,28-28S43.439,0,28,0z M40,41H16c-1.104,0-2-0.896-2-2s0.896-2,2-2
@@ -27,10 +32,10 @@
 						</svg>
 					</div>
 					Меню
-				</a>
+				</label>
 			</li>
 			<li class="header_item">
-				<a href="#" class="header_link service">
+				<label for="services_checkbox" class="header_link service_open_label">
 					<div class="header_link_svg_wrap">
 						<svg class="header_link_svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847" xml:space="preserve">
 							<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
@@ -39,7 +44,7 @@
 						</svg>
 					</div>
 					Послуги
-				</a>
+				</label>
 			</li>
 			<li class="header_item">
 				<a href="tel:0800210979" class="header_link phone">0-800-210-979</a>
@@ -94,19 +99,19 @@
 						<option value="ua">
 							укр
 							<div class="language_img_wrap">
-								<img class="language_img" src="img/main/ua-flag.png" alt="ua">
+								<img class="language_img" src="img/general/header/ua-flag.png" alt="ua">
 							</div>
 						</option>
 						<option value="uk">
 							eng
 							<div class="language_img_wrap">
-								<img class="language_img" src="img/main/uk-flag.png" alt="uk">
+								<img class="language_img" src="img/general/header/uk-flag.png" alt="uk">
 							</div>
 						</option>
 						<option value="ru">
 							рус
 							<div class="language_img_wrap">
-								<img class="language_img" src="img/main/rus-flag.png" alt="rus">
+								<img class="language_img" src="img/general/header/rus-flag.png" alt="rus">
 							</div>
 						</option>
 					</select>
@@ -114,6 +119,67 @@
 			</li>
 		</ul>
 	</header>
+	<!-- MENU -->
+	<menu class="menu">
+		<div class="menu_inner">
+			<label for="menu_checkbox" class="menu_close_label">
+				<svg class="menu_close_svg" enable-background="new 0 0 413.348 413.348" height="512" viewBox="0 0 413.348 413.348" width="512" xmlns="http://www.w3.org/2000/svg">
+					<path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z" />
+				</svg>
+			</label>
+			<ul class="menu_list">
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Послуги
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Прайс-лист
+					</a>
+				</li>
+			</ul>
+			<ul class="menu_list">
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Служба аварійних комісарів
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Міжнародна співпраця
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Для страховників
+					</a>
+				</li>
+			</ul>
+			<ul class="menu_list">
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Про компанію
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Кейси
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Блог
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">
+						Контакти
+					</a>
+				</li>
+			</ul>
+		</div>
+	</menu>
 
 	<!-- BANNER -->
 	<section class="banner">

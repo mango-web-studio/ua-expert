@@ -4,7 +4,7 @@ html {
 *, *::before, *::after {
 	box-sizing: border-box;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
+body, h1, h2, h3, h4, h5, h6, p, ul, li, menu {
 	margin: 0;
 	padding: 0;
 }
@@ -26,6 +26,13 @@ svg {
   width: 100%;
   height: auto;
 }
-input {
+input,
+button {
 	outline: none;
+	margin: 0;
+	border-radius: 0;
+	appearance: none;
+}
+label {
+	cursor: pointer;
 }
