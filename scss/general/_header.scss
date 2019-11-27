@@ -21,6 +21,16 @@
         text-align: center;
     }
 
+    &_label {
+        @include font(14px, 18px, 'Montserrat-Regular');
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: $gray_1;
+        transition: 0.3s;
+    }
+
     &_link {
         @include font(14px, 18px, 'Montserrat-Regular');
 
@@ -28,54 +38,71 @@
         display: flex;
         align-items: center;
         color: $gray_1;
+        transition: 0.3s;
+
+        &:hover {
+            color: $blue_2;
+        }
 
         &_svg {
             fill: $white_1;
         }
+    }
 
-        &.menu_open_label {
+    .menu_open_label {
 
-            .header_link_svg {
-                
-                &_wrap {
-                    width: 25px;
-                    margin-right: 10px;
-                }
+        .header_label_svg {
+            fill: $white_1;
+
+            &_wrap {
+                width: 25px;
+                margin-right: 10px;
             }
         }
+    }
 
-        &.service_open_label {
-            padding-right: 15px;
+    .consultation {
+        color: $gray_1;
+        border-bottom: 1px solid $gray_1;
+        transition: 0.3s;
 
-            .header_link_svg {
-                height: 100%;
-                fill: $gray_1;
+        &:hover {
+            color: $blue_2;
+            border-bottom: 1px solid $blue_2;
+        }
+    }
 
-                &_wrap {
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    transform: translateY(-50%);
-                    width: 10px;
-                    height: 10px;
-                }
+    .service_open_label {
+        padding-right: 15px;
+
+        .header_label_svg {
+            height: 100%;
+            fill: $gray_1;
+
+            &_wrap {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
             }
         }
+    }
 
-        &.logo {
+    .logo {
 
-            .header_link_svg_wrap {
-                width: 180px;
-            }
+        .header_label_svg_wrap {
+            width: 180px;
         }
+    }
 
-        &.call {
-            border-bottom: 1px solid $gray_1;
+    .call {
+        border-bottom: 1px solid $gray_1;
 
-            &:hover {
-                color: $blue_2;
-                border-bottom: 1px solid $blue_2;
-            }
+        &:hover {
+            color: $blue_2;
+            border-bottom: 1px solid $blue_2;
         }
     }
 
@@ -84,15 +111,15 @@
         &_label {
             position: relative;
             padding-left: 15px;
+        }
 
-            svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 10px;
-                height: 100%;
-                fill: $gray_1;
-            }
+        &_svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100%;
+            fill: $gray_1;
         }
 
         &_input {
@@ -102,6 +129,10 @@
             border: 0;
             background-color: $blue_1;
             color: $gray_1;
+
+            &:focus::placeholder {
+                color: transparent;
+            }
         }
     }
 

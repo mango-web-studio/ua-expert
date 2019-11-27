@@ -138,8 +138,19 @@
             &_logo {
                 width: 5.7%;
 
+                &_link {
+
+                    &:hover {
+
+                        .copyright_logo_svg {
+                            fill: $purple_1;
+                        }
+                    }
+                }
+                
                 &_svg {
                     fill: $gray_9;
+                    transition: 0.3s;
                 }
             }
         }

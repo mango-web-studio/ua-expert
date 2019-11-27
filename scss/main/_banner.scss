@@ -9,51 +9,37 @@
     padding-top: 4.7vw;
     background-color: $blue_1;
 
-    // CONTENT
-    .content {
+    &_inner {
         width: 100%;
         max-width: 1160px;
         margin: auto;
         padding: 6% $main_horizontal_padding 7.3%;
-
-        &_title {
-            @include font(40px, 45px, 'PlayfairDisplay-Bold');
-
-            margin-bottom: 3.88%;
-            color: $white_1;
-        }
-
-        &_description {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        &_paragraph {
-            @include font(14px, 27px, 'Montserrat-Light');
-
-            width: 750px;
-            color: $gray_1;
-        }
-
-        &_link {
-            @include font(14px, 60px, 'Montserrat-Bold');
-
-            width: 240px;
-            text-align: center;
-            align-self: flex-end;
-            color: $white_1;
-            background-color: $blue_2;
-            border-radius: 50px;
-
-            &:hover {
-                background-color: $white_1;
-                color: $black_1;
-            }
-        }
     }
 
-    // FOOTER
-    .footer {
+    &_title {
+        @include font(40px, 45px, 'PlayfairDisplay-Bold');
+
+        margin-bottom: 3.88%;
+        color: $white_1;
+    }
+
+    &_description {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_paragraph {
+        @include font(14px, 27px, 'Montserrat-Light');
+
+        width: 750px;
+        color: $gray_1;
+    }
+
+    &_label {
+        align-self: flex-end;
+    }
+
+    &_footer {
         width: 100%;
         background-color: $blue_1;
         color: $gray_1;
@@ -74,8 +60,8 @@
 
         &_link {
 
-            &:hover .footer_title,
-            &:hover .footer_description {
+            &:hover .banner_footer_title,
+            &:hover .banner_footer_description {
                 color: $blue_2;
             }
         }
@@ -85,6 +71,8 @@
 
             color: $white_1;
             margin-bottom: 5.55%;
+            transition: 0.3s;
+
         }
 
         &_description {
@@ -93,6 +81,7 @@
             overflow: hidden;
             max-height: 43px;
             color: $gray_2;
+            transition: 0.3s;
         }
     }
 }

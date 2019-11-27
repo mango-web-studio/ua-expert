@@ -4,17 +4,18 @@
 @import "mixins.scss";
 @import "reset.scss";
 // GENERAL
+@import "general/elements.scss";  // Styling the "selects" elements
 @import "general/header.scss";
 @import "general/menu.scss";
 @import "general/footer.scss";
 @import "general/404.scss";
 @import "general/select.scss";  // Styling the "selects" elements
-@import "general/checkboxes.scss";  // Styling the "selects" elements
 //MAIN
 @import "main/banner.scss";
 @import "main/services.scss";
 @import "main/advantages.scss";
 @import "main/partners.scss";
 @import "main/responses.scss";
+@import "main/popup_consultation.scss";
 // PRICE
 @import "price/price.scss";

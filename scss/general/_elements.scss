@@ -1,0 +1,17 @@
+.button {
+    @include font(14px, 60px, 'Montserrat-Bold');
+
+    text-align: center;
+    padding: 0 25px;
+    border: 0;
+    color: $white_1;
+    background-color: $blue_2;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $white_1;
+        color: $black_1;
+    }
+}

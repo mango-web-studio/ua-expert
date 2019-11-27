@@ -74,4 +74,40 @@ window.onload = function() {
     }
     /* if the user clicks anywhere outside the select box, then close all select boxes: */
     document.addEventListener("click", closeAllSelect);
+
+
+// To display the number of slides of slider on the homepage
+    let collectionSlides = document.querySelectorAll('.slick-slide');
+    if (collectionSlides) {
+        let slickSlider       = document.querySelector('.slick-slider'),
+            slickActiveSlides = document.querySelectorAll('.slick-active'),
+            slickClonedSlides = document.querySelectorAll('.slick-cloned'),
+            visibleSlides     = (slickActiveSlides.length - 1) / 3,
+            hiddenSlides      = Math.ceil((collectionSlides.length - slickClonedSlides.length) / 3),
+            leftArrow         = document.querySelector('.slick-prev'),
+            rightArrow        = document.querySelector('.slick-next'),
+            slideFromSlides   = document.createElement('p');
+        slideFromSlides.className = 'js_slide_from_slides';
+        slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+        slickSlider.append(slideFromSlides);
+
+        leftArrow.addEventListener('click', function () {
+            visibleSlides--;
+            if ( visibleSlides >= 1 ) {
+                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+            } else {
+                visibleSlides = hiddenSlides;
+                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+            }
+        });
+        rightArrow.addEventListener('click', function () {
+            visibleSlides++;
+            if ( visibleSlides <= hiddenSlides ) {
+                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+            } else {
+                visibleSlides = 1;
+                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+            }
+        });
+    }
 };

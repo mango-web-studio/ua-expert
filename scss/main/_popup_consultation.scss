@@ -1,0 +1,90 @@
+.consultation_checkbox {
+    display: none;
+
+    &:checked ~ .popup_consultation {
+        display: block;
+    }
+}
+
+.popup_consultation {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black_3;
+    z-index: 100;
+
+    &_inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 80px 50px 30px;
+        background-color: $white_1;
+        text-align: center;
+    }
+
+    &_label {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 38px;
+        padding: 8px;
+        background-color: $blue_2;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $black_4;
+        }
+    }
+
+    &_svg {
+        fill: $white_1;
+        transition: 0.3s;
+    }
+
+    &_title {
+        @include font(22px, 22px, 'Montserrat-Bold');
+
+        max-width: 440px;
+        margin-bottom: 50px;
+    }
+
+    &_field {
+        @include font(14px, 34px, 'Montserrat-Regular');
+
+        display: block;
+        margin: 0 auto 25px;
+        width: 340px;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid $gray_12;
+        color: $black_1;
+        text-align: center;
+
+        &::placeholder {
+            color: $black_1;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    &_button {
+        margin: 25px auto 50px;
+
+        &:hover {
+            background-color: $black_4;
+            color: $white_1;
+        }
+    }
+
+    &_info {
+        @include font(12px, 12px, 'Montserrat-Regular');
+
+        color: $gray_12;
+    }
+}
