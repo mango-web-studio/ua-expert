@@ -12,22 +12,28 @@
         margin: auto;
     }
 
-    .right {
+    .aside {
         position: sticky;
         top: 4.7vw;
+        height: calc(100vh - 4.7vw);
         width: 23.25%;
 
-        &_list {
-            padding: 7.58% 0 7.58% 20.84%;
+        &_inner {
+            height: 100%;
         }
 
-        &_item {
-            padding: 11% 0;
+        &_list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            padding: 7.58% 0 7.58% 20.84%;
         }
 
         &_link {
             @include font(14px, 24px, 'Montserrat-Bold');
 
+            display: block;
             color: $gray_11;
 
             &:hover {

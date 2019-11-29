@@ -76,10 +76,30 @@ window.onload = function() {
     document.addEventListener("click", closeAllSelect);
 
 
-// To display the number of slides of slider on the homepage
-    let collectionSlides = document.querySelectorAll('.slick-slide');
-    if (collectionSlides) {
-        let slickSlider       = document.querySelector('.slick-slider'),
+// HEADER
+    // To displays the flag image in the languages switch item (in "header" element)
+    let langSelect = document.getElementById('language');
+    if (langSelect) {
+        let langSelectWrap = langSelect.parentElement,
+            selectSelected = langSelectWrap.querySelector('.select-selected'),
+            selectItemDivs = langSelectWrap.querySelectorAll('.select-items div')
+            langClassNames = ['ua', 'uk', 'ru'];
+
+        selectSelected.classList.add(langClassNames[langSelect.selectedIndex]);
+        for (let i = 0; i < selectItemDivs.length; i++) {
+            selectItemDivs[i].addEventListener('click', function() {
+                selectSelected.classList.remove(selectSelected.classList[1]);
+                selectSelected.classList.add(langClassNames[i]);
+            });
+        }
+    }
+
+
+// HOMEPAGE
+    // To display the number of slides of slider (on the homepage)
+    let slickSlider = document.querySelector('.slick-slider');
+    if (slickSlider) {
+        let collectionSlides = document.querySelectorAll('.slick-slide'),
             slickActiveSlides = document.querySelectorAll('.slick-active'),
             slickClonedSlides = document.querySelectorAll('.slick-cloned'),
             visibleSlides     = (slickActiveSlides.length - 1) / 3,
@@ -107,6 +127,30 @@ window.onload = function() {
             } else {
                 visibleSlides = 1;
                 slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+            }
+        });
+    }
+
+
+// PRICE page
+    // Settings for smooth scrolling (price page)
+    let scroll = new SmoothScroll('a[href*="#"]');
+
+    // Sets "aside link" class name "active" (price page)
+    let price = document.querySelector('.price');
+    if (price) {
+        let priceItems = price.querySelectorAll('.price_content_item'),
+            asideLinks = price.querySelectorAll('.aside_link');
+        document.addEventListener('scroll', function() {
+            for (let i = 0; i < priceItems.length; i++) {
+                if (priceItems[0].getBoundingClientRect().top.toFixed() > 0) {
+                    asideLinks[0].classList.add('active');
+                }
+                if (priceItems[i].getBoundingClientRect().top.toFixed() <= 0 && priceItems[i].getBoundingClientRect().bottom.toFixed() > 0) {
+                    asideLinks[i].classList.add('active');
+                } else {
+                    asideLinks[i].classList.remove('active');
+                }
             }
         });
     }

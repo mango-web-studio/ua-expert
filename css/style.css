@@ -280,19 +280,6 @@ label {
   text-transform: uppercase;
 }
 
-.header .select-selected::before {
-  content: "";
-  background-size: cover;
-  position: absolute;
-  right: 7px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 16px;
-  height: 10px;
-}
-
 .header .select-items {
   padding: 0;
   text-transform: uppercase;
@@ -333,6 +320,48 @@ label {
 }
 
 .header .select-items div:last-child::before {
+  content: "";
+  background-image: url(../img/general/header/rus-flag.png);
+  background-size: cover;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 10px;
+}
+
+.ua::before {
+  content: "";
+  background-image: url(../img/general/header/ua-flag.png);
+  background-size: cover;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 10px;
+}
+
+.uk::before {
+  content: "";
+  background-image: url(../img/general/header/uk-flag.png);
+  background-size: cover;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 10px;
+}
+
+.ru::before {
   content: "";
   background-image: url(../img/general/header/rus-flag.png);
   background-size: cover;
@@ -1522,31 +1551,47 @@ label {
   margin: auto;
 }
 
-.price .right {
+.price .aside {
   position: -webkit-sticky;
   position: sticky;
   top: 4.7vw;
+  height: -webkit-calc(100vh - 4.7vw);
+  height: calc(100vh - 4.7vw);
   width: 23.25%;
 }
 
-.price .right_list {
+.price .aside_inner {
+  height: 100%;
+}
+
+.price .aside_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  height: 100%;
   padding: 7.58% 0 7.58% 20.84%;
 }
 
-.price .right_item {
-  padding: 11% 0;
-}
-
-.price .right_link {
+.price .aside_link {
   font: 1.4rem/2.4rem "Montserrat-Bold";
+  display: block;
   color: #828282;
 }
 
-.price .right_link:hover {
+.price .aside_link:hover {
   color: #2657D8;
 }
 
-.price .right_link.active {
+.price .aside_link.active {
   color: #2657D8;
 }
 

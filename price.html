@@ -7,20 +7,22 @@
 
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
-  
+
 <body>
-	<!-- to open the menu -->
+	<!-- to open the menu block -->
 	<input id="menu_checkbox" class="menu_checkbox" type="checkbox">
-	<!-- to open the services -->
+	<!-- to open the services block -->
 	<input id="services_checkbox" class="services_checkbox" type="checkbox">
+	<!-- to open a consultation popup window -->
+	<input id="consultation_checkbox" class="consultation_checkbox" type="checkbox">
 
 	<!-- HEADER -->
 	<header class="header">
 		<ul class="header_list">
 			<li class="header_item">
-				<label for="menu_checkbox" class="header_link menu_open_label">
-					<div class="header_link_svg_wrap">
-						<svg class="header_link_svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56 56" xml:space="preserve">
+				<label for="menu_checkbox" class="header_label menu_open_label">
+					<div class="header_label_svg_wrap">
+						<svg class="header_label_svg" x="0px" y="0px" viewBox="0 0 56 56">
 							<path d="M28,0C12.561,0,0,12.561,0,28s12.561,28,28,28s28-12.561,28-28S43.439,0,28,0z M40,41H16c-1.104,0-2-0.896-2-2s0.896-2,2-2
 							h24c1.104,0,2,0.896,2,2S41.104,41,40,41z M40,30H16c-1.104,0-2-0.896-2-2s0.896-2,2-2h24c1.104,0,2,0.896,2,2S41.104,30,40,30z
 							M40,19H16c-1.104,0-2-0.896-2-2s0.896-2,2-2h24c1.104,0,2,0.896,2,2S41.104,19,40,19z"/>
@@ -30,9 +32,9 @@
 				</label>
 			</li>
 			<li class="header_item">
-				<label for="services_checkbox" class="header_link service_open_label">
-					<div class="header_link_svg_wrap">
-						<svg class="header_link_svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847" xml:space="preserve">
+				<label for="services_checkbox" class="header_label service_open_label">
+					<div class="header_label_svg_wrap">
+						<svg class="header_label_svg" width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847">
 							<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
 								c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
 								c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
@@ -68,15 +70,15 @@
 				</a>
 			</li>
 			<li class="header_item">
-				<a href="#" class="header_link call">
+				<label  class="header_label consultation" for="consultation_checkbox">
 					Замовити дзвінок
-				</a>
+				</label>
 			</li>
 			<li class="header_item">
 				<div class="search">
 					<label class="search_label">
 						<input class="search_input" type="text" placeholder="Пошук">
-						<svg class="header_link_svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30.239px" height="30.239px" viewBox="0 0 30.239 30.239" xml:space="preserve">
+						<svg class="header_link_svg search_svg" x="0px" y="0px" width="30.239px" height="30.239px" viewBox="0 0 30.239 30.239">
 							<g>
 								<path d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735
 									c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0
@@ -93,21 +95,12 @@
 					<select name="language" id="language" class="language">
 						<option value="ua">
 							укр
-							<div class="language_img_wrap">
-								<img class="language_img" src="img/general/header/ua-flag.png" alt="ua">
-							</div>
 						</option>
 						<option value="uk">
 							eng
-							<div class="language_img_wrap">
-								<img class="language_img" src="img/general/header/uk-flag.png" alt="uk">
-							</div>
 						</option>
 						<option value="ru">
 							рус
-							<div class="language_img_wrap">
-								<img class="language_img" src="img/general/header/rus-flag.png" alt="rus">
-							</div>
 						</option>
 					</select>
 				</div>
@@ -129,7 +122,7 @@
 					</a>
 				</li>
 				<li class="menu_item">
-					<a href="#" class="menu_link">
+					<a href="price.html" class="menu_link">
 						Прайс-лист
 					</a>
 				</li>
@@ -175,132 +168,150 @@
 			</ul>
 		</div>
 	</menu>
+	<!-- Consultation popup -->
+	<div class="popup_consultation">
+		<div class="popup_consultation_inner">
+			<label class="popup_consultation_label" for="consultation_checkbox">
+				<svg class="popup_consultation_svg" viewBox="0 0 413.348 413.348" xmlns="http://www.w3.org/2000/svg">
+					<path d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z"/>
+				</svg>
+			</label>
+			<p class="popup_consultation_title">
+				Залиште свій телефон, та ми зателефонуємо Вам
+			</p>
+			<form action="" method="GET" name="popupConsultationForm" class="popup_consultation_form">
+				<input class="popup_consultation_input popup_consultation_field" type="text" name="fullName" required placeholder="ФІО*">
+				<input class="popup_consultation_input popup_consultation_field" type="tel" name="phoneNumber" required placeholder="Телефон*" pattern="[0-9]{10}" maxlength="12">
+				<input class="popup_consultation_input popup_consultation_button button" type="submit" value="Замовити консультацію">
+			</form>
+			<p class="popup_consultation_info">
+				*Обов'язкове для заповнення
+			</p>
+		</div>
+	</div>
 
 	<!-- PRICE -->
 	<div class="price">
 		<div class="price_inner">
-
 			<!-- Content -->
 			<div class="price_content">
 				<ul class="price_content_list">
 					<!-- Expertise -->
 					<li class="price_content_item">
 						<section id="expertise" class="expertise">
-							<div class="expertise_inner_wrap">
-								<div class="expertise_inner">
-									<div class="expertise_top">
-										<p class="expertise_title">
-											Експертиза
-										</p>
-										<div class="expertise_img_wrap">
-											<img class="expertise_img" src="img/price/1.png" alt="microscope">
-										</div>
+							<div class="expertise_inner">
+								<div class="expertise_top">
+									<p class="expertise_title">
+										Експертиза
+									</p>
+									<div class="expertise_img_wrap">
+										<img class="expertise_img" src="img/price/1.png" alt="microscope">
 									</div>
-									<div class="expertise_content">
-										<ul class="expertise_content_list">
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Експертиза обставин та механізму ДТП
-												</p>
-												<p class="description_right">
-													від 1758 грн.
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Транспортно-трасологічна експертиза
-												</p>
-												<p class="description_right">
-													від 2100 грн.
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Експертиза технічного стану транспортних засобів 
-												</p>
-												<p class="description_right">
-													від 1758 грн.
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Автотоварознавча експертиза
-												</p>
-												<p class="description_right">
-													від 1015 грн.
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Будівельно-технічна експертиза
-												</p>
-												<p class="description_right">
-													від 8438 грн. 
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Пожежно-технічна експертиза
-												</p>
-												<p class="description_right">
-													від 4200 грн. 
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Товарознавча експертиза
-												</p>
-												<p class="description_right">
-													від 3165 грн. 
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Економічна експертиза
-												</p>
-												<p class="description_right">
-													від 8438 грн. 
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Експертиза комп'ютерної техніки і програмних продуктів
-												</p>
-												<p class="description_right">
-													від 2800 грн. 
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Експертиза об'єктів інтелектуальної власності
-												</p>
-												<p class="description_right">
-													від 5625 грн. 
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Мистецтвознавча експертиза
-												</p>
-												<p class="description_right">
-													від 2812 грн.
-												</p>
-											</li>
-											<li class="expertise_content_item">
-												<p class="description_left">
-													Психологічна експертиза
-												</p>
-												<p class="description_right">
-													від 2109 грн. 
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="expertise_bottom">
-										<p class="expertise_bottom_description">
-											Плата за послуги, без ПДВ, затверджена на рівні послуг зазначених у постанові Кабінету Міністрів України від 4 червня 2007 року №795, окрім консультаційних , організаційних послуг та оціночної діяльності. 
-										</p>
-									</div>
+								</div>
+								<div class="expertise_content">
+									<ul class="expertise_content_list">
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Експертиза обставин та механізму ДТП
+											</p>
+											<p class="description_right">
+												від 1758 грн.
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Транспортно-трасологічна експертиза
+											</p>
+											<p class="description_right">
+												від 2100 грн.
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Експертиза технічного стану транспортних засобів 
+											</p>
+											<p class="description_right">
+												від 1758 грн.
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Автотоварознавча експертиза
+											</p>
+											<p class="description_right">
+												від 1015 грн.
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Будівельно-технічна експертиза
+											</p>
+											<p class="description_right">
+												від 8438 грн. 
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Пожежно-технічна експертиза
+											</p>
+											<p class="description_right">
+												від 4200 грн. 
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Товарознавча експертиза
+											</p>
+											<p class="description_right">
+												від 3165 грн. 
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Економічна експертиза
+											</p>
+											<p class="description_right">
+												від 8438 грн. 
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Експертиза комп'ютерної техніки і програмних продуктів
+											</p>
+											<p class="description_right">
+												від 2800 грн. 
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Експертиза об'єктів інтелектуальної власності
+											</p>
+											<p class="description_right">
+												від 5625 грн. 
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Мистецтвознавча експертиза
+											</p>
+											<p class="description_right">
+												від 2812 грн.
+											</p>
+										</li>
+										<li class="expertise_content_item">
+											<p class="description_left">
+												Психологічна експертиза
+											</p>
+											<p class="description_right">
+												від 2109 грн. 
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="expertise_bottom">
+									<p class="expertise_bottom_description">
+										Плата за послуги, без ПДВ, затверджена на рівні послуг зазначених у постанові Кабінету Міністрів України від 4 червня 2007 року №795, окрім консультаційних , організаційних послуг та оціночної діяльності. 
+									</p>
 								</div>
 							</div>
 						</section>
@@ -308,73 +319,71 @@
 					<!-- Research -->
 					<li class="price_content_item">
 						<section id="research" class="research">
-							<div class="research_inner_wrap">
-								<div class="research_inner">
-									<div class="research_top">
-										<p class="research_title">
-											Дослідження
-										</p>
-										<div class="research_img_wrap">
-											<img class="research_img" src="img/price/2.png" alt="research">
-										</div>
+							<div class="research_inner">
+								<div class="research_top">
+									<p class="research_title">
+										Дослідження
+									</p>
+									<div class="research_img_wrap">
+										<img class="research_img" src="img/price/2.png" alt="research">
 									</div>
-									<div class="research_content">
-										<ul class="research_content_list">
-											<li class="research_content_item">
-												<p class="description_left">
-													Почеркознавчі дослідження
-												</p>
-												<p class="description_right">
-													від 2250 грн.
-												</p>
-											</li>
-											<li class="research_content_item">
-												<p class="description_left">
-													Технічне дослідження документів
-												</p>
-												<p class="description_right">
-													від 2250 грн.
-												</p>
-											</li>
-											<li class="research_content_item">
-												<p class="description_left">
-													Комплексне дослідження транспортних засобів
-												</p>
-												<p class="description_right">
-													від 500 грн.
-												</p>
-											</li>
-											<li class="research_content_item">
-												<p class="description_left">
-													Вивчення та надання правової, фахової оцінки проведених експертиз в судовому процесі
-												</p>
-												<p class="description_right">
-													200 грн./год
-												</p>
-											</li>
-											<li class="research_content_item">
-												<p class="description_left">
-													Вивчення справ та надання консультацій перед призначенням експертиз та досліджень
-												</p>
-												<p class="description_right">
-													200 грн./год
-												</p>
-											</li>
-											<li class="research_content_item">
-												<p class="description_left">
-													Консультації з проведення інших видів досліджень (експертиз) та організація їх виконання (експертиза харчових продуктів, експертиза спеціальних хімічних речовин, молекулярно-генетична експертиза, експертиза металів та сплавів, експертиза сильнодіючих та отруйних речовин та інші)
-												</p>
-												<p class="description_right">
-													безкоштовно
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="research_bottom">
-										<p class="research_bottom_description">
-											Плата за послуги, без ПДВ, затверджена на рівні послуг зазначених у постанові Кабінету Міністрів України від 4 червня 2007 року №795, окрім консультаційних , організаційних послуг та оціночної діяльності. 
-										</p>
-									</div>
+								</div>
+								<div class="research_content">
+									<ul class="research_content_list">
+										<li class="research_content_item">
+											<p class="description_left">
+												Почеркознавчі дослідження
+											</p>
+											<p class="description_right">
+												від 2250 грн.
+											</p>
+										</li>
+										<li class="research_content_item">
+											<p class="description_left">
+												Технічне дослідження документів
+											</p>
+											<p class="description_right">
+												від 2250 грн.
+											</p>
+										</li>
+										<li class="research_content_item">
+											<p class="description_left">
+												Комплексне дослідження транспортних засобів
+											</p>
+											<p class="description_right">
+												від 500 грн.
+											</p>
+										</li>
+										<li class="research_content_item">
+											<p class="description_left">
+												Вивчення та надання правової, фахової оцінки проведених експертиз в судовому процесі
+											</p>
+											<p class="description_right">
+												200 грн./год
+											</p>
+										</li>
+										<li class="research_content_item">
+											<p class="description_left">
+												Вивчення справ та надання консультацій перед призначенням експертиз та досліджень
+											</p>
+											<p class="description_right">
+												200 грн./год
+											</p>
+										</li>
+										<li class="research_content_item">
+											<p class="description_left">
+												Консультації з проведення інших видів досліджень (експертиз) та організація їх виконання (експертиза харчових продуктів, експертиза спеціальних хімічних речовин, молекулярно-генетична експертиза, експертиза металів та сплавів, експертиза сильнодіючих та отруйних речовин та інші)
+											</p>
+											<p class="description_right">
+												безкоштовно
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="research_bottom">
+									<p class="research_bottom_description">
+										Плата за послуги, без ПДВ, затверджена на рівні послуг зазначених у постанові Кабінету Міністрів України від 4 червня 2007 року №795, окрім консультаційних , організаційних послуг та оціночної діяльності. 
+									</p>
 								</div>
 							</div>
 						</section>
@@ -382,206 +391,204 @@
 					<!-- Realty -->
 					<li class="price_content_item">
 						<section id="realty" class="realty">
-							<div class="realty_inner_wrap">
-								<div class="realty_inner">
-									<div class="realty_top">
-										<p class="realty_title">
-											Оцінка нерухомості
-										</p>
-										<div class="realty_img_wrap">
-											<img class="realty_img" src="img/price/3.png" alt="house">
-										</div>
+							<div class="realty_inner">
+								<div class="realty_top">
+									<p class="realty_title">
+										Оцінка нерухомості
+									</p>
+									<div class="realty_img_wrap">
+										<img class="realty_img" src="img/price/3.png" alt="house">
 									</div>
-									<div class="realty_content">
-										<!-- Apartments -->
-										<ul class="realty_content_list">
-											<li class="realty_content_item">
-												<p class="description_left">
-													Квартири до 30 кв.м.
-												</p>
-												<p class="description_right">
-													250 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Квартири від 30 до 70 кв.м.
-												</p>
-												<p class="description_right">
-													300 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Квартири від 70 до 80 кв.м.
-												</p>
-												<p class="description_right">
-													350 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Квартири від 80 до 90 кв.м.
-												</p>
-												<p class="description_right">
-													400 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Квартири від 90 до 100 кв.м.
-												</p>
-												<p class="description_right">
-													450 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Квартири більше 100 кв.м.
-												</p>
-												<p class="description_right">
-													від 600 грн.
-												</p>
-											</li>
-										</ul>
+								</div>
+								<div class="realty_content">
+									<!-- Apartments -->
+									<ul class="realty_content_list">
+										<li class="realty_content_item">
+											<p class="description_left">
+												Квартири до 30 кв.м.
+											</p>
+											<p class="description_right">
+												250 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Квартири від 30 до 70 кв.м.
+											</p>
+											<p class="description_right">
+												300 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Квартири від 70 до 80 кв.м.
+											</p>
+											<p class="description_right">
+												350 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Квартири від 80 до 90 кв.м.
+											</p>
+											<p class="description_right">
+												400 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Квартири від 90 до 100 кв.м.
+											</p>
+											<p class="description_right">
+												450 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Квартири більше 100 кв.м.
+											</p>
+											<p class="description_right">
+												від 600 грн.
+											</p>
+										</li>
+									</ul>
 
-										<!-- Houses -->
-										<ul class="realty_content_list">
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки до 60 кв.м.
-												</p>
-												<p class="description_right">
-													250 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки від 60 до 150 кв.м.
-												</p>
-												<p class="description_right">
-													300 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки від 150 до 170 кв.м.
-												</p>
-												<p class="description_right">
-													350 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки від 170 до 200 кв.м.
-												</p>
-												<p class="description_right">
-													400 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки від 200 до 300 кв.м.
-												</p>
-												<p class="description_right">
-													500 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки від 300 до 500 кв.м.
-												</p>
-												<p class="description_right">
-													від 600 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Будинки більше 500 кв.м.
-												</p>
-												<p class="description_right">
-													від 700 грн.
-												</p>
-											</li>
-										</ul>
+									<!-- Houses -->
+									<ul class="realty_content_list">
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки до 60 кв.м.
+											</p>
+											<p class="description_right">
+												250 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки від 60 до 150 кв.м.
+											</p>
+											<p class="description_right">
+												300 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки від 150 до 170 кв.м.
+											</p>
+											<p class="description_right">
+												350 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки від 170 до 200 кв.м.
+											</p>
+											<p class="description_right">
+												400 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки від 200 до 300 кв.м.
+											</p>
+											<p class="description_right">
+												500 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки від 300 до 500 кв.м.
+											</p>
+											<p class="description_right">
+												від 600 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Будинки більше 500 кв.м.
+											</p>
+											<p class="description_right">
+												від 700 грн.
+											</p>
+										</li>
+									</ul>
 
-										<!-- Non-residential premises -->
-										<ul class="realty_content_list">
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення до 60 кв.м.
-												</p>
-												<p class="description_right">
-													350 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення від 60 до 100 кв.м.
-												</p>
-												<p class="description_right">
-													400 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення від 100 до 150 кв.м.
-												</p>
-												<p class="description_right">
-													450 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення від 150 до 200 кв.м.
-												</p>
-												<p class="description_right">
-													500 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення від 200 до 300 кв.м.
-												</p>
-												<p class="description_right">
-													600 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення від 300 до 500 кв.м.
-												</p>
-												<p class="description_right">
-													від 700 грн.
-												</p>
-											</li>
-											<li class="realty_content_item">
-												<p class="description_left">
-													Нежитлові приміщення більше 500 кв.м.
-												</p>
-												<p class="description_right">
-													від 800 грн.
-												</p>
-											</li>
-										</ul>
+									<!-- Non-residential premises -->
+									<ul class="realty_content_list">
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення до 60 кв.м.
+											</p>
+											<p class="description_right">
+												350 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення від 60 до 100 кв.м.
+											</p>
+											<p class="description_right">
+												400 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення від 100 до 150 кв.м.
+											</p>
+											<p class="description_right">
+												450 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення від 150 до 200 кв.м.
+											</p>
+											<p class="description_right">
+												500 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення від 200 до 300 кв.м.
+											</p>
+											<p class="description_right">
+												600 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення від 300 до 500 кв.м.
+											</p>
+											<p class="description_right">
+												від 700 грн.
+											</p>
+										</li>
+										<li class="realty_content_item">
+											<p class="description_left">
+												Нежитлові приміщення більше 500 кв.м.
+											</p>
+											<p class="description_right">
+												від 800 грн.
+											</p>
+										</li>
+									</ul>
 
-										<!-- Garages and parking places -->
-										<ul class="realty_content_list">
-											<li class="realty_content_item">
-												<p class="description_left">
-													Гаражі та паркомісце
-												</p>
-												<p class="description_right">
-													від 300 грн.
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="realty_bottom">
-										<p class="realty_bottom_description">
-											Плата за послуги, без ПДВ.
-										</p>
-									</div>
+									<!-- Garages and parking places -->
+									<ul class="realty_content_list">
+										<li class="realty_content_item">
+											<p class="description_left">
+												Гаражі та паркомісце
+											</p>
+											<p class="description_right">
+												від 300 грн.
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="realty_bottom">
+									<p class="realty_bottom_description">
+										Плата за послуги, без ПДВ.
+									</p>
 								</div>
 							</div>
 						</section>
@@ -589,89 +596,87 @@
 					<!-- Auto transport -->
 					<li class="price_content_item">
 						<section id="autotransport" class="autotransport">
-							<div class="autotransport_inner_wrap">
-								<div class="autotransport_inner">
-									<div class="autotransport_top">
-										<p class="autotransport_title">
-											Оцінка автотранспорту
-										</p>
-										<div class="autotransport_img_wrap">
-											<img class="autotransport_img" src="img/price/4.png" alt="car">
-										</div>
+							<div class="autotransport_inner">
+								<div class="autotransport_top">
+									<p class="autotransport_title">
+										Оцінка автотранспорту
+									</p>
+									<div class="autotransport_img_wrap">
+										<img class="autotransport_img" src="img/price/4.png" alt="car">
 									</div>
-									<div class="autotransport_content">
-										<ul class="autotransport_content_list">
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Мототехніка
-												</p>
-												<p class="description_right">
-													від 300 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Автомобілі легкові стандарт
-												</p>
-												<p class="description_right">
-													від 300 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Автомобілі легкові престиж та позашляховики
-												</p>
-												<p class="description_right">
-													від 500 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Автомобілі вантажні та автобуси
-												</p>
-												<p class="description_right">
-													від 500 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Причіпи легкові
-												</p>
-												<p class="description_right">
-													від 300 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Причіпи та напівпричіпи вантажні
-												</p>
-												<p class="description_right">
-													від 500 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													Спецтехніка
-												</p>
-												<p class="description_right">
-													від 600 грн.
-												</p>
-											</li>
-											<li class="autotransport_content_item">
-												<p class="description_left">
-													С/г техніка
-												</p>
-												<p class="description_right">
-													від 600 грн.
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="autotransport_bottom">
-										<p class="autotransport_bottom_description">
-											Плата за послуги, без ПДВ.
-										</p>
-									</div>
+								</div>
+								<div class="autotransport_content">
+									<ul class="autotransport_content_list">
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Мототехніка
+											</p>
+											<p class="description_right">
+												від 300 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Автомобілі легкові стандарт
+											</p>
+											<p class="description_right">
+												від 300 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Автомобілі легкові престиж та позашляховики
+											</p>
+											<p class="description_right">
+												від 500 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Автомобілі вантажні та автобуси
+											</p>
+											<p class="description_right">
+												від 500 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Причіпи легкові
+											</p>
+											<p class="description_right">
+												від 300 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Причіпи та напівпричіпи вантажні
+											</p>
+											<p class="description_right">
+												від 500 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												Спецтехніка
+											</p>
+											<p class="description_right">
+												від 600 грн.
+											</p>
+										</li>
+										<li class="autotransport_content_item">
+											<p class="description_left">
+												С/г техніка
+											</p>
+											<p class="description_right">
+												від 600 грн.
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="autotransport_bottom">
+									<p class="autotransport_bottom_description">
+										Плата за послуги, без ПДВ.
+									</p>
 								</div>
 							</div>
 						</section>
@@ -679,33 +684,31 @@
 					<!-- Air transport -->
 					<li class="price_content_item">
 						<section id="airtransport" class="airtransport">
-							<div class="airtransport_inner_wrap">
-								<div class="airtransport_inner">
-									<div class="airtransport_top">
-										<p class="airtransport_title">
-											Оцінка водного і повітряного транспорту
-										</p>
-										<div class="airtransport_img_wrap">
-											<img class="airtransport_img" src="img/price/5.png" alt="helicopter">
-										</div>
+							<div class="airtransport_inner">
+								<div class="airtransport_top">
+									<p class="airtransport_title">
+										Оцінка водного і повітряного транспорту
+									</p>
+									<div class="airtransport_img_wrap">
+										<img class="airtransport_img" src="img/price/5.png" alt="helicopter">
 									</div>
-									<div class="airtransport_content">
-										<ul class="airtransport_content_list">
-											<li class="airtransport_content_item">
-												<p class="description_left">
-													Водний, повітряний транспорт
-												</p>
-												<p class="description_right">
-													договірна
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="airtransport_bottom">
-										<p class="airtransport_bottom_description">
-											Плата за послуги, без ПДВ.
-										</p>
-									</div>
+								</div>
+								<div class="airtransport_content">
+									<ul class="airtransport_content_list">
+										<li class="airtransport_content_item">
+											<p class="description_left">
+												Водний, повітряний транспорт
+											</p>
+											<p class="description_right">
+												договірна
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="airtransport_bottom">
+									<p class="airtransport_bottom_description">
+										Плата за послуги, без ПДВ.
+									</p>
 								</div>
 							</div>
 						</section>
@@ -713,63 +716,61 @@
 					<!-- Equipment -->
 					<li class="price_content_item">
 						<section id="equipment" class="equipment">
-							<div class="equipment_inner_wrap">
-								<div class="equipment_inner">
-									<div class="equipment_top">
-										<p class="equipment_title">
-											Оцінка обладнання
-										</p>
-										<div class="equipment_img_wrap">
-											<img class="equipment_img" src="img/price/6.png" alt="equipment">
-										</div>
+							<div class="equipment_inner">
+								<div class="equipment_top">
+									<p class="equipment_title">
+										Оцінка обладнання
+									</p>
+									<div class="equipment_img_wrap">
+										<img class="equipment_img" src="img/price/6.png" alt="equipment">
 									</div>
-									<div class="equipment_content">
-										<ul class="equipment_content_list">
-											<li class="equipment_content_item">
-												<p class="description_left">
-													С/г інвентар та обладнання
-												</p>
-												<p class="description_right">
-													від 200 грн.*
-												</p>
-											</li>
-											<li class="equipment_content_item">
-												<p class="description_left">
-													Обладнання
-												</p>
-												<p class="description_right">
-													від 200 грн.*
-												</p>
-											</li>
-											<li class="equipment_content_item">
-												<p class="description_left">
-													Технологічні лінії
-												</p>
-												<p class="description_right">
-													від 2000 грн.
-												</p>
-											</li>
-											<li class="equipment_content_item">
-												<p class="description_left">
-													Товари в оберті - 50 грн./поз., але не меньше 1000/звіт
-												</p>
-												<p class="description_right">
-													50 грн.**
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="equipment_bottom">
-										<p class="equipment_bottom_description">
-											* - 200 грн./1 позиція, але не меньше 1000/звіт
-										</p>
-										<p class="equipment_bottom_description">
-											** - 50 грн./1 позиція, але не меньше 1000/звіт
-										</p>
-										<p class="equipment_bottom_description">
-											Плата за послуги без ПДВ. 
-										</p>
-									</div>
+								</div>
+								<div class="equipment_content">
+									<ul class="equipment_content_list">
+										<li class="equipment_content_item">
+											<p class="description_left">
+												С/г інвентар та обладнання
+											</p>
+											<p class="description_right">
+												від 200 грн.*
+											</p>
+										</li>
+										<li class="equipment_content_item">
+											<p class="description_left">
+												Обладнання
+											</p>
+											<p class="description_right">
+												від 200 грн.*
+											</p>
+										</li>
+										<li class="equipment_content_item">
+											<p class="description_left">
+												Технологічні лінії
+											</p>
+											<p class="description_right">
+												від 2000 грн.
+											</p>
+										</li>
+										<li class="equipment_content_item">
+											<p class="description_left">
+												Товари в оберті - 50 грн./поз., але не меньше 1000/звіт
+											</p>
+											<p class="description_right">
+												50 грн.**
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="equipment_bottom">
+									<p class="equipment_bottom_description">
+										* - 200 грн./1 позиція, але не меньше 1000/звіт
+									</p>
+									<p class="equipment_bottom_description">
+										** - 50 грн./1 позиція, але не меньше 1000/звіт
+									</p>
+									<p class="equipment_bottom_description">
+										Плата за послуги без ПДВ. 
+									</p>
 								</div>
 							</div>
 						</section>
@@ -777,103 +778,98 @@
 					<!-- Enterprise -->
 					<li class="price_content_item">
 						<section id="enterprise" class="enterprise">
-							<div class="enterprise_inner_wrap">
-								<div class="enterprise_inner">
-									<div class="enterprise_top">
-										<p class="enterprise_title">
-											Підприємство
-										</p>
-										<div class="enterprise_img_wrap">
-											<img class="enterprise_img" src="img/price/7.png" alt="enterprise">
-										</div>
+							<div class="enterprise_inner">
+								<div class="enterprise_top">
+									<p class="enterprise_title">
+										Підприємство
+									</p>
+									<div class="enterprise_img_wrap">
+										<img class="enterprise_img" src="img/price/7.png" alt="enterprise">
 									</div>
-									<div class="enterprise_content">
-										<ul class="enterprise_content_list">
-											<li class="enterprise_content_item">
-												<p class="description_left">
-													Цілісний майновий комплекс (бізнес)
-												</p>
-												<p class="description_right">
-													від 3000 грн.
-												</p>
-											</li>
-											<li class="enterprise_content_item">
-												<p class="description_left">
-													Акції, облігації, векселя, паї
-												</p>
-												<p class="description_right">
-													від 3000 грн.
-												</p>
-											</li>
-											<li class="enterprise_content_item">
-												<p class="description_left">
-													Дебіторська заборгованість, борги, права вимог (по одній угоді)
-												</p>
-												<p class="description_right">
-													від 2000 грн.
-												</p>
-											</li>
-											<li class="enterprise_content_item">
-												<p class="description_left">
-													Нематеріальні активи
-												</p>
-												<p class="description_right">
-													договірна
-												</p>
-											</li>
-											<li class="enterprise_content_item">
-												<p class="description_left">
-													ТМ, патент та ін.
-												</p>
-												<p class="description_right">
-													договірна
-												</p>
-											</li>
-										</ul>
-									</div>
-									<div class="enterprise_bottom">
-										<p class="enterprise_bottom_description">
-											Плата за послуги без ПДВ.
-										</p>
-									</div>
+								</div>
+								<div class="enterprise_content">
+									<ul class="enterprise_content_list">
+										<li class="enterprise_content_item">
+											<p class="description_left">
+												Цілісний майновий комплекс (бізнес)
+											</p>
+											<p class="description_right">
+												від 3000 грн.
+											</p>
+										</li>
+										<li class="enterprise_content_item">
+											<p class="description_left">
+												Акції, облігації, векселя, паї
+											</p>
+											<p class="description_right">
+												від 3000 грн.
+											</p>
+										</li>
+										<li class="enterprise_content_item">
+											<p class="description_left">
+												Дебіторська заборгованість, борги, права вимог (по одній угоді)
+											</p>
+											<p class="description_right">
+												від 2000 грн.
+											</p>
+										</li>
+										<li class="enterprise_content_item">
+											<p class="description_left">
+												Нематеріальні активи
+											</p>
+											<p class="description_right">
+												договірна
+											</p>
+										</li>
+										<li class="enterprise_content_item">
+											<p class="description_left">
+												ТМ, патент та ін.
+											</p>
+											<p class="description_right">
+												договірна
+											</p>
+										</li>
+									</ul>
+								</div>
+								<div class="enterprise_bottom">
+									<p class="enterprise_bottom_description">
+										Плата за послуги без ПДВ.
+									</p>
 								</div>
 							</div>
 						</section>
 					</li>
 				</ul>
 			</div>
-
-			<!-- Right -->
-			<aside class="right">
-				<div class="right_inner">
-					<ul class="right_list">
-						<li class="right_item">
-							<a href="#expertise" class="right_link active">1. Експертиза</a>
+			<!-- Aside -->
+			<aside class="aside">
+				<div class="aside_inner">
+					<ul class="aside_list">
+						<li class="aside_item">
+							<a href="#expertise" class="aside_link">1. Експертиза</a>
 						</li>
-						<li class="right_item">
-							<a href="#research" class="right_link">2. Дослідження</a>
+						<li class="aside_item">
+							<a href="#research" class="aside_link">2. Дослідження</a>
 						</li>
-						<li class="right_item">
-							<a href="#realty" class="right_link">3. Оцінка нерухомості</a>
+						<li class="aside_item">
+							<a href="#realty" class="aside_link">3. Оцінка нерухомості</a>
 						</li>
-						<li class="right_item">
-							<a href="#autotransport" class="right_link">4. Оцінка автотранспорту</a>
+						<li class="aside_item">
+							<a href="#autotransport" class="aside_link">4. Оцінка автотранспорту</a>
 						</li>
-						<li class="right_item">
-							<a href="#airtransport" class="right_link">5. Оцінка водного і повітряного транспорту</a>
+						<li class="aside_item">
+							<a href="#airtransport" class="aside_link">5. Оцінка водного і повітряного транспорту</a>
 						</li>
-						<li class="right_item">
-							<a href="#equipment" class="right_link">6. Оцінка обладнання</a>
+						<li class="aside_item">
+							<a href="#equipment" class="aside_link">6. Оцінка обладнання</a>
 						</li>
-						<li class="right_item">
-							<a href="#enterprise" class="right_link">7. Підприємство</a>
+						<li class="aside_item">
+							<a href="#enterprise" class="aside_link">7. Підприємство</a>
 						</li>
 					</ul>
 				</div>
 			</aside>
-
 		</div>
-
 	</div>
 
 	<!-- FOOTER -->
@@ -1025,17 +1021,19 @@
 					&copy; UkrExpCompany 2019
 				</p>
 				<div class="copyright_logo">
-					<svg class="copyright_logo_svg" width="66" height="33" viewBox="0 0 66 33" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M34.2842 0.994965C46.8352 -2.33321 57.7248 3.19092 57.5538 10.1181C54.762 7.32098 52.6855 6.2819 48.2019 5.236C53.1808 7.24197 54.504 8.57336 56.4535 11.0058C51.5281 10.527 47.1148 7.65233 43.2049 5.10561C39.8659 2.93069 36.8941 0.994965 34.2842 0.994965ZM54.0232 20.1228C54.2605 19.1866 54.5109 18.3317 54.7874 17.5369L54.8026 17.5402L54.7989 17.5231L54.7964 17.511C56.1241 13.7077 58.0535 11.2801 62.0096 7.8903C56.656 11.348 54.3088 13.8294 52.4394 18.2557C51.4254 18.0645 50.417 17.969 49.414 17.969C47.7857 17.969 46.4361 18.5476 45.3652 19.7048C44.309 20.8489 43.7809 22.1837 43.7809 23.7092C43.7809 24.8269 44.0816 25.7738 44.6831 26.5497C45.2846 27.3256 46.1354 27.7135 47.2356 27.7135C47.6757 27.7135 48.0938 27.6215 48.4898 27.4373C49.2674 27.0692 50.1768 26.0697 51.2184 24.439C51.233 24.7941 51.2698 25.399 51.3284 26.2538C51.4018 27.1086 51.4384 27.7596 51.4384 28.2066C51.4384 29.114 51.1744 29.857 50.6463 30.4357C50.1182 31.0143 49.3846 31.3036 48.4458 31.3036C47.9031 31.3036 47.4336 31.1327 47.0376 30.7907C46.6415 30.4488 46.4434 30.0411 46.4434 29.5677C46.4434 29.4362 46.4654 29.2849 46.5094 29.114C46.3334 29.0877 46.1868 29.0746 46.0694 29.0746C45.5266 29.0746 45.0572 29.239 44.6611 29.5677C44.265 29.8964 44.067 30.2976 44.067 30.771C44.067 31.5337 44.441 32.0926 45.1892 32.4477C45.952 32.8159 46.8615 33 47.9177 33C49.7074 33 51.1744 32.4674 52.3186 31.4022C53.4628 30.3501 54.0349 29.0154 54.0349 27.3979C54.0349 26.9376 53.9836 26.2341 53.8809 25.2872C53.7783 24.3273 53.7269 23.525 53.7269 22.8807C53.7269 21.9732 53.8257 21.054 54.0232 20.1228ZM16.5253 24.3207L16.7453 20.0994C16.7453 18.6791 16.0045 17.969 14.5229 17.969C13.6721 17.969 12.8139 18.3174 11.9483 19.0144C11.0976 19.7115 10.4008 20.5202 9.85794 21.4407C9.90195 21.0067 9.92395 20.6122 9.92395 20.2572C9.92395 18.8369 9.18318 18.1268 7.70151 18.1268C6.86535 18.1268 6.02919 18.449 5.19302 19.0933C4.35686 19.7246 3.66746 20.4741 3.12462 21.3421C3.22738 20.4216 3.27864 19.8429 3.27864 19.6062C3.27864 19.1459 3.10998 18.7777 2.77255 18.5016C2.44985 18.2254 2.0244 18.0873 1.49629 18.0873C0.96819 18.0873 0.469462 18.1662 0 18.324C0.337436 19.6128 0.5061 20.7569 0.5061 21.7563C0.5061 22.7426 0.440086 23.742 0.30806 24.7546C0.176034 25.754 0.110021 26.451 0.110021 26.8456C0.110021 27.227 0.264051 27.5294 0.572112 27.7529C0.894915 27.9633 1.30563 28.0686 1.80436 28.0686C2.31783 28.0686 2.80929 27.9897 3.27864 27.8319C3.0586 26.9245 2.91194 25.9053 2.83856 24.7744C2.86793 24.3404 3.08061 23.7617 3.47668 23.0385C3.88751 22.302 4.38623 21.6314 4.97298 21.0265C5.55983 20.4216 6.08057 20.1191 6.53529 20.1191C7.19542 20.1191 7.52548 20.4478 7.52548 21.1054C7.52548 21.421 7.44483 22.1969 7.28343 23.433C7.12214 24.6691 7.04138 25.5503 7.04138 26.0763C7.04138 27.3256 7.66488 27.9502 8.91175 27.9502C9.2932 27.9502 9.76266 27.8713 10.32 27.7135C9.9827 26.6878 9.77729 25.6554 9.70391 24.6166C9.70391 23.9328 10.1587 22.9859 11.0682 21.776C11.9924 20.5662 12.7845 19.9613 13.4446 19.9613C14.0461 19.9613 14.3468 20.29 14.3468 20.9476C14.3468 21.2895 14.2662 22.1311 14.1048 23.4725C13.9435 24.8007 13.8627 25.7475 13.8627 26.313C13.8627 27.5623 14.4862 28.1869 15.7331 28.1869C16.2612 28.1869 16.7307 28.108 17.1414 27.9502C16.7307 26.8061 16.5253 25.5962 16.5253 24.3207ZM28.8431 23.3344C28.8431 21.8089 29.0411 20.29 29.4372 18.7777C27.6768 18.2385 25.9605 17.969 24.2882 17.969C22.6306 17.969 21.2809 18.6068 20.2394 19.8824C19.1979 21.1448 18.6771 22.6176 18.6771 24.3009C18.6771 25.4056 18.9851 26.3327 19.6012 27.0823C20.2174 27.8187 21.0829 28.1869 22.1977 28.1869C22.6672 28.1869 23.1219 28.0686 23.562 27.8319C24.5302 27.3059 25.5351 26.0434 26.5766 24.0445C26.3859 25.0177 26.2906 25.787 26.2906 26.3524C26.2906 26.9047 26.4006 27.3321 26.6206 27.6346C26.8407 27.9239 27.2295 28.0686 27.7868 28.0686C28.3443 28.0686 28.8871 27.9897 29.4152 27.8319C29.0338 26.3458 28.8431 24.8467 28.8431 23.3344ZM24.5742 19.6457C25.1171 19.6457 25.7772 19.7509 26.5546 19.9613C26.0853 21.5657 25.4471 23.0451 24.6402 24.3996C23.8334 25.754 23.1733 26.4313 22.6598 26.4313C22.2198 26.4313 21.8897 26.1223 21.6696 25.5042C21.4643 24.8861 21.3616 24.2746 21.3616 23.6697C21.3616 22.5256 21.611 21.4013 22.1097 20.2966C22.6526 19.8626 23.474 19.6457 24.5742 19.6457ZM41.4059 24.439L41.6259 20.0994C41.6259 18.6791 40.885 17.969 39.4035 17.969C38.5086 17.969 37.6138 18.324 36.719 19.0342C35.824 19.7312 35.0979 20.5464 34.5405 21.4802C34.6578 20.5859 34.7166 19.9349 34.7166 19.5273C34.7166 19.1197 34.5478 18.7777 34.2105 18.5016C33.8877 18.2254 33.4623 18.0873 32.9342 18.0873C32.4061 18.0873 31.9073 18.1662 31.4379 18.324C31.7752 19.6128 31.944 20.7569 31.944 21.7563C31.944 22.7426 31.878 23.742 31.746 24.7546C31.6139 25.754 31.5479 26.451 31.5479 26.8456C31.5479 27.227 31.702 27.5294 32.01 27.7529C32.3327 27.9633 32.7434 28.0686 33.2423 28.0686C33.7556 28.0686 34.2471 27.9897 34.7166 27.8319C34.4818 26.8981 34.3351 25.9185 34.2765 24.8927C34.3497 24.393 34.5992 23.7617 35.0246 22.999C35.4647 22.2231 35.9854 21.5262 36.5869 20.9081C37.203 20.2769 37.7532 19.9613 38.2373 19.9613C38.8974 19.9613 39.2274 20.29 39.2274 20.9476C39.2274 21.2895 39.1467 22.1311 38.9854 23.4725C38.824 24.8007 38.7434 25.7475 38.7434 26.313C38.7434 27.5623 39.3667 28.1869 40.6137 28.1869C41.1418 28.1869 41.6112 28.108 42.022 27.9502C41.6112 26.8061 41.4059 25.6357 41.4059 24.439ZM49.436 19.6457C50.1989 19.6457 50.9691 19.7509 51.7465 19.9613C51.233 21.4079 50.5582 22.7689 49.7221 24.0445C48.8859 25.3201 48.2185 25.9579 47.7197 25.9579C47.2796 25.9579 46.9642 25.6686 46.7735 25.09C46.5828 24.4982 46.4874 23.8933 46.4874 23.2752C46.4874 22.21 46.7515 21.204 47.2796 20.2572C47.9544 19.8495 48.6732 19.6457 49.436 19.6457ZM56.8462 27.0428C57.609 27.8844 58.7972 28.3053 60.4109 28.3053C62.0245 28.3053 63.3595 27.7727 64.4157 26.7075C65.4719 25.6292 66 24.3207 66 22.7821C66 19.4945 64.3717 17.8506 61.115 17.8506C59.5307 17.8506 58.2325 18.4096 57.2203 19.5273C56.2081 20.6451 55.702 21.9667 55.702 23.4922C55.702 25.0045 56.0833 26.188 56.8462 27.0428ZM58.4305 22.3086C58.4305 21.5459 58.5625 20.7832 58.8266 20.0205C59.4573 19.6917 60.1981 19.5273 61.049 19.5273C62.5306 19.5273 63.2715 20.9278 63.2715 23.7289C63.2715 24.7152 63.1101 25.445 62.7874 25.9185C62.4793 26.3919 61.8264 26.6286 60.829 26.6286C59.8461 26.6286 59.1859 26.2012 58.8486 25.3464C58.6872 24.9256 58.5772 24.5048 58.5185 24.084C58.4598 23.6631 58.4305 23.0713 58.4305 22.3086ZM55.8698 16.4758C58.5592 18.4777 63.7021 16.56 65.9154 11.6382C65.1812 12.4675 63.6011 12.8697 61.8251 13.3218C59.7474 13.8506 57.4015 14.4477 55.8282 15.8768C57.3377 15.9415 58.2358 15.8956 60.4284 14.8783C58.7545 16.0082 57.76 16.3755 55.8698 16.4758Z"/>
-					</svg>
+					<a href="https://mango.agency/new/index.html" class="copyright_logo_link" target="_blank">
+						<svg class="copyright_logo_svg" width="66" height="33" viewBox="0 0 66 33" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M34.2842 0.994965C46.8352 -2.33321 57.7248 3.19092 57.5538 10.1181C54.762 7.32098 52.6855 6.2819 48.2019 5.236C53.1808 7.24197 54.504 8.57336 56.4535 11.0058C51.5281 10.527 47.1148 7.65233 43.2049 5.10561C39.8659 2.93069 36.8941 0.994965 34.2842 0.994965ZM54.0232 20.1228C54.2605 19.1866 54.5109 18.3317 54.7874 17.5369L54.8026 17.5402L54.7989 17.5231L54.7964 17.511C56.1241 13.7077 58.0535 11.2801 62.0096 7.8903C56.656 11.348 54.3088 13.8294 52.4394 18.2557C51.4254 18.0645 50.417 17.969 49.414 17.969C47.7857 17.969 46.4361 18.5476 45.3652 19.7048C44.309 20.8489 43.7809 22.1837 43.7809 23.7092C43.7809 24.8269 44.0816 25.7738 44.6831 26.5497C45.2846 27.3256 46.1354 27.7135 47.2356 27.7135C47.6757 27.7135 48.0938 27.6215 48.4898 27.4373C49.2674 27.0692 50.1768 26.0697 51.2184 24.439C51.233 24.7941 51.2698 25.399 51.3284 26.2538C51.4018 27.1086 51.4384 27.7596 51.4384 28.2066C51.4384 29.114 51.1744 29.857 50.6463 30.4357C50.1182 31.0143 49.3846 31.3036 48.4458 31.3036C47.9031 31.3036 47.4336 31.1327 47.0376 30.7907C46.6415 30.4488 46.4434 30.0411 46.4434 29.5677C46.4434 29.4362 46.4654 29.2849 46.5094 29.114C46.3334 29.0877 46.1868 29.0746 46.0694 29.0746C45.5266 29.0746 45.0572 29.239 44.6611 29.5677C44.265 29.8964 44.067 30.2976 44.067 30.771C44.067 31.5337 44.441 32.0926 45.1892 32.4477C45.952 32.8159 46.8615 33 47.9177 33C49.7074 33 51.1744 32.4674 52.3186 31.4022C53.4628 30.3501 54.0349 29.0154 54.0349 27.3979C54.0349 26.9376 53.9836 26.2341 53.8809 25.2872C53.7783 24.3273 53.7269 23.525 53.7269 22.8807C53.7269 21.9732 53.8257 21.054 54.0232 20.1228ZM16.5253 24.3207L16.7453 20.0994C16.7453 18.6791 16.0045 17.969 14.5229 17.969C13.6721 17.969 12.8139 18.3174 11.9483 19.0144C11.0976 19.7115 10.4008 20.5202 9.85794 21.4407C9.90195 21.0067 9.92395 20.6122 9.92395 20.2572C9.92395 18.8369 9.18318 18.1268 7.70151 18.1268C6.86535 18.1268 6.02919 18.449 5.19302 19.0933C4.35686 19.7246 3.66746 20.4741 3.12462 21.3421C3.22738 20.4216 3.27864 19.8429 3.27864 19.6062C3.27864 19.1459 3.10998 18.7777 2.77255 18.5016C2.44985 18.2254 2.0244 18.0873 1.49629 18.0873C0.96819 18.0873 0.469462 18.1662 0 18.324C0.337436 19.6128 0.5061 20.7569 0.5061 21.7563C0.5061 22.7426 0.440086 23.742 0.30806 24.7546C0.176034 25.754 0.110021 26.451 0.110021 26.8456C0.110021 27.227 0.264051 27.5294 0.572112 27.7529C0.894915 27.9633 1.30563 28.0686 1.80436 28.0686C2.31783 28.0686 2.80929 27.9897 3.27864 27.8319C3.0586 26.9245 2.91194 25.9053 2.83856 24.7744C2.86793 24.3404 3.08061 23.7617 3.47668 23.0385C3.88751 22.302 4.38623 21.6314 4.97298 21.0265C5.55983 20.4216 6.08057 20.1191 6.53529 20.1191C7.19542 20.1191 7.52548 20.4478 7.52548 21.1054C7.52548 21.421 7.44483 22.1969 7.28343 23.433C7.12214 24.6691 7.04138 25.5503 7.04138 26.0763C7.04138 27.3256 7.66488 27.9502 8.91175 27.9502C9.2932 27.9502 9.76266 27.8713 10.32 27.7135C9.9827 26.6878 9.77729 25.6554 9.70391 24.6166C9.70391 23.9328 10.1587 22.9859 11.0682 21.776C11.9924 20.5662 12.7845 19.9613 13.4446 19.9613C14.0461 19.9613 14.3468 20.29 14.3468 20.9476C14.3468 21.2895 14.2662 22.1311 14.1048 23.4725C13.9435 24.8007 13.8627 25.7475 13.8627 26.313C13.8627 27.5623 14.4862 28.1869 15.7331 28.1869C16.2612 28.1869 16.7307 28.108 17.1414 27.9502C16.7307 26.8061 16.5253 25.5962 16.5253 24.3207ZM28.8431 23.3344C28.8431 21.8089 29.0411 20.29 29.4372 18.7777C27.6768 18.2385 25.9605 17.969 24.2882 17.969C22.6306 17.969 21.2809 18.6068 20.2394 19.8824C19.1979 21.1448 18.6771 22.6176 18.6771 24.3009C18.6771 25.4056 18.9851 26.3327 19.6012 27.0823C20.2174 27.8187 21.0829 28.1869 22.1977 28.1869C22.6672 28.1869 23.1219 28.0686 23.562 27.8319C24.5302 27.3059 25.5351 26.0434 26.5766 24.0445C26.3859 25.0177 26.2906 25.787 26.2906 26.3524C26.2906 26.9047 26.4006 27.3321 26.6206 27.6346C26.8407 27.9239 27.2295 28.0686 27.7868 28.0686C28.3443 28.0686 28.8871 27.9897 29.4152 27.8319C29.0338 26.3458 28.8431 24.8467 28.8431 23.3344ZM24.5742 19.6457C25.1171 19.6457 25.7772 19.7509 26.5546 19.9613C26.0853 21.5657 25.4471 23.0451 24.6402 24.3996C23.8334 25.754 23.1733 26.4313 22.6598 26.4313C22.2198 26.4313 21.8897 26.1223 21.6696 25.5042C21.4643 24.8861 21.3616 24.2746 21.3616 23.6697C21.3616 22.5256 21.611 21.4013 22.1097 20.2966C22.6526 19.8626 23.474 19.6457 24.5742 19.6457ZM41.4059 24.439L41.6259 20.0994C41.6259 18.6791 40.885 17.969 39.4035 17.969C38.5086 17.969 37.6138 18.324 36.719 19.0342C35.824 19.7312 35.0979 20.5464 34.5405 21.4802C34.6578 20.5859 34.7166 19.9349 34.7166 19.5273C34.7166 19.1197 34.5478 18.7777 34.2105 18.5016C33.8877 18.2254 33.4623 18.0873 32.9342 18.0873C32.4061 18.0873 31.9073 18.1662 31.4379 18.324C31.7752 19.6128 31.944 20.7569 31.944 21.7563C31.944 22.7426 31.878 23.742 31.746 24.7546C31.6139 25.754 31.5479 26.451 31.5479 26.8456C31.5479 27.227 31.702 27.5294 32.01 27.7529C32.3327 27.9633 32.7434 28.0686 33.2423 28.0686C33.7556 28.0686 34.2471 27.9897 34.7166 27.8319C34.4818 26.8981 34.3351 25.9185 34.2765 24.8927C34.3497 24.393 34.5992 23.7617 35.0246 22.999C35.4647 22.2231 35.9854 21.5262 36.5869 20.9081C37.203 20.2769 37.7532 19.9613 38.2373 19.9613C38.8974 19.9613 39.2274 20.29 39.2274 20.9476C39.2274 21.2895 39.1467 22.1311 38.9854 23.4725C38.824 24.8007 38.7434 25.7475 38.7434 26.313C38.7434 27.5623 39.3667 28.1869 40.6137 28.1869C41.1418 28.1869 41.6112 28.108 42.022 27.9502C41.6112 26.8061 41.4059 25.6357 41.4059 24.439ZM49.436 19.6457C50.1989 19.6457 50.9691 19.7509 51.7465 19.9613C51.233 21.4079 50.5582 22.7689 49.7221 24.0445C48.8859 25.3201 48.2185 25.9579 47.7197 25.9579C47.2796 25.9579 46.9642 25.6686 46.7735 25.09C46.5828 24.4982 46.4874 23.8933 46.4874 23.2752C46.4874 22.21 46.7515 21.204 47.2796 20.2572C47.9544 19.8495 48.6732 19.6457 49.436 19.6457ZM56.8462 27.0428C57.609 27.8844 58.7972 28.3053 60.4109 28.3053C62.0245 28.3053 63.3595 27.7727 64.4157 26.7075C65.4719 25.6292 66 24.3207 66 22.7821C66 19.4945 64.3717 17.8506 61.115 17.8506C59.5307 17.8506 58.2325 18.4096 57.2203 19.5273C56.2081 20.6451 55.702 21.9667 55.702 23.4922C55.702 25.0045 56.0833 26.188 56.8462 27.0428ZM58.4305 22.3086C58.4305 21.5459 58.5625 20.7832 58.8266 20.0205C59.4573 19.6917 60.1981 19.5273 61.049 19.5273C62.5306 19.5273 63.2715 20.9278 63.2715 23.7289C63.2715 24.7152 63.1101 25.445 62.7874 25.9185C62.4793 26.3919 61.8264 26.6286 60.829 26.6286C59.8461 26.6286 59.1859 26.2012 58.8486 25.3464C58.6872 24.9256 58.5772 24.5048 58.5185 24.084C58.4598 23.6631 58.4305 23.0713 58.4305 22.3086ZM55.8698 16.4758C58.5592 18.4777 63.7021 16.56 65.9154 11.6382C65.1812 12.4675 63.6011 12.8697 61.8251 13.3218C59.7474 13.8506 57.4015 14.4477 55.8282 15.8768C57.3377 15.9415 58.2358 15.8956 60.4284 14.8783C58.7545 16.0082 57.76 16.3755 55.8698 16.4758Z"/>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-
+	<!-- For smooth scrolling -->
+	<script type="text/javascript" src="js/smooth-scroll.polyfills.min.js"></script>
 	<!-- My-script -->
 	<script type="text/javascript" src="js/my-script.js"></script>
-
 </body>
 </html>
