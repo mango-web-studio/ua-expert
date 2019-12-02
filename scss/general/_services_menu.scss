@@ -1,0 +1,53 @@
+.services_checkbox {
+    display: none;
+
+    &:checked ~ .services_menu {
+        display: block;
+    }
+}
+
+.services_menu {
+    display: none;
+    position: fixed;
+    top: 4.7vw;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 4.7vw);
+    z-index: 99;
+
+    &__inner {
+        width: $site_width;
+        height: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+    &__list {
+        width: 270px;
+    }
+
+    &__item {
+        border-bottom: 1px solid $blue_9;
+        background-color: $blue_5;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &:hover {
+            background-color: $blue_8;
+
+            .services_menu__link {
+                color: $blue_3;
+            }
+        }
+    }
+
+    &__link {
+        @include font(14px, 20px, 'Montserrat-Bold');
+
+        display: block;
+        padding: 20px;
+        color: $gray_11;
+    }
+}

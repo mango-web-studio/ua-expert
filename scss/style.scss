@@ -4,12 +4,12 @@
 @import "mixins.scss";
 @import "reset.scss";
 // GENERAL
-@import "general/elements.scss";  // Styling the "selects" elements
 @import "general/header.scss";
 @import "general/menu.scss";
+@import "general/services_menu.scss";
 @import "general/footer.scss";
 @import "general/404.scss";
-@import "general/select.scss";  // Styling the "selects" elements
+@import "general/elements.scss";  // Styling the {select, button} elements
 //MAIN
 @import "main/banner.scss";
 @import "main/services.scss";
