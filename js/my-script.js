@@ -76,6 +76,16 @@ window.onload = function() {
     document.addEventListener("click", closeAllSelect);
 
 
+// GLOBAL
+    // preventDefault for empty links
+    let links = document.querySelectorAll('a[href="#"]');
+    for (const link of links) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+        });
+    }
+
+
 // HEADER
     // To displays the flag image in the languages switch item (in "header" element)
     let langSelect = document.getElementById('language');
@@ -99,7 +109,7 @@ window.onload = function() {
     // To display the number of slides of slider (on the homepage)
     let slickSlider = document.querySelector('.slick-slider');
     if (slickSlider) {
-        let collectionSlides = document.querySelectorAll('.slick-slide'),
+        let collectionSlides  = document.querySelectorAll('.slick-slide'),
             slickActiveSlides = document.querySelectorAll('.slick-active'),
             slickClonedSlides = document.querySelectorAll('.slick-cloned'),
             visibleSlides     = (slickActiveSlides.length - 1) / 3,

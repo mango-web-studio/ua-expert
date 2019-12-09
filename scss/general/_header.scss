@@ -74,20 +74,16 @@
     }
 
     .service_open_label {
+        @include icon(arrow-down);
+
+        position: relative;
         padding-right: 15px;
 
-        .header_label_svg {
-            height: 100%;
-            fill: $gray_1;
-
-            &_wrap {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                width: 10px;
-                height: 10px;
-            }
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0.8em;
         }
     }
 

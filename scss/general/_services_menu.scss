@@ -1,53 +1,141 @@
 .services_checkbox {
     display: none;
 
-    &:checked ~ .services_menu {
-        display: block;
+    &:checked ~ .services__menu {
+        display: flex;
     }
 }
 
-.services_menu {
-    display: none;
-    position: fixed;
-    top: 4.7vw;
-    left: 0;
-    width: 100%;
-    max-height: calc(100vh - 4.7vw);
-    z-index: 99;
+.services {
 
-    &__inner {
-        width: $site_width;
-        height: 100%;
-        padding: 0 10px;
-        margin: 0 auto;
-    }
+    &__menu {
+        display: none;
+        position: fixed;
+        top: 4.7vw;
+        left: 50%;
+        width: 100%;
+        max-width: $site_width;
+        max-height: calc(100vh - 4.7vw);
+        z-index: 99;
+        transform: translateX(-50%);
 
-    &__list {
-        width: 270px;
-    }
-
-    &__item {
-        border-bottom: 1px solid $blue_9;
-        background-color: $blue_5;
-
-        &:last-child {
-            border-bottom: 0;
+        &_list {
+            position: relative;
+            width: 23.54%;
         }
 
-        &:hover {
-            background-color: $blue_8;
+        &_item {
+            display: flex;
+            align-items: center;
+            height: 75px;
+            padding: 20px;
+            border-right: 1px solid $blue_9;
+            border-bottom: 1px solid $blue_9;
+            background-color: $blue_5;
 
-            .services_menu__link {
-                color: $blue_3;
+            &:hover {
+                background-color: $blue_8;
+
+                .services__menu_link {
+                    color: $blue_3;
+
+                    &::before {
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .services__submenu {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &_link {
+            @include font(14px, 20px, 'Montserrat-Bold');
+
+            color: $gray_11;
+            cursor: default;
+
+            &__arrow_right {
+                @include icon(arrow-right);
+
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    left: calc(100% + 5px);
+                    top: 0;
+                    font-size: 0.8em;
+                    transition: 0.3s;
+                }
+            }
+        }
+
+        &_close {
+            background-color: $blue_5;
+        }
+
+        &_label {
+    	    @include icon(close);
+
+            display: block;
+            padding: 10px;
+            background-color: $blue_7;
+
+            &:hover {
+                background-color: $blue_8;
+            }
+
+            &::before {
+                font-size: 2rem;
+                color: $gray_11;
+            }
+
+            &:hover::before {
+                color: $blue_2;
             }
         }
     }
 
-    &__link {
-        @include font(14px, 20px, 'Montserrat-Bold');
+    &__submenu {
+        display: none;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 324.85%;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
 
-        display: block;
-        padding: 20px;
-        color: $gray_11;
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background-color: $blue_5;
+        }
+
+        &_item {
+
+            &:hover {
+                background-color: $blue_8;
+
+                .services__submenu_link {
+                    color: $blue_3;
+                }
+            }
+        }
+
+        &_link {
+            @include font(14px, 20px, 'Montserrat-Bold');
+
+            display: flex;
+            align-items: center;
+            height: 75px;
+            padding: 20px;
+            border-bottom: 1px solid $blue_9;
+            border-right: 1px solid $blue_9;
+            color: $gray_11;
+        }
     }
 }
