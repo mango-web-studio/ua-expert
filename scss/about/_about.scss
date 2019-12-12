@@ -1,0 +1,233 @@
+.about {
+    background-color: $gray_4;
+
+    &__inner {
+        position: relative;
+        max-width: $site_width;
+        padding: 0 10px;
+        margin: auto;
+    }
+
+    .company {
+        margin-bottom: 7%;
+
+        &__title {
+            position: relative;
+            margin-bottom: 5.7%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 22.8%;
+                width: 200%;
+                padding-bottom: 17.54%;
+                background-color: $gray_5;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding-bottom: 17.54%;
+            }
+
+            &_inner {
+                @include font(40px, 50px, 'PlayfairDisplay-Bold');
+
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+
+                &__first_letter {
+
+                    &::first-letter {
+                        color: $blue_3;
+                    }
+                }
+            }
+        }
+
+        &__description {
+
+            &_footer {
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                color: $gray_10;
+            }
+        }
+
+        &__specialize {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5.7%;
+
+            &_title {
+                @include font(18px, 26px, 'Montserrat-Bold');
+
+                width: 22.8%;
+            }
+
+            &_description {
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                width: 74%;
+                color: $gray_10;
+            }
+        }
+
+        &__photo {
+            margin-bottom: 5.7%;
+        }
+
+        &__experience {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5.7%;
+            border-bottom: 1px solid $gray_1;
+            margin-bottom: 5.7%;
+
+            &_title {
+                @include font(18px, 26px, 'Montserrat-Bold');
+
+                width: 22.8%;
+            }
+
+            &_list {
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                width: 34.2%;
+                color: $gray_10;
+            }
+
+            &_item {
+                margin-bottom: 6.4%;
+            }
+
+            &_description {
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                width: 34.2%;
+                color: $gray_10;
+            }
+        }
+    }
+
+    .equipment {
+        margin-bottom: 7%;
+
+        &__title {
+            @include font(30px, 30px, 'PlayfairDisplay-Bold');
+
+            margin-bottom: 5.7%;
+
+            &__first_letter {
+
+                &::first-letter {
+                    color: $blue_3;
+                }
+            }
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            position: relative;
+            width: 22.8%;
+
+            &:last-child .equipment__item_description {
+                left: unset;
+                right: 0;
+            }
+
+            &_front {
+                position: relative;
+
+                &:hover + .equipment__item_description {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &_photo {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $blue_3;
+                    opacity: 0.7;
+                }
+
+                &_img {
+                    width: 100%;
+                }
+            }
+
+            &_icon {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                font-size: 18px;
+                color: $white_1;
+            }
+
+            &_title {
+                @include font(22px, 26px, 'Montserrat-Bold');
+
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                padding: 0 15px;
+                color: $white_1;
+            }
+
+            &_description {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 170%;
+                padding: 15px;
+                background-color: $blue_3;
+                transition: 0.3s;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                z-index: 1;
+
+                &_title {
+                    @include font(18px, 26px, 'Montserrat-Bold');
+
+                    margin-bottom: 15px;
+                    color: $white_1;
+                }
+
+                &_paragraph {
+                    @include font(14px, 24px, 'Montserrat-Regular');
+
+                    color: $white_1;
+                }
+            }
+        }
+    }
+
+    .credo {
+        padding-bottom: 7%;
+
+        &__paragraph {
+            @include font(40px, 50px, 'Montserrat-Bold');
+        }
+    }
+}

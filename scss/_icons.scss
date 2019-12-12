@@ -36,7 +36,7 @@
 	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == thin-arrow-right {
+	@if $filename == info {
 		$char: "\E004";
 	}
 
@@ -63,6 +63,6 @@
 .icon-close {
 	@include icon(close);
 }
-.icon-thin-arrow-right {
-	@include icon(thin-arrow-right);
-}
+.icon-info {
+	@include icon(info);
+}

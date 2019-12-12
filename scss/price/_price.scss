@@ -1,11 +1,9 @@
 .price {
-    background-color: $white_1;
+    background-color: $gray_4;
 
     &_inner {
         position: relative;
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         max-width: $site_width;
         padding: 0 10px;
         margin: auto;
@@ -66,9 +64,6 @@
 
         &_top {
             position: relative;
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: center;
 
             &::before {
                 content: "";
@@ -100,6 +95,7 @@
             top: 50%;
             right: 0;
             transform: translateY(-50%);
+            max-height: 100%;
 
             &_wrap {
                 position: relative;

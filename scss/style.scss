@@ -5,18 +5,20 @@
 @import "reset.scss";
 @import "icons.scss";
 // GENERAL
+@import "general/elements.scss";    // Styling the {select, button} elements
 @import "general/header.scss";
 @import "general/menu.scss";
 @import "general/services_menu.scss";
+@import "general/popup_consultation.scss";
 @import "general/footer.scss";
 @import "general/404.scss";
-@import "general/elements.scss";  // Styling the {select, button} elements
 //MAIN
 @import "main/banner.scss";
 @import "main/services.scss";
 @import "main/advantages.scss";
 @import "main/partners.scss";
 @import "main/responses.scss";
-@import "main/popup_consultation.scss";
 // PRICE
 @import "price/price.scss";
+// ABOUT
+@import "about/about.scss";

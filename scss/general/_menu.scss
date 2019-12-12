@@ -11,8 +11,8 @@
     left: -50%;
     top: 0;
     height: 100vh;
-    padding: 3.125%;
-    padding-right: 7.81%;
+    width: 28%;
+    padding: 60px;
     background-color: $blue_1;
     z-index: 100;
     transition: 0.5s;
@@ -22,10 +22,17 @@
     }
 
     &_close_label {
+        @include icon(close);
+
         position: absolute;
-        top: 0;
-        left: 120%;
-        width: 20px;
+        top: 60px;
+        right: 40px;
+        color: $white_1;
+
+        &::before {
+            display: block;
+            font-size: 20px;
+        }
     }
 
     &_close_svg {
