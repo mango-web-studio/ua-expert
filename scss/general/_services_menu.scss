@@ -41,6 +41,7 @@
 
                     &::before {
                         transform: rotate(90deg);
+                        color: $blue_3;
                     }
                 }
 
@@ -54,7 +55,9 @@
         &_link {
             @include font(14px, 20px, 'Montserrat-Bold');
 
+            padding-right: 15px;
             color: $gray_11;
+            transition: 0.3s;
             cursor: default;
 
             &__arrow_right {
@@ -64,9 +67,10 @@
 
                 &::before {
                     position: absolute;
-                    left: calc(100% + 5px);
+                    right: 0;
                     top: 0;
                     font-size: 0.8em;
+                    color: $gray_11;
                     transition: 0.3s;
                 }
             }

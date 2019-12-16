@@ -5,7 +5,7 @@
         position: relative;
         display: flex;
         max-width: $site_width;
-        padding: 0 10px;
+        padding: 0 $main_horizontal_padding;
         margin: auto;
     }
 

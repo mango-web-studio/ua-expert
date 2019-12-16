@@ -2,10 +2,6 @@
 	font: #{$font_size/$base_font_size}rem/#{$line_height/$base_font_size}rem $font_family;
 }
 
-@mixin font-fluid($font_size, $line_height, $font_family: sans-serif) {
-	font: #{$font_size*100/$site_width}vw/#{$line_height*100/$site_width}vw $font_family;
-}
-
 @mixin background($url, $repeat: no-repeat, $top: top, $left: left, $size: cover, $color: transparent) {
 	background-image: $url;
 	background-repeat: $repeat;

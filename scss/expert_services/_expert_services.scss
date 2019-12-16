@@ -1,0 +1,142 @@
+.expert_services {
+    background-color: $gray_4;
+
+    &__head {
+        @include background(url(../img/expert_services/expert_services__head_bg.jpg));
+
+        padding-bottom: 3.65%;
+
+        &_inner {
+            max-width: $site_width;
+            padding: 20px $main_horizontal_padding;
+            margin: 0 auto;
+        }
+
+        &_top {
+            margin-bottom: 5.7%;
+
+            &_list {
+                display: flex;
+            }
+
+            &_item {
+                margin-right: 5px;
+            }
+
+            &_link {
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                color: $gray_12;
+
+                &:hover {
+                    text-shadow: 0 0 3px;
+                }
+
+                &__icon {
+                    @include icon(arrow-right-thin);
+
+                    &::before {
+                        font-size: 0.6em;
+                    }
+                }
+            }
+        }
+
+        &_title {
+            @include font(36px, 42px, 'PlayfairDisplay-Bold');
+
+            color: $white_1;
+        }
+    }
+
+    &__inner {
+        max-width: $site_width;
+        padding: 50px $main_horizontal_padding;
+        margin: 0 auto;
+    }
+
+    &__description {
+        @include font(14px, 24px, 'Montserrat-Regular');
+
+        margin-bottom: 6.14%;
+        color: $gray_10;
+    }
+
+    &__expertise {
+
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+        }
+
+        &_item {
+            height: 100%;
+        }
+
+        &_link {
+            position: relative;
+            display: block;
+            height: 100%;
+
+            &:hover {
+
+                .expert_services__expertise_img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &_photo {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        &_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        &_description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 11.45%;
+
+            &_title {
+                @include font(16px, 24px, 'Montserrat-Bold');
+
+                color: $white_1;
+                overflow: hidden;
+            }
+
+            &_price {
+                @include font(18px, 24px, 'Montserrat-Bold');
+
+                margin-bottom: 20px;
+                color: $green_1;
+            }
+
+            &_more {
+                @include font(14px, 24px, 'Montserrat-Bold');
+
+                color: $blue_3;
+
+                &__icon {
+                    @include icon(arrow-right-thin, after);
+
+                    &::after {
+                        font-size: 0.6em;
+                    }
+                }
+            }
+        }
+    }
+}

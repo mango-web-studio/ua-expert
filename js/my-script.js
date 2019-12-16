@@ -153,10 +153,8 @@ window.onload = function() {
             asideLinks = price.querySelectorAll('.aside_link');
         document.addEventListener('scroll', function() {
             for (let i = 0; i < priceItems.length; i++) {
-                if (priceItems[0].getBoundingClientRect().top.toFixed() > 0) {
-                    asideLinks[0].classList.add('active');
-                }
-                if (priceItems[i].getBoundingClientRect().top.toFixed() <= 0 && priceItems[i].getBoundingClientRect().bottom.toFixed() > 0) {
+                if (priceItems[i].getBoundingClientRect().top.toFixed() < document.documentElement.clientHeight/2 
+                    && priceItems[i].getBoundingClientRect().bottom.toFixed() > document.documentElement.clientHeight/2) {
                     asideLinks[i].classList.add('active');
                 } else {
                     asideLinks[i].classList.remove('active');

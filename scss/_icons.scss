@@ -30,14 +30,17 @@
 	@if $filename == arrow-down {
 		$char: "\E001";
 	}
-	@if $filename == arrow-right {
+	@if $filename == arrow-right-thin {
 		$char: "\E002";
 	}
-	@if $filename == close {
+	@if $filename == arrow-right {
 		$char: "\E003";
 	}
-	@if $filename == info {
+	@if $filename == close {
 		$char: "\E004";
+	}
+	@if $filename == info {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -57,6 +60,9 @@
 .icon-arrow-down {
 	@include icon(arrow-down);
 }
+.icon-arrow-right-thin {
+	@include icon(arrow-right-thin);
+}
 .icon-arrow-right {
 	@include icon(arrow-right);
 }
@@ -65,4 +71,4 @@
 }
 .icon-info {
 	@include icon(info);
-}
+}

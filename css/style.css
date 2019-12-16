@@ -85,7 +85,7 @@ label {
   src: url("../fonts/iconsfont/myfont.eot?#iefix") format("eot"), url("../fonts/iconsfont/myfont.woff2") format("woff2"), url("../fonts/iconsfont/myfont.woff") format("woff"), url("../fonts/iconsfont/myfont.ttf") format("truetype"), url("../fonts/iconsfont/myfont.svg#myfont") format("svg");
 }
 
-.icon-arrow-down:before, .icon-arrow-right:before, .icon-close:before, .icon-info:before, .header .service_open_label:before, .menu_close_label:before, .services__menu_link__arrow_right:before, .services__menu_label:before {
+.icon-arrow-down:before, .icon-arrow-right-thin:before, .icon-arrow-right:before, .icon-close:before, .icon-info:before, .header .service_open_label:before, .menu_close_label:before, .services__menu_link__arrow_right:before, .services__menu_label:before, .expert_services__head_top_link__icon:before, .expert_services__expertise_description_more__icon:after {
   font-family: "myfont";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -100,16 +100,20 @@ label {
   content: "";
 }
 
-.icon-arrow-right:before {
+.icon-arrow-right-thin:before {
   content: "";
 }
 
-.icon-close:before {
+.icon-arrow-right:before {
   content: "";
 }
 
-.icon-info:before {
+.icon-close:before {
   content: "";
+}
+
+.icon-info:before {
+  content: "";
 }
 
 .select_wrap {
@@ -503,7 +507,7 @@ label {
 }
 
 .menu_close_label:before {
-  content: "";
+  content: "";
 }
 
 .menu_close_label::before {
@@ -606,6 +610,7 @@ label {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
+  color: #2657D8;
 }
 
 .services__menu_item:hover .services__submenu {
@@ -615,7 +620,11 @@ label {
 
 .services__menu_link {
   font: 1.4rem/2rem "Montserrat-Bold";
+  padding-right: 15px;
   color: #828282;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   cursor: default;
 }
 
@@ -624,15 +633,15 @@ label {
 }
 
 .services__menu_link__arrow_right:before {
-  content: "";
+  content: "";
 }
 
 .services__menu_link__arrow_right::before {
   position: absolute;
-  left: -webkit-calc(100% + 5px);
-  left: calc(100% + 5px);
+  right: 0;
   top: 0;
   font-size: 0.8em;
+  color: #828282;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -649,7 +658,7 @@ label {
 }
 
 .services__menu_label:before {
-  content: "";
+  content: "";
 }
 
 .services__menu_label:hover {
@@ -2202,4 +2211,156 @@ label {
 
 .about .credo__paragraph {
   font: 4rem/5rem "Montserrat-Bold";
+}
+
+.expert_services {
+  background-color: #F8F8F8;
+}
+
+.expert_services__head {
+  background-image: url(../img/expert_services/expert_services__head_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  background-color: transparent;
+  padding-bottom: 3.65%;
+}
+
+.expert_services__head_inner {
+  max-width: 1160px;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+.expert_services__head_top {
+  margin-bottom: 5.7%;
+}
+
+.expert_services__head_top_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.expert_services__head_top_item {
+  margin-right: 5px;
+}
+
+.expert_services__head_top_link {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  color: #C9C9C9;
+}
+
+.expert_services__head_top_link:hover {
+  text-shadow: 0 0 3px;
+}
+
+.expert_services__head_top_link__icon:before {
+  content: "";
+}
+
+.expert_services__head_top_link__icon::before {
+  font-size: 0.6em;
+}
+
+.expert_services__head_title {
+  font: 3.6rem/4.2rem "PlayfairDisplay-Bold";
+  color: #fff;
+}
+
+.expert_services__inner {
+  max-width: 1160px;
+  padding: 50px 10px;
+  margin: 0 auto;
+}
+
+.expert_services__description {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  margin-bottom: 6.14%;
+  color: #212121;
+}
+
+.expert_services__expertise_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.expert_services__expertise_item {
+  height: 100%;
+}
+
+.expert_services__expertise_link {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.expert_services__expertise_link:hover .expert_services__expertise_img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.expert_services__expertise_photo {
+  height: 100%;
+  overflow: hidden;
+}
+
+.expert_services__expertise_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.expert_services__expertise_description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 11.45%;
+}
+
+.expert_services__expertise_description_title {
+  font: 1.6rem/2.4rem "Montserrat-Bold";
+  color: #fff;
+  overflow: hidden;
+}
+
+.expert_services__expertise_description_price {
+  font: 1.8rem/2.4rem "Montserrat-Bold";
+  margin-bottom: 20px;
+  color: #2BDE28;
+}
+
+.expert_services__expertise_description_more {
+  font: 1.4rem/2.4rem "Montserrat-Bold";
+  color: #2657D8;
+}
+
+.expert_services__expertise_description_more__icon:after {
+  content: "";
+}
+
+.expert_services__expertise_description_more__icon::after {
+  font-size: 0.6em;
 }
