@@ -562,8 +562,11 @@ label {
   display: flex;
 }
 
-.services__menu {
+.hidden {
   display: none;
+}
+
+.services__menu {
   position: fixed;
   top: 4.7vw;
   left: 50%;
@@ -579,6 +582,7 @@ label {
 
 .services__menu_list {
   position: relative;
+  display: inline-block;
   width: 23.54%;
 }
 
@@ -898,6 +902,11 @@ label {
   font: 1.4rem/2.4rem "Montserrat-Bold";
   color: #fff;
   margin-bottom: 5.6%;
+}
+
+.footer_content_title_link {
+  font: 1.4rem/2.4rem "Montserrat-Bold";
+  color: #fff;
 }
 
 .footer_content_article {
@@ -2550,4 +2559,136 @@ label {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+
+.js_description_open .faq__content_description_title {
+  color: #2657D8;
+}
+
+.js_description_open .faq__content_description_title::before {
+  content: '-';
+}
+
+.faq {
+  background-color: #F8F8F8;
+}
+
+.faq__inner {
+  position: relative;
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.faq__top {
+  position: relative;
+  margin-bottom: 5.7%;
+}
+
+.faq__top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 22.8%;
+  width: 200%;
+  padding-bottom: 17.54%;
+  background-color: #EDEDED;
+}
+
+.faq__top::after {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 17.54%;
+}
+
+.faq__title {
+  font: 4rem/5rem "PlayfairDisplay-Bold";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.faq__title__first_letter::first-letter {
+  color: #2657D8;
+}
+
+.faq__content {
+  padding-bottom: 6.58%;
+}
+
+.faq__content_section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 4.82%;
+}
+
+.faq__content_section:last-child {
+  padding-bottom: 0;
+}
+
+.faq__content_title {
+  font: 1.8rem/2.6rem "Montserrat-Bold";
+  padding-right: 15px;
+  color: #212121;
+}
+
+.faq__content_description {
+  width: 74.12%;
+}
+
+.faq__content_description_item {
+  border-bottom: 1px solid #ABAEBD;
+  margin-bottom: 15px;
+}
+
+.faq__content_description_item:last-child {
+  margin-bottom: 0;
+}
+
+.faq__content_description_top {
+  margin-bottom: 25px;
+}
+
+.faq__content_description_title {
+  font: 1.4rem/2.4rem "Montserrat-Bold";
+  position: relative;
+  color: #212121;
+  cursor: pointer;
+}
+
+.faq__content_description_title::before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.faq__content_description_bottom {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.faq__content_description_paragraph {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  padding-bottom: 25px;
+  color: #212121;
 }

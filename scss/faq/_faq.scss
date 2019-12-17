@@ -1,0 +1,133 @@
+.js_description_open {
+
+    .faq__content_description {
+
+        &_title {
+            color: $blue_3;
+
+            &::before {
+                content: '-';
+            }
+        }
+    }
+}
+
+.faq {
+    background-color: $gray_4;
+
+    &__inner {
+        position: relative;
+        max-width: $site_width;
+        padding: 0 $main_horizontal_padding;
+        margin: auto;
+    }
+
+    &__top {
+        position: relative;
+        margin-bottom: 5.7%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 22.8%;
+            width: 200%;
+            padding-bottom: 17.54%;
+            background-color: $gray_5;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding-bottom: 17.54%;
+        }
+    }
+
+    &__title {
+
+        @include font(40px, 50px, 'PlayfairDisplay-Bold');
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        &__first_letter {
+
+            &::first-letter {
+                color: $blue_3;
+            }
+        }
+    }
+
+    &__content {
+        padding-bottom: 6.58%;
+
+        &_section {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 4.82%;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        &_title {
+            @include font(18px, 26px, 'Montserrat-Bold');
+
+            padding-right: 15px;
+            color: $gray_10;
+        }
+
+        &_description {
+            width: 74.12%;
+
+            &_item {
+                border-bottom: 1px solid $gray_1;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &_top {
+                margin-bottom: 25px;
+            }
+
+            &_title {
+                @include font(14px, 24px, 'Montserrat-Bold');
+
+                position: relative;
+                color: $gray_10;
+                cursor: pointer;
+
+                &::before {
+                    content: '+';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    font-size: 20px;
+                }
+            }
+
+            &_bottom {
+                height: 0;
+                overflow: hidden;
+                transition: 0.3s;
+            }
+
+            &_paragraph {
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                padding-bottom: 25px;
+                color: $gray_10;
+            }
+        }
+    }
+}

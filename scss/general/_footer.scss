@@ -36,6 +36,12 @@
 
             color: $white_1;
             margin-bottom: 5.6%;
+
+            &_link {
+                @include font(14px, 24px, 'Montserrat-Bold');
+
+                color: $white_1;
+            }
         }
 
         &_article {

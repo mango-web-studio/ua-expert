@@ -6,10 +6,14 @@
     }
 }
 
+.hidden {
+    display: none;
+}
+
 .services {
 
     &__menu {
-        display: none;
+        // display: none;
         position: fixed;
         top: 4.7vw;
         left: 50%;
@@ -21,6 +25,7 @@
 
         &_list {
             position: relative;
+            display: inline-block;
             width: 23.54%;
         }
 

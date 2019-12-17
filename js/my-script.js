@@ -84,6 +84,18 @@ window.onload = function() {
             e.preventDefault();
         });
     }
+    // open/close the services_menu when clicked
+    let service_open_label = document.querySelector('.service_open_label'),
+        services__menu     = document.querySelector('.services__menu');
+
+    service_open_label.addEventListener('click', function() {
+        services__menu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', function(e) {
+        if (e.target !== service_open_label && !services__menu.classList.contains('hidden')) {
+            services__menu.classList.add('hidden');
+        }
+    });
 
 
 // HEADER
@@ -158,6 +170,27 @@ window.onload = function() {
                     asideLinks[i].classList.add('active');
                 } else {
                     asideLinks[i].classList.remove('active');
+                }
+            }
+        });
+    }
+
+
+// FAQ page
+    let faqDescription      = document.querySelectorAll('.faq__content_description_item'),
+        faqDescriptionTitle = document.querySelectorAll('.faq__content_description_title'),
+        faqDescriptionBottom = document.querySelectorAll('.faq__content_description_bottom'),
+        faqDescriptionParagraph = document.querySelectorAll('.faq__content_description_paragraph');
+
+    if (faqDescription) {
+        document.addEventListener('click', function(e) {
+            for (let i = 0; i < faqDescription.length; i++) {
+                if (e.target == faqDescriptionTitle[i]) {
+                    faqDescription[i].classList.add('js_description_open');
+                    faqDescriptionBottom[i].style.height = `${faqDescriptionParagraph[i].offsetHeight}px`;
+                } else {
+                    faqDescription[i].classList.remove('js_description_open');
+                    faqDescriptionBottom[i].style.height = '0px';
                 }
             }
         });
