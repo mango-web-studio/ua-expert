@@ -48,7 +48,6 @@ gulp.task('iconfont', function(){
 	  targetPath: '../../scss/_icons.scss',
 	  fontPath: '../fonts/iconsfont/'
 	}))
-	// .pipe(gulp.dest('fonts/icons/'))
 	.pipe(iconfont({
 		fontName: fontName,
 		startUnicode: false,
@@ -63,5 +62,4 @@ gulp.task('iconfont', function(){
 gulp.task('watch', ['browser-sync', 'sass'], function() {
 	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('*.html', browserSync.reload);
-	gulp.watch('js/**/*.js', browserSync.reload);
 });
