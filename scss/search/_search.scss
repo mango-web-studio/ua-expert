@@ -1,0 +1,119 @@
+.search_request {
+    background-color: $gray_4;
+
+    &__head {
+        width: 100%;
+        background-color: $gray_5;
+
+        &_inner {
+            position: relative;
+            max-width: $site_width;
+            padding: 0 $main_horizontal_padding;
+            margin: 0 auto;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-bottom: 17.55%;
+            }
+        }
+
+        &_title {
+            @include font(22px, 26px, 'Montserrat-Regular');
+
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $gray_11;
+        }
+        
+        &_request {
+            color: $black_2;
+        }
+    }
+
+    &__content {
+        max-width: $site_width;
+        padding: 0 $main_horizontal_padding;
+        margin: 0 auto;
+
+        &_item {
+            padding: 4.39% 0;
+            border-bottom: 1px solid $gray_5;
+            counter-increment: request-order-number;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        &_link {
+            display: block;
+        }
+
+        &_title {
+            @include font(18px, 26px, 'Montserrat-Bold');
+
+            margin-bottom: 10px;
+            color: $gray_10;
+
+            &::before {
+                content: counter(request-order-number) '.';
+            }
+        }
+
+        &_subtitle {
+            @include font(14px, 24px, 'Montserrat-Regular');
+
+            margin-bottom: 15px;
+            color: $gray_13;
+        }
+
+        &_description {
+            @include font(14px, 24px, 'Montserrat-Regular');
+
+            color: $gray_10;
+        }
+    }
+
+    &__pagination {
+        max-width: $site_width;
+        padding: 0 $main_horizontal_padding;
+        margin: 0 auto;
+
+        &_list {
+            display: flex;
+            justify-content: center;
+            padding: 7.45% 0;
+        }
+
+        &_item {
+            margin-right: 25px;
+        }
+
+        &_link {
+            @include font(14px, 24px, 'Montserrat-Bold');
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            background-color: $white_1;
+            color: $black_1;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $gray_4;
+                border: 1px solid $blue_3;
+            }
+
+            &.active {
+                background-color: $blue_3;
+                color: $white_1;
+            }
+        }
+    }
+}

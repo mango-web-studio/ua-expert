@@ -2707,19 +2707,7 @@ label {
 
 .cases__head {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 7.45% 0;
+  padding: 0 0 17.54%;
   margin-bottom: 7.45%;
 }
 
@@ -3045,25 +3033,14 @@ label {
 
 .blog__head {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 7.45% 0;
+  padding: 0 0 17.54%;
   margin-bottom: 7.45%;
 }
 
 .blog__head::before {
   content: '';
   position: absolute;
+  top: 0;
   right: 23%;
   width: 100%;
   height: 100%;
@@ -3365,6 +3342,407 @@ label {
 }
 
 .blog__pagination_link.active {
+  background-color: #2657D8;
+  color: #fff;
+}
+
+.search_request {
+  background-color: #F8F8F8;
+}
+
+.search_request__head {
+  width: 100%;
+  background-color: #EDEDED;
+}
+
+.search_request__head_inner {
+  position: relative;
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.search_request__head_inner::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-bottom: 17.55%;
+}
+
+.search_request__head_title {
+  font: 2.2rem/2.6rem "Montserrat-Regular";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #828282;
+}
+
+.search_request__head_request {
+  color: #01020A;
+}
+
+.search_request__content {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.search_request__content_item {
+  padding: 4.39% 0;
+  border-bottom: 1px solid #EDEDED;
+  counter-increment: request-order-number;
+}
+
+.search_request__content_item:last-child {
+  border: 0;
+}
+
+.search_request__content_link {
+  display: block;
+}
+
+.search_request__content_title {
+  font: 1.8rem/2.6rem "Montserrat-Bold";
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.search_request__content_title::before {
+  content: counter(request-order-number) ".";
+}
+
+.search_request__content_subtitle {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  margin-bottom: 15px;
+  color: #949494;
+}
+
+.search_request__content_description {
+  font: 1.4rem/2.4rem "Montserrat-Regular";
+  color: #212121;
+}
+
+.search_request__pagination {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.search_request__pagination_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 7.45% 0;
+}
+
+.search_request__pagination_item {
+  margin-right: 25px;
+}
+
+.search_request__pagination_link {
+  font: 1.4rem/2.4rem "Montserrat-Bold";
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+
+.search_request__pagination_link:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #2657D8;
+}
+
+.search_request__pagination_link.active {
+  background-color: #2657D8;
+  color: #fff;
+}
+
+.international_cooperation {
+  width: 100%;
+  background-color: #F8F8F8;
+}
+
+.international_cooperation__inner {
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.international_cooperation__head {
+  position: relative;
+  padding: 0 0 17.54%;
+  margin-bottom: 7.45%;
+}
+
+.international_cooperation__head::before {
+  content: '';
+  position: absolute;
+  right: 23%;
+  width: 100%;
+  height: 100%;
+  background-color: #EDEDED;
+}
+
+.international_cooperation__head_title {
+  font: 4rem/4rem "PlayfairDisplay-Bold";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.international_cooperation__head_title:first-letter {
+  color: #2657D8;
+}
+
+.international_cooperation__content_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 340px;
+  grid-gap: 2.6em 2.63%;
+}
+
+.international_cooperation__content_item {
+  position: relative;
+}
+
+.international_cooperation__content_item:first-child {
+  grid-column: 1 / 4;
+}
+
+.international_cooperation__content_item:first-child .international_cooperation__content_description {
+  padding: 65px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-align-content: flex-end;
+      -ms-flex-line-pack: end;
+          align-content: flex-end;
+}
+
+.international_cooperation__content_item:first-child .international_cooperation__content_category {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  margin: 0 15px 15px 0;
+}
+
+.international_cooperation__content_item:first-child .international_cooperation__content_title {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.international_cooperation__content_item:first-child .international_cooperation__content_date {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+
+.international_cooperation__content_item:nth-child(9) {
+  grid-column: span 2;
+}
+
+.international_cooperation__content_link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.international_cooperation__content_link:hover .international_cooperation__content_description--important {
+  background-color: rgba(231, 21, 21, 0.7);
+}
+
+.international_cooperation__content_link:hover .international_cooperation__content_description--important .international_cooperation__content_category {
+  color: #E71515;
+  background-color: #fff;
+}
+
+.international_cooperation__content_link:hover .international_cooperation__content_description--interesting {
+  background-color: rgba(231, 125, 21, 0.7);
+}
+
+.international_cooperation__content_link:hover .international_cooperation__content_description--interesting .international_cooperation__content_category {
+  color: #F4890A;
+  background-color: #fff;
+}
+
+.international_cooperation__content_link:hover .international_cooperation__content_description--ordinary {
+  background-color: rgba(43, 100, 245, 0.7);
+}
+
+.international_cooperation__content_link:hover .international_cooperation__content_description--ordinary .international_cooperation__content_category {
+  color: #2B64F5;
+  background-color: #fff;
+}
+
+.international_cooperation__content_background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.international_cooperation__content_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.international_cooperation__content_description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 25px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.international_cooperation__content_description--important .international_cooperation__content_category {
+  display: block;
+  background-color: #E71515;
+}
+
+.international_cooperation__content_description--interesting .international_cooperation__content_category {
+  display: block;
+  background-color: #F4890A;
+}
+
+.international_cooperation__content_description--ordinary .international_cooperation__content_category {
+  background-color: #2B64F5;
+}
+
+.international_cooperation__content_category {
+  font: 1.2rem/1.6rem "Montserrat-Regular";
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 5px;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.international_cooperation__content_title {
+  font: 1.4rem/2.2rem "Montserrat-Bold";
+  padding-bottom: 25px;
+  border-bottom: 1px solid #5C5C5C;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.international_cooperation__content_date {
+  font: 1.2rem/2.6rem "Montserrat-Regular";
+  color: #ABAEBD;
+}
+
+.international_cooperation__pagination {
+  padding: 7.45% 0;
+}
+
+.international_cooperation__pagination_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.international_cooperation__pagination_item {
+  margin-right: 25px;
+}
+
+.international_cooperation__pagination_link {
+  font: 1.4rem/2.4rem "Montserrat-Bold";
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+
+.international_cooperation__pagination_link:hover {
+  background-color: #F8F8F8;
+  border: 1px solid #2657D8;
+}
+
+.international_cooperation__pagination_link.active {
   background-color: #2657D8;
   color: #fff;
 }
