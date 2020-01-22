@@ -77,12 +77,14 @@
 .button {
     @include font(14px, 60px, 'Montserrat-Bold');
 
+    display: inline-block;
     text-align: center;
     padding: 0 25px;
     border: 0;
     color: $white_1;
     background-color: $blue_2;
     border-radius: 50px;
+    white-space: nowrap;
     cursor: pointer;
     transition: 0.3s;
 

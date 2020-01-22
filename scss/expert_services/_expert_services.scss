@@ -20,24 +20,29 @@
             }
 
             &_item {
-                margin-right: 5px;
+                margin-right: 12px;
+
+                &:first-child .expert_services__head_top_link {
+
+                    &::before {
+                        display: none;
+                    }
+                }
             }
 
             &_link {
+                @include icon(arrow-right-thin);
                 @include font(14px, 24px, 'Montserrat-Regular');
 
                 color: $gray_12;
 
                 &:hover {
-                    text-shadow: 0 0 3px;
+                    color: $gray_4;
                 }
 
-                &__icon {
-                    @include icon(arrow-right-thin);
-
-                    &::before {
-                        font-size: 0.6em;
-                    }
+                &::before {
+                    font-size: 0.6em;
+                    margin-right: 8px;
                 }
             }
         }
