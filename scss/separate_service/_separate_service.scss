@@ -19,6 +19,7 @@
             &_list {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
             }
 
             &_item {
@@ -37,6 +38,7 @@
                 @include font(14px, 24px, 'Montserrat-Regular');
 
                 color: $gray_12;
+                transition: 0.3s;
 
                 &:hover {
                     color: $gray_4;

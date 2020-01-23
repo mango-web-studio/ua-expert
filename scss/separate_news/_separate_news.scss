@@ -1,0 +1,196 @@
+.separate_news {
+    background-color: $gray_4;
+
+    &__head {
+        @include background(url(../../img/separate_news/head_bg.jpg));
+        padding: 1.05% 0 5.21%;
+
+        &_inner {
+            width: 100%;
+            max-width: $site_width;
+            padding: 0 $main_horizontal_padding;
+            margin: 0 auto;
+        }
+
+        &_path {
+            margin-bottom: 6.58%;
+
+            &_list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &_item {
+                margin-right: 12px;
+
+                &::first-child .separate_news__head_path_link {
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+            &_link {
+                @include icon(arrow-right-thin);
+                @include font(14px, 24px, 'Montserrat-Regular');
+
+                color: $gray_12;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $gray_4;
+                }
+
+                &::before {
+                    font-size: 0.6em;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        &_content {
+            font-size: 0;
+        }
+
+        &_category {
+            @include font(12px, 24px, 'Montserrat-Regular');
+
+            display: inline-block;
+            padding: 4px 10px;
+            margin-right: 12px;
+            color: $white_1;
+            background-color: $red_1;
+        }
+
+        &_date {
+            @include font(12px, 24px, 'Montserrat-Regular');
+
+            display: inline-block;
+            padding: 4px 10px;
+            color: $gray_12;
+        }
+
+        &_title {
+            @include font(36px, 42px, 'PlayfairDisplay-Bold');
+
+            margin-top: 1.75%;
+            color: $white_1;
+        }
+    }
+
+    &__content {
+
+        &_inner {
+            width: 100%;
+            max-width: $site_width;
+            padding: 4.17% $main_horizontal_padding;
+            margin: 0 auto;
+        }
+
+        &_news {
+            margin-bottom: 5.26%;
+
+            &_paragraph {
+                @extend %clearfix;
+
+                margin-bottom: 5.7%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(2) {
+
+                    .separate_news__content_news_image {
+                        float: left;
+                        margin-left: 0;
+                        margin-right: 30px;
+                    }
+                }
+            }
+
+            &_title {
+                @include font(18px, 26px, 'Montserrat-Bold');
+
+                margin-bottom: 25px;
+                color: $gray_10;
+            }
+
+            &_description {
+                @include font(18px, 26px, 'Montserrat-Regular');
+
+                color: $gray_10;
+            }
+
+            &_image {
+                float: right;
+                margin-left: 30px;
+            }
+        }
+
+        &_comment {
+            padding: 7.02% 0;
+            border-top: 1px solid $gray_14;
+            border-bottom: 1px solid $gray_14;
+            margin-bottom: 5.26%;
+
+            &_title {
+                @include font(14px, 26px, 'Montserrat-Bold');
+
+                margin-bottom: 2.63%;
+                color: $gray_10;
+            }
+
+            &_form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &_input {
+                    width: 25.44%;
+                    height: 48px;
+                    padding: 0 20px;
+                    border: 1px solid $gray_14;
+                    border-radius: 50px;
+
+                    &::placeholder {
+                        @include font(14px, 26px, 'Montserrat-Regular');
+
+                        color: $gray_10;
+                    }
+
+                    &:nth-child(2) {
+                        width: 53.95%;
+                    }
+                }
+
+                &_submit {
+                    @include font(16px, 24px, 'Montserrat-Bold');
+
+                    width: 14.39%;
+                    height: 48px;
+
+                    &:hover {
+                        border: 1px solid $gray_14;
+                    }
+                }
+            }
+        }
+
+        &_comments {
+            margin-bottom: 5.26%;
+
+            &_title {
+                @include font(40px, 46px, 'PlayfairDisplay-Bold');
+
+                margin-bottom: 4.39%;
+                color: $gray_10;
+
+                &::first-letter {
+                    color: $blue_3;
+                }
+            }
+        }
+    }
+}

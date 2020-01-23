@@ -118,8 +118,17 @@ window.onload = function() {
 
 
 // HOMEPAGE
+	// Slick slider settings
+    if ($('.responses_slider')) {
+        $('.responses_slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true
+        });
+    }
     // To display the number of slides of slider (on the homepage)
-    let slickSlider = document.querySelector('.slick-slider');
+    let slickSlider = document.querySelector('.responses_slider');
     if (slickSlider) {
         let collectionSlides  = document.querySelectorAll('.slick-slide'),
             slickActiveSlides = document.querySelectorAll('.slick-active'),
@@ -193,6 +202,20 @@ window.onload = function() {
                     faqDescriptionBottom[i].style.height = '0px';
                 }
             }
+        });
+    }
+
+
+// SEPARATE NEWS
+	// Slick slider settings
+    if ($('.separate_news__content_comments_list')) {
+        $('.separate_news__content_comments_list').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            adaptiveHeight: true
         });
     }
 };
