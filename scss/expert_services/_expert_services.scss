@@ -75,10 +75,6 @@
             grid-gap: 30px;
         }
 
-        &_item {
-            height: 100%;
-        }
-
         &_link {
             position: relative;
             display: block;
@@ -133,6 +129,7 @@
                 @include font(14px, 24px, 'Montserrat-Bold');
 
                 color: $blue_3;
+                white-space: nowrap;
 
                 &__icon {
                     @include icon(arrow-right-thin, after);

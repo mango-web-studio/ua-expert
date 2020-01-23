@@ -1,4 +1,6 @@
 .separate_service {
+    @include background(url(../img/separate_service/page_img_bg.png), no-repeat, 0, 70%, 55%);
+
     background-color: $gray_4;
     overflow-x: hidden;
 
@@ -102,6 +104,24 @@
                 width: 1000%;
                 height: 100%;
                 background-color: $gray_5;
+            }
+
+            &_button {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 23%;
+                transform: translateY(-50%);
+                text-align: center;
+
+                &_link {
+                    border: 1px solid transparent;
+
+                    &:hover {
+                        border: 1px solid $black_1;
+                        background-color: transparent;
+                    }
+                }
             }
         }
 
@@ -335,6 +355,92 @@
 
             &_button {
                 text-align: center;
+
+                &_link {
+                    border: 1px solid transparent;
+
+                    &:hover {
+                        border: 1px solid $black_1;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            // Section 5 list
+
+            &_list_5 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 30px;
+            }
+
+            &_item_5 {
+
+                &_link {
+                    position: relative;
+                    display: block;
+                    height: 100%;
+
+                    &:hover {
+
+                        .separate_service__section_content_item_5_img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                &_photo {
+                    height: 100%;
+                    overflow: hidden;
+                }
+
+                &_img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 0.3s;
+                }
+
+                &_description {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 100%;
+                    padding: 11.45%;
+
+                    &_title {
+                        @include font(16px, 24px, 'Montserrat-Bold');
+
+                        color: $white_1;
+                        overflow: hidden;
+                    }
+
+                    &_price {
+                        @include font(18px, 24px, 'Montserrat-Bold');
+
+                        margin-bottom: 20px;
+                        color: $green_1;
+                    }
+
+                    &_more {
+                        @include font(14px, 24px, 'Montserrat-Bold');
+
+                        color: $blue_3;
+                        white-space: nowrap;
+
+                        &__icon {
+                            @include icon(arrow-right-thin, after);
+
+                            &::after {
+                                font-size: 0.6em;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
