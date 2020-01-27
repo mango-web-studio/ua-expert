@@ -210,11 +210,13 @@ window.onload = function() {
 	// Slick slider settings
     if ($('.separate_news__content_comments_list')) {
         $('.separate_news__content_comments_list').slick({
+            swipe: true,
             dots: true,
-            arrows: false,
+            dotsClass: 'separate_news__content_comments_pagination',
             infinite: true,
             speed: 300,
             slidesToShow: 2,
+            slidesToScroll: 2,
             adaptiveHeight: true
         });
     }

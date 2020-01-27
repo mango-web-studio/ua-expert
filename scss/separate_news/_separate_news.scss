@@ -23,7 +23,7 @@
             &_item {
                 margin-right: 12px;
 
-                &::first-child .separate_news__head_path_link {
+                &:first-child .separate_news__head_path_link {
 
                     &::before {
                         display: none;
@@ -191,6 +191,219 @@
                     color: $blue_3;
                 }
             }
+
+            &_item {
+
+                &:nth-child(odd) {
+                    margin-right: 15px;
+                }
+
+                &:nth-child(even) {
+                    margin-left: 15px;
+                }
+
+                &_name {
+                    @include font(18px, 26px, 'Montserrat-Bold');
+
+                    margin-bottom: 10px;
+                    color: $gray_10;
+                }
+
+                &_date {
+                    @include font(14px, 26px, 'Montserrat-Regular');
+
+                    margin-bottom: 20px;
+                    color: $gray_13;
+                }
+
+                &_message {
+                    @include font(14px, 26px, 'Montserrat-Regular');
+
+                    font-style: italic;
+                    margin-bottom: 20px;
+                    color: $gray_10;
+                }
+            }
+
+            &_pagination {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2.2%;
+
+                .slick-active {
+
+                    button {
+                        background-color: $blue_3;
+                        color: $white_1;
+                    }
+                }
+
+                li {
+                    border-radius: 50%;
+                    margin: 0 13px;
+                }
+
+                button {
+                    @include font(14px, 24px, 'Montserrat-Bold');
+
+                    width: 30px;
+                    height: 30px;
+                    padding: 0;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    background-color: $white_1;
+                    color: $gray_10;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        border: 1px solid $blue_3;
+                    }
+                }
+            }
+        }
+
+        &_similar_news {
+
+            &_title {
+                @include font(40px, 46px, 'PlayfairDisplay-Bold');
+
+                margin-bottom: 4.39%;
+                color: $gray_10;
+
+                &::first-letter {
+                    color: $blue_3;
+                }
+            }
+
+            &_list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 340px;
+                grid-gap: 2.6em 2.63%;
+            }
+
+            &_item {
+                position: relative;
+
+                &_category {
+                    @include font(12px, 16px, 'Montserrat-Regular');
+
+                    display: none;
+                    position: absolute;
+                    top: 25px;
+                    left: 25px;
+                    padding: 5px;
+                    color: $white_1;
+                    transition: 0.2s;
+                }
+
+                &_title {
+                    @include font(14px, 22px, 'Montserrat-Bold');
+
+                    padding-bottom: 25px;
+                    border-bottom: 1px solid $gray_8;
+                    margin-bottom: 15px;
+                    color: $white_1;
+                }
+
+                &_date {
+                    @include font(12px, 26px, 'Montserrat-Regular');
+
+                    color: $gray_1;
+                }
+            }
+
+            &_link {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+
+                    .separate_news__content_similar_news_description {
+
+                        &--important {
+                            background-color: $red_2;
+
+                            .separate_news__content_similar_news_item_category {
+                                color: $red_1;
+                                background-color: $white_1;
+                            }
+                        }
+
+                        &--interesting {
+                            background-color: $orange_2;
+
+                            .separate_news__content_similar_news_item_category {
+                                color: $orange_1;
+                                background-color: $white_1;
+                            }
+                        }
+
+                        &--ordinary {
+                            background-color: $blue_10;
+
+                            .separate_news__content_similar_news_item_category {
+                                color: $blue_2;
+                                background-color: $white_1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_background {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+            &_img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &_description {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 25px;
+                transition: 0.2s;
+
+                &--important {
+
+                    .separate_news__content_similar_news_item_category {
+                        display: block;
+                        background-color: $red_1;
+                    }
+                }
+
+                &--interesting {
+
+                    .separate_news__content_similar_news_item_category {
+                        display: block;
+                        background-color: $orange_1;
+                    }
+                }
+
+                &--ordinary {
+
+                    .separate_news__content_similar_news_item_category {
+                        // display: block;
+                        background-color: $blue_2;
+                    }
+                }
+            }
+
         }
     }
 }
