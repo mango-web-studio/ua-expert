@@ -77,25 +77,13 @@ window.onload = function() {
 
 
 // GLOBAL
-    // preventDefault for empty links
+    // PreventDefault for empty links
     let links = document.querySelectorAll('a[href="#"]');
     for (const link of links) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
         });
     }
-    // open/close the services_menu when clicked
-    let service_open_label = document.querySelector('.service_open_label'),
-        services__menu     = document.querySelector('.services__menu');
-
-    service_open_label.addEventListener('click', function() {
-        services__menu.classList.toggle('hidden');
-    });
-    document.addEventListener('click', function(e) {
-        if (e.target !== service_open_label && !services__menu.classList.contains('hidden')) {
-            services__menu.classList.add('hidden');
-        }
-    });
 
 
 // HEADER
@@ -127,6 +115,7 @@ window.onload = function() {
             dots: true
         });
     }
+
     // To display the number of slides of slider (on the homepage)
     let slickSlider = document.querySelector('.responses_slider');
     if (slickSlider) {
@@ -164,8 +153,7 @@ window.onload = function() {
 
 
 // PRICE page
-    // Settings for smooth scrolling (price page)
-    let scroll = new SmoothScroll('a[href*="#"]');
+    var scroll = new SmoothScroll('a[href*="#"]');
 
     // Sets "aside link" class name "active" (price page)
     let price = document.querySelector('.price');
@@ -208,16 +196,16 @@ window.onload = function() {
 
 // SEPARATE NEWS
 	// Slick slider settings
-    if ($('.separate_news__content_comments_list')) {
-        $('.separate_news__content_comments_list').slick({
-            swipe: true,
-            dots: true,
-            dotsClass: 'separate_news__content_comments_pagination',
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            adaptiveHeight: true
-        });
-    }
+    // if ($('.separate_news__content_comments_list')) {
+    //     $('.separate_news__content_comments_list').slick({
+    //         swipe: true,
+    //         dots: true,
+    //         dotsClass: 'separate_news__content_comments_pagination',
+    //         infinite: true,
+    //         speed: 300,
+    //         slidesToShow: 2,
+    //         slidesToScroll: 2,
+    //         adaptiveHeight: true
+    //     });
+    // }
 };

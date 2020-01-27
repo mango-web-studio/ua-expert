@@ -1,27 +1,23 @@
-.services_checkbox {
-    display: none;
-
-    &:checked ~ .services__menu {
-        display: flex;
-    }
-}
-
-.hidden {
-    display: none;
+.service_open_label:hover + .services__menu {
+    display: flex;
 }
 
 .services {
 
     &__menu {
-        // display: none;
+        display: none;
         position: fixed;
-        top: 4.7vw;
+        top: 100%;
         left: 50%;
         width: 100%;
         max-width: $site_width;
         max-height: calc(100vh - 4.7vw);
         z-index: 99;
         transform: translateX(-50%);
+
+        &:hover {
+            display: flex;
+        }
 
         &_list {
             position: relative;

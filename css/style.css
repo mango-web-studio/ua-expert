@@ -208,11 +208,19 @@ label {
   top: 0;
   left: 0;
   width: 100%;
+  padding-bottom: 4.7%;
   background-color: #00020E;
   z-index: 99;
 }
 
 .header_list {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -221,15 +229,13 @@ label {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
   width: 100%;
-  height: 4.7vw;
   max-width: 1160px;
-  margin: auto;
   padding: 0 10px;
 }
 
 .header_item {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,6 +288,10 @@ label {
   fill: #fff;
 }
 
+.header .menu_open_label {
+  height: 100%;
+}
+
 .header .menu_open_label .header_label_svg {
   fill: #fff;
 }
@@ -306,6 +316,7 @@ label {
 
 .header .service_open_label {
   position: relative;
+  height: 100%;
   padding-right: 15px;
 }
 
@@ -315,8 +326,11 @@ label {
 
 .header .service_open_label::before {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-size: 0.8em;
 }
 
@@ -560,24 +574,17 @@ label {
   color: #fff;
 }
 
-.services_checkbox {
-  display: none;
-}
-
-.services_checkbox:checked ~ .services__menu {
+.service_open_label:hover + .services__menu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .services__menu {
+  display: none;
   position: fixed;
-  top: 4.7vw;
+  top: 100%;
   left: 50%;
   width: 100%;
   max-width: 1160px;
@@ -587,6 +594,13 @@ label {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.services__menu:hover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .services__menu_list {
