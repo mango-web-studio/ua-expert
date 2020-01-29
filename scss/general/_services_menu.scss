@@ -1,47 +1,43 @@
 .service_open_label:hover + .services__menu {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .services {
 
     &__menu {
-        display: none;
-        position: fixed;
+        position: absolute;
         top: 100%;
-        left: 50%;
+        left: 0;
         width: 100%;
+        width: 23.54%;
         max-width: $site_width;
         max-height: calc(100vh - 4.7vw);
-        z-index: 99;
-        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
 
         &:hover {
-            display: flex;
+            visibility: visible;
+            opacity: 1;
         }
 
         &_list {
-            position: relative;
-            display: inline-block;
-            width: 23.54%;
+            display: block;
         }
 
         &_item {
-            display: flex;
-            align-items: center;
-            height: 75px;
-            padding: 20px;
-            border-right: 1px solid $blue_9;
-            border-bottom: 1px solid $blue_9;
             background-color: $blue_5;
+            transition: 0.2s;
 
             &:hover {
                 background-color: $blue_8;
 
-                .services__menu_link {
+                .services__menu_link_span {
                     color: $blue_3;
 
                     &::before {
-                        transform: rotate(90deg);
+                        transform: translateY(-50%) rotate(90deg);
                         color: $blue_3;
                     }
                 }
@@ -54,93 +50,151 @@
         }
 
         &_link {
-            @include font(14px, 20px, 'Montserrat-Bold');
-
-            padding-right: 15px;
-            color: $gray_11;
-            transition: 0.3s;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            height: 75px;
+            border-right: 1px solid $blue_9;
+            border-bottom: 1px solid $blue_9;
+            overflow: hidden;
             cursor: default;
 
-            &__arrow_right {
-                @include icon(arrow-right);
+            &_span {
+                @include font(14px, 20px, 'Montserrat-Bold');
 
-                position: relative;
-
-                &::before {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    font-size: 0.8em;
-                    color: $gray_11;
-                    transition: 0.3s;
-                }
-            }
-        }
-
-        &_close {
-            background-color: $blue_5;
-        }
-
-        &_label {
-    	    @include icon(close);
-
-            display: block;
-            padding: 10px;
-            background-color: $blue_7;
-
-            &:hover {
-                background-color: $blue_8;
-            }
-
-            &::before {
-                font-size: 2rem;
                 color: $gray_11;
-            }
+                transition: 0.2s;
 
-            &:hover::before {
-                color: $blue_2;
+                &--arrow_right {
+                    @include icon(arrow-right);
+
+                    position: relative;
+                    padding-right: 20px;
+
+                    &::before {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 0.8em;
+                        color: $gray_11;
+                        transition: 0.2s;
+                    }
+                }
             }
         }
     }
 
     &__submenu {
-        display: none;
-        display: flex;
         position: absolute;
         top: 0;
         left: 100%;
         width: 324.85%;
         opacity: 0;
         visibility: hidden;
-        transition: 0.3s;
+        transition: 0.2s;
 
         &_list {
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            background-color: $blue_5;
         }
 
         &_item {
+            background-color: $blue_6;
+            transition: 0.2s;
 
             &:hover {
                 background-color: $blue_8;
-
-                .services__submenu_link {
-                    color: $blue_3;
-                }
             }
         }
 
         &_link {
-            @include font(14px, 20px, 'Montserrat-Bold');
+            @include font(14px, 20px, 'Montserrat-Regular');
 
             display: flex;
+            justify-content: flex-start;
             align-items: center;
             height: 75px;
             padding: 20px;
             border-bottom: 1px solid $blue_9;
             border-right: 1px solid $blue_9;
-            color: $gray_11;
+            color: $white_1;
+            transition: 0.2s;
+            overflow: hidden;
+
+            &:hover {
+                color: $blue_3;
+            }
+        }
+    }
+}
+
+// whidth $tablet = 768px;
+@media only screen and (max-width: $tablet) {
+
+    .services {
+
+        &__menu {
+            width: 100%;
+            overflow-y: scroll;
+
+            &_list {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &_item  {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                &:hover {
+
+                    .services__submenu {
+                        display: block;
+                    }
+                }
+            }
+
+            &_link {
+
+                &_span {
+                    @include font(12px, 20px, 'Montserrat-Bold');
+
+                    color: $blue_3;
+
+                    &--arrow_right {
+
+                        &::before {
+                            color: $blue_3;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__submenu {
+            display: none;
+            position: relative;
+            width: 100%;
+            top: 100%;
+            left: 0;
+
+            &_list {
+                grid-template-columns: 1fr;
+            }
+
+            &_item {
+                background-color: $blue_5;
+            }
+
+            &_link {
+                @include font(10px, 20px, 'Montserrat-Regular');
+
+                color: $white_1;
+            }
         }
     }
 }

@@ -96,7 +96,7 @@
             height: 100%;
             background: $blue_4;
             opacity: 0;
-            transition: 0.3s;
+            transition: 0.2s;
             z-index: -1;
         }
 
@@ -132,13 +132,13 @@
             @include font(14px, 24px, 'Montserrat-Bold');
 
             color: $blue_3;
-            transition: 0.3s;
+            transition: 0.2s;
 
 
             &_svg {
 
                 fill: $blue_3;
-                transition: 0.3s;
+                transition: 0.2s;
 
                 &_wrap {
                     display: inline-block;

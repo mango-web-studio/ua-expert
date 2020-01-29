@@ -3,22 +3,23 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding-bottom: 4.7%;
+    padding: 1.46% 0;
+    // padding-bottom: 4.7%;
     background-color: $blue_1;
     z-index: 99;
 
     &_list {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        height: 100%;
-        transform: translateX(-50%);
+        position: relative;
+        // top: 0;
+        // left: 50%;
+        // transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
         height: 100%;
         width: 100%;
         max-width: $site_width;
         padding: 0 $main_horizontal_padding;
+        margin: 0 auto;
     }
 
     &_item {
@@ -33,7 +34,7 @@
         display: flex;
         align-items: center;
         color: $gray_1;
-        transition: 0.3s;
+        transition: 0.2s;
     }
 
     &_link {
@@ -43,7 +44,7 @@
         display: flex;
         align-items: center;
         color: $gray_1;
-        transition: 0.3s;
+        transition: 0.2s;
 
         &:hover {
             color: $blue_2;
@@ -70,7 +71,7 @@
     .consultation {
         color: $gray_1;
         border-bottom: 1px solid $gray_1;
-        transition: 0.3s;
+        transition: 0.2s;
 
         &:hover {
             color: $blue_2;
@@ -111,27 +112,31 @@
     }
 
     .search {
+        width: 100%;
+        max-width: 100px;
 
         &_label {
             position: relative;
+            display: block;
             padding-left: 15px;
         }
 
-        &_svg {
+        &_icon {
+            @include icon(search);
+
             position: absolute;
-            top: 0;
+            top: 50%;
             left: 0;
-            width: 10px;
-            height: 100%;
-            fill: $gray_1;
+            transform: translateY(-50%);
+            color: $gray_1;
         }
 
         &_input {
             @include font(14px, 18px, 'Montserrat-Regular');
 
-            width: 100px;
+            width: 100%;
             border: 0;
-            background-color: $blue_1;
+            background-color: transparent;
             color: $gray_1;
 
             &:focus::placeholder {
@@ -247,4 +252,46 @@
         width: 16px;
         height: 10px;
     }
+}
+
+// whidth $tablet = 768px;
+@media only screen and (max-width: $tablet) {
+
+    .header {
+
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            justify-items: center;
+        }
+
+        &_item {
+
+            &:first-child {
+                grid-column: span 2;
+            }
+
+            &:nth-child(2) {
+                grid-column: span 2;
+            }
+
+            &:nth-child(3) {
+                grid-column: span 2;
+            }
+
+            &:nth-child(4) {
+                grid-column: 3 / 5;
+                grid-row: 1 / 2;
+            }
+
+            &:nth-child(5) {
+                grid-column: span 2;
+            }
+        }
+    }
+}
+
+// whidth $tablet = 767px;
+@media only screen and (max-width: $tablet) {
+
 }

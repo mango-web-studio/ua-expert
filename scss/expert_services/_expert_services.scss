@@ -36,7 +36,7 @@
                 @include font(14px, 24px, 'Montserrat-Regular');
 
                 color: $gray_12;
-                transition: 0.3s;
+                transition: 0.2s;
 
                 &:hover {
                     color: $gray_4;
@@ -99,7 +99,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         &_description {

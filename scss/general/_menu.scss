@@ -8,7 +8,7 @@
 
 .menu {
     position: fixed;
-    left: -50%;
+    left: -100%;
     top: 0;
     height: 100vh;
     width: 28%;
@@ -73,5 +73,38 @@
         @include font(16px, 20px, 'Montserrat-Regular');
 
         color: $white_1;
+    }
+}
+
+// whidth $tablet = 768px;
+@media only screen and (max-width: $tablet) {
+
+    .menu {
+        width: 50%;
+
+        &_close_label {
+            top: 35px;
+            right: 35px;
+
+            &::before {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) and (orientation: landscape) {
+
+    .menu {
+        width: 50%;
+
+        &_close_label {
+            top: 35px;
+            right: 35px;
+
+            &::before {
+                font-size: 2.5rem;
+            }
+        }
     }
 }

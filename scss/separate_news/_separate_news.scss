@@ -36,7 +36,7 @@
                 @include font(14px, 24px, 'Montserrat-Regular');
 
                 color: $gray_12;
-                transition: 0.3s;
+                transition: 0.2s;
 
                 &:hover {
                     color: $gray_4;
@@ -255,7 +255,7 @@
                     background-color: $white_1;
                     color: $gray_10;
                     cursor: pointer;
-                    transition: 0.3s;
+                    transition: 0.2s;
 
                     &:hover {
                         border: 1px solid $blue_3;

@@ -42,6 +42,9 @@
 	@if $filename == info {
 		$char: "\E005";
 	}
+	@if $filename == search {
+		$char: "\E006";
+	}
 
 	@return $char;
 }
@@ -71,4 +74,7 @@
 }
 .icon-info {
 	@include icon(info);
+}
+.icon-search {
+	@include icon(search);
 }
