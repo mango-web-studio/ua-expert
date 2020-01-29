@@ -38,17 +38,17 @@ label {
 	cursor: pointer;
 }
 
-// whidth $tablet = 768px;
-@media only screen and (max-width: $tablet) {
-
+// 480px - 767px
+@include respond-to(mobile) {
+	
 	html {
 		font-size: 8px;
 	}
 }
 
-// whidth $mobile = 480px;
-@media only screen and (max-width: $mobile) {
-
+// 320px - 479px
+@include respond-to(mobile_small) {
+	
 	html {
 		font-size: 6px;
 	}

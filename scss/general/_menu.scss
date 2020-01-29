@@ -11,27 +11,28 @@
     left: -100%;
     top: 0;
     height: 100vh;
-    width: 28%;
-    padding: 60px;
+    width: auto;
+    max-width: 30%;
+    padding: 5%;
     background-color: $blue_1;
     z-index: 100;
     transition: 0.5s;
 
     &_inner {
-        position: relative;
+        padding-right: 10px;
     }
 
     &_close_label {
         @include icon(close);
 
         position: absolute;
-        top: 60px;
+        top: 40px;
         right: 40px;
         color: $white_1;
 
         &::before {
             display: block;
-            font-size: 20px;
+            font-size: 2rem;
         }
     }
 
@@ -76,35 +77,73 @@
     }
 }
 
-// whidth $tablet = 768px;
-@media only screen and (max-width: $tablet) {
+
+// 768px - 1280px
+@include respond-to(tablet) {
 
     .menu {
-        width: 50%;
+        width: auto;
+        max-width: 50%;
 
         &_close_label {
             top: 35px;
-            right: 35px;
+            right: 25px;
+        }
 
-            &::before {
-                font-size: 2.5rem;
-            }
+        &_inner {
+            max-height: 100%;
+            overflow-y: scroll;
+            padding-right: 10px;
         }
     }
 }
 
-@media only screen and (max-width: $tablet) and (orientation: landscape) {
+// 480px - 767px
+@include respond-to(mobile) {
 
     .menu {
-        width: 50%;
+        width: auto;
+        max-width: 50%;
 
         &_close_label {
-            top: 35px;
-            right: 35px;
+            top: 20px;
+            right: 25px;
+        }
+
+        &_inner {
+            max-height: 100%;
+            overflow-y: scroll;
+            padding-right: 10px;
+        }
+    }
+}
+
+// 320px - 479px
+@include respond-to(mobile_small) {
+
+    .menu {
+        width: 100%;
+        max-width: none;
+        padding: 50px 30px;
+
+        &_close_label {
+            top: 25px;
+            right: 25px;
 
             &::before {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
+        }
+
+        &_inner {
+            max-height: 100%;
+            overflow-y: scroll;
+            padding-right: 10px;
+        }
+
+        &_link {
+            font-size: 2.6rem;
+            line-height: 3rem;
         }
     }
 }
