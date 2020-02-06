@@ -10,8 +10,8 @@
     position: fixed;
     left: -100%;
     top: 0;
+    height: 100%;
     height: 100vh;
-    width: auto;
     max-width: 30%;
     padding: 5%;
     background-color: $blue_1;
@@ -78,7 +78,7 @@
 }
 
 
-// 768px - 1280px
+// 768px - 1024px
 @include respond-to(tablet) {
 
     .menu {
@@ -102,18 +102,9 @@
 @include respond-to(mobile) {
 
     .menu {
-        width: auto;
-        max-width: 50%;
 
         &_close_label {
             top: 20px;
-            right: 25px;
-        }
-
-        &_inner {
-            max-height: 100%;
-            overflow-y: scroll;
-            padding-right: 10px;
         }
     }
 }
@@ -128,17 +119,10 @@
 
         &_close_label {
             top: 25px;
-            right: 25px;
 
             &::before {
                 font-size: 3rem;
             }
-        }
-
-        &_inner {
-            max-height: 100%;
-            overflow-y: scroll;
-            padding-right: 10px;
         }
 
         &_link {

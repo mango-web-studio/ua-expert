@@ -62,4 +62,5 @@ gulp.task('iconfont', function(){
 gulp.task('watch', ['browser-sync', 'sass'], function() {
 	gulp.watch('scss/**/*.scss', ['sass']);
 	gulp.watch('*.html', browserSync.reload);
+	gulp.watch('js/*.js', browserSync.reload);
 });

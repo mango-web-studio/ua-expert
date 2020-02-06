@@ -78,7 +78,7 @@ window.onload = function() {
 
 // GLOBAL
     // PreventDefault for empty links
-    let links = document.querySelectorAll('a[href="#"]');
+    const links = document.querySelectorAll('a[href="#"]');
     for (const link of links) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -105,6 +105,29 @@ window.onload = function() {
     }
 
 
+// MENU, Services Menu
+    // Disable scrolling when opening the menu and a screen width <= 1024px
+    document.addEventListener('click', function(e) {
+        let body            = document.querySelector('body'),
+            servicesMenu    = document.querySelector('.services__menu'),
+            // serviceLabel    = document.querySelector('.service_open_label'),
+            menuCheckbox    = document.querySelector('#menu_checkbox'),
+            consultCheckbox = document.querySelector('#consultation_checkbox');
+
+        consultCheckbox.checked && document.documentElement.clientWidth <= 1024 ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
+        if (menuCheckbox.checked && document.documentElement.clientWidth <= 1024) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'visible';
+        }
+        if (servicesMenu.style.visibility == 'visible' && document.documentElement.clientWidth <= 1024) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'visible';
+        }
+    });
+
+
 // HOMEPAGE
 	// Slick slider settings
     if ($('.responses_slider')) {
@@ -112,7 +135,18 @@ window.onload = function() {
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 3,
-            dots: true
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        // arrows: false,
+                        dots: false
+                    }
+                }
+            ]
         });
     }
 
@@ -120,35 +154,66 @@ window.onload = function() {
     let slickSlider = document.querySelector('.responses_slider');
     if (slickSlider) {
         let collectionSlides  = document.querySelectorAll('.slick-slide'),
-            slickActiveSlides = document.querySelectorAll('.slick-active'),
+            slickActiveSlides = document.querySelectorAll('.slick-slide.slick-active'),
             slickClonedSlides = document.querySelectorAll('.slick-cloned'),
-            visibleSlides     = (slickActiveSlides.length - 1) / 3,
             hiddenSlides      = Math.ceil((collectionSlides.length - slickClonedSlides.length) / 3),
             leftArrow         = document.querySelector('.slick-prev'),
             rightArrow        = document.querySelector('.slick-next'),
             slideFromSlides   = document.createElement('p');
-        slideFromSlides.className = 'js_slide_from_slides';
-        slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-        slickSlider.append(slideFromSlides);
 
-        leftArrow.addEventListener('click', function () {
-            visibleSlides--;
-            if ( visibleSlides >= 1 ) {
-                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-            } else {
-                visibleSlides = hiddenSlides;
-                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-            }
-        });
-        rightArrow.addEventListener('click', function () {
-            visibleSlides++;
-            if ( visibleSlides <= hiddenSlides ) {
-                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-            } else {
-                visibleSlides = 1;
-                slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-            }
-        });
+        slideFromSlides.className = 'js_slide_from_slides';
+
+        if (document.documentElement.clientWidth < 480) {
+            let visibleSlides = slickActiveSlides.length;
+
+            slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
+            slickSlider.append(slideFromSlides);
+
+            leftArrow.addEventListener('click', function () {
+                visibleSlides--;
+                if ( visibleSlides >= 1 ) {
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
+                } else {
+                    visibleSlides = collectionSlides.length - slickClonedSlides.length;
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
+                }
+            });
+            rightArrow.addEventListener('click', function () {
+                visibleSlides++;
+                if ( visibleSlides <= collectionSlides.length - slickClonedSlides.length ) {
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
+                } else {
+                    visibleSlides = 1;
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
+                }
+            });
+        }
+
+        if (document.documentElement.clientWidth >= 480) {
+            let visibleSlides = slickActiveSlides.length / 3;
+
+            slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+            slickSlider.append(slideFromSlides);
+
+            leftArrow.addEventListener('click', function () {
+                visibleSlides--;
+                if ( visibleSlides >= 1 ) {
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+                } else {
+                    visibleSlides = hiddenSlides;
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+                }
+            });
+            rightArrow.addEventListener('click', function () {
+                visibleSlides++;
+                if ( visibleSlides <= hiddenSlides ) {
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+                } else {
+                    visibleSlides = 1;
+                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
+                }
+            });
+        }
     }
 
 

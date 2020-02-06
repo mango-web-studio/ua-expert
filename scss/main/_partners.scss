@@ -23,7 +23,7 @@
         @include font(40px, 45px, 'PlayfairDisplay-Bold');
 
         position: absolute;
-        bottom: calc(100% - 22.5px);
+        top: -22.5px;
         left: 10px;
 
         &::first-letter {
@@ -45,5 +45,32 @@
 
     &_img {
         margin: auto;
+    }
+}
+
+
+// 0 - 479px
+@include respond-to(mobile_small) {
+
+    .partners {
+
+        &::before {
+            left: -35.94%;
+            transform: translateY(50%);
+            padding-bottom: 31.25%;
+        }
+
+        &_title {
+            top: -13.5px;
+        }
+
+        &_list_wrap {
+            overflow-x: scroll;
+        }
+
+        &_list {
+            width: 350%;
+            flex-wrap: nowrap;
+        }
     }
 }

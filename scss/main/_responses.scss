@@ -25,7 +25,6 @@
         @include font(40px, 40px, 'PlayfairDisplay-Bold');
 
         text-align: center;
-        margin-bottom: 15.5%;
         z-index: 1;
 
         &::first-letter {
@@ -34,6 +33,7 @@
     }
 
     &_slider {
+        padding-top: 15.5%;
         margin-bottom: 0;
     }
 
@@ -42,6 +42,7 @@
         &.slick-slide {
             display: flex;
             align-items: flex-start;
+            padding: 0 5px;
         }
     }
 
@@ -49,8 +50,9 @@
         @include font(40px, 40px, 'Montserrat-Bold');
 
         position: absolute;
-        left: 115px;
-        bottom: calc(100% + 175px);
+        top: -40px;
+        left: 8.77%;
+        // transform: translate(0, 50%);
         color: $gray_12;
 
         span {
@@ -65,7 +67,8 @@
 
     .slick-dots {
         position: absolute;
-        bottom: calc(100% + 190px);
+        top: -40px;
+        transform: translate(0, 50%);
         right: 0;
         width: auto;
         height: 15px;
@@ -86,9 +89,9 @@
     }
 
     .slick-prev {
-        top: unset;
+        top: -30px;
         left: 0;
-        bottom: calc(100% + 175px);
+        transform: translate(0, 0);
         z-index: 1;
 
         &::before {
@@ -102,9 +105,9 @@
     }
 
     .slick-next {
-        top: unset;
-        left: 250px;
-        bottom: calc(100% + 175px);
+        top: -30px;
+        left: 21.49%;
+        transform: translate(0, 0);
         z-index: 1;
 
         &::before {
@@ -119,11 +122,16 @@
 // Slick slider end
 
     &_photo {
-        margin-right: 15px;
+        position: relative;
+        padding-bottom: 20%;
+        padding-left: 20%;
+        margin: 0 15px 15px 0;
 
         &_img {
+            position: absolute;
+            top: 0;
+            left: 0;
             border-radius: 50%;
-            max-width: unset;
         }
     }
 
@@ -140,6 +148,95 @@
 
             max-height: 220px;
             font-style: italic;
+        }
+    }
+}
+
+
+// 768px - 1024px
+@include respond-to(tablet) {
+
+    .responses {
+
+        &::before {
+            padding-bottom: 120px;
+            width: 65%;
+        }
+    }
+}
+
+// 480px - 767px
+@include respond-to(mobile) {
+
+    .responses {
+
+        &::before {
+            padding-bottom: 100px;
+            // width: 65%;
+        }
+
+        &_inner {
+            position: relative;
+            padding-top: 34px;
+        }
+
+        &_title {
+            position: absolute;
+            left: 45%;
+            top: 34px;
+        }
+
+        &_slide {
+
+            &.slick-slide {
+                flex-direction: column;
+            }
+        }
+
+        &_photo {
+            padding-bottom: 50px;
+            padding-left: 50px;
+        }
+
+        .slick-prev {
+            top: 5px;
+        }
+
+        .slick-next {
+            top: 5px;
+        }
+
+        .slick-dots {
+            top: 5px;
+        }
+
+        .js_slide_from_slides {
+            top: 0;
+        }
+
+        &_description {
+
+            .title {
+                font-size: 12px;
+                line-height: 24px;
+            }
+
+            .paragraph {
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+
+// 0 - 479px
+@include respond-to(mobile_small) {
+
+    .responses {
+
+        &_slider {
+            padding-top: 23%;
         }
     }
 }

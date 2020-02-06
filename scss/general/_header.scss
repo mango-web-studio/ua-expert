@@ -4,15 +4,11 @@
     left: 0;
     width: 100%;
     padding: 1.46% 0;
-    // padding-bottom: 4.7%;
     background-color: $blue_1;
     z-index: 99;
 
     &_list {
         position: relative;
-        // top: 0;
-        // left: 50%;
-        // transform: translateX(-50%);
         display: flex;
         justify-content: space-between;
         height: 100%;
@@ -150,7 +146,6 @@
         &_wrap {
             @include font(14px, 18px, 'Montserrat-Regular');
 
-            width: 70px;
             color: $gray_1;
         }
 
@@ -277,7 +272,8 @@
             }
 
             &:nth-child(3) {
-                grid-column: span 2;
+                grid-column: 3 / 5;
+                grid-row: 2 / 3;
             }
 
             &:nth-child(4) {
@@ -292,38 +288,16 @@
     }
 }
 
-// 320px - 480px
+
+// 0 - 479px
 @include respond-to(mobile_small) {
 
     .header {
+        padding: 5px 0;
 
-        &_list {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            justify-items: center;
-        }
-
-        &_item {
-
-            &:first-child {
-                grid-column: span 2;
-            }
-
-            &:nth-child(2) {
-                grid-column: span 2;
-            }
-
-            &:nth-child(3) {
-                grid-column: span 2;
-            }
-
-            &:nth-child(4) {
-                grid-column: 3 / 5;
-                grid-row: 1 / 2;
-            }
-
-            &:nth-child(5) {
-                grid-column: span 2;
+        .menu_open_label {
+            .header_label_svg_wrap {
+                width: 20px;
             }
         }
     }
