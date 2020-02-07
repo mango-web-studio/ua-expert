@@ -114,7 +114,7 @@ window.onload = function() {
             menuCheckbox    = document.querySelector('#menu_checkbox'),
             consultCheckbox = document.querySelector('#consultation_checkbox');
 
-        consultCheckbox.checked && document.documentElement.clientWidth <= 1024 ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'visible';
+        consultCheckbox.checked && document.documentElement.clientWidth <= 1024 ? body.style.overflow = 'hidden' : body.style.overflow = 'visible';
         if (menuCheckbox.checked && document.documentElement.clientWidth <= 1024) {
             body.style.overflow = 'hidden';
         } else {
