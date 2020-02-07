@@ -231,3 +231,135 @@
         }
     }
 }
+
+
+// 480px - 767px
+@include respond-to(mobile) {
+
+    .about {
+
+        &__inner {
+            overflow-x: hidden;
+        }
+
+        .company {
+
+            &__title {
+                margin-bottom: 15px;
+
+                &::before {
+                    right: 0;
+                    transform: translateX(25%);
+                }
+            }
+
+            &__photo {
+                margin-bottom: 15px;
+            }
+
+            &__specialize {
+                flex-direction: column;
+                order: 1;
+
+                &_title {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_description {
+                    width: 100%;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+            }
+
+            &__experience {
+                display: flex;
+                flex-direction: column;
+                order: 1;
+
+                &_title {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_list {
+                    width: 100%;
+                }
+
+                &_item {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_description {
+                    width: 100%;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+            }
+
+            &__description {
+                display: flex;
+                flex-direction: column;
+
+                &_footer {
+                    order: 1;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .equipment {
+
+            &__title {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            &__list_wrap {
+                overflow-x: scroll;
+            }
+
+            &__list {
+                width: 270%;
+            }
+        }
+
+        .credo {
+
+            &__paragraph {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+
+// 0 - 479px
+@include respond-to(mobile_small) {
+
+    .about {
+
+        .company {
+
+            &__title {
+
+                &::before {
+                    padding-bottom: 100px;
+                }
+
+                &::after {
+                    padding-bottom: 100px;
+                }
+            }
+        }
+    }
+}
