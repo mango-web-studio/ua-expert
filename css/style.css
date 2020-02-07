@@ -3020,6 +3020,18 @@ label {
   .about .equipment__list {
     width: 270%;
   }
+  .about .equipment__item_title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .about .equipment__item_description_title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .about .equipment__item_description_paragraph {
+    font-size: 16px;
+    line-height: 20px;
+  }
   .about .credo__paragraph {
     font-size: 16px;
     line-height: 22px;
@@ -3032,6 +3044,21 @@ label {
   }
   .about .company__title::after {
     padding-bottom: 100px;
+  }
+  .about .equipment__list {
+    overflow: hidden;
+  }
+  .about .equipment__item_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .about .equipment__item_description_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .about .equipment__item_description_paragraph {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
@@ -3117,6 +3144,7 @@ label {
 .expert_services__expertise_list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   grid-gap: 30px;
 }
 
@@ -3193,6 +3221,43 @@ label {
 
 .expert_services__expertise_description_more__icon::after {
   font-size: 0.6em;
+}
+
+@media only screen and (max-width: 767px) {
+  .expert_services__inner {
+    padding: 25px 10px;
+  }
+  .expert_services__expertise_list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .expert_services__description {
+    margin-bottom: 25px;
+  }
+  .expert_services__expertise_list {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 42vw;
+    grid-gap: 15px;
+  }
+  .expert_services__expertise_description {
+    padding: 15px;
+  }
+  .expert_services__expertise_description_title {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .expert_services__expertise_description_price {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  .expert_services__expertise_description_more {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .separate_service {
