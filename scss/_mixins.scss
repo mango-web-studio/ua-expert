@@ -64,7 +64,7 @@
 	}
 	// 768 - 1024
 	@if $media == tablet {
-		@media only screen and (max-width: $tablet-landscape) {
+		@media only screen and (max-width: $tablet-landscape - 1) {
 			@content;
 		}
 	}

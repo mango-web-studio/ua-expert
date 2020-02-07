@@ -108,22 +108,14 @@ window.onload = function() {
 // MENU, Services Menu
     // Disable scrolling when opening the menu and a screen width <= 1024px
     document.addEventListener('click', function(e) {
-        let body            = document.querySelector('body'),
-            servicesMenu    = document.querySelector('.services__menu'),
-            // serviceLabel    = document.querySelector('.service_open_label'),
-            menuCheckbox    = document.querySelector('#menu_checkbox'),
+        let menuCheckbox    = document.querySelector('#menu_checkbox'),
             consultCheckbox = document.querySelector('#consultation_checkbox');
 
-        consultCheckbox.checked && document.documentElement.clientWidth <= 1024 ? body.style.overflow = 'hidden' : body.style.overflow = 'visible';
-        if (menuCheckbox.checked && document.documentElement.clientWidth <= 1024) {
-            body.style.overflow = 'hidden';
+        if (menuCheckbox.checked && document.documentElement.clientWidth <= 1024 ||
+            consultCheckbox.checked && document.documentElement.clientWidth <= 1024) {
+            document.body.style.overflow = 'hidden';
         } else {
-            body.style.overflow = 'visible';
-        }
-        if (servicesMenu.style.visibility == 'visible' && document.documentElement.clientWidth <= 1024) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = 'visible';
+            document.body.style.overflow = 'visible';
         }
     });
 

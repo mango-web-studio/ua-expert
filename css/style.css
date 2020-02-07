@@ -630,7 +630,7 @@ label {
   color: #fff;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .menu {
     width: auto;
     max-width: 50%;
@@ -840,7 +840,7 @@ label {
   color: #2657D8;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .services__menu_link {
     height: auto;
   }
@@ -1148,11 +1148,6 @@ label {
   color: #ABAEBD;
 }
 
-.footer_content_paragraph.overflow {
-  max-height: 48px;
-  overflow: hidden;
-}
-
 .footer_content_link {
   font: 1.2rem/2.4rem "Montserrat-Regular";
   display: inline-block;
@@ -1272,9 +1267,6 @@ label {
 }
 
 @media only screen and (max-width: 767px) {
-  .footer_paragraph.overflow {
-    max-height: 56px;
-  }
   .footer_bottom .copyright_logo {
     width: 40px;
   }
@@ -2270,7 +2262,9 @@ label {
       -ms-transform: translate(0, 50%);
           transform: translate(0, 50%);
   right: 0;
-  width: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 15px;
   z-index: 1;
 }
@@ -2349,10 +2343,20 @@ label {
   font-style: italic;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .responses::before {
     padding-bottom: 120px;
     width: 65%;
+  }
+  .responses .slick-dots {
+    top: -40px;
+    left: 12%;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+  }
+  .responses .js_slide_from_slides {
+    display: none;
   }
 }
 
@@ -2617,7 +2621,7 @@ label {
 .price .equipment_content_item .description_right,
 .price .enterprise_content_item .description_right {
   font: 1.4rem/2.4rem "Montserrat-Bold";
-  width: 20%;
+  width: 25%;
 }
 
 .price .expertise_bottom_description,
@@ -2629,6 +2633,53 @@ label {
 .price .enterprise_bottom_description {
   font: 1.4rem/2.4rem "Montserrat-Regular";
   color: #949494;
+}
+
+@media only screen and (max-width: 767px) {
+  .price_inner {
+    overflow-x: hidden;
+  }
+  .price .aside {
+    display: none;
+  }
+  .price_content {
+    width: 100%;
+    border-right: 0;
+  }
+  .price .expertise_top::before,
+  .price .research_top::before,
+  .price .realty_top::before,
+  .price .autotransport_top::before,
+  .price .airtransport_top::before,
+  .price .equipment_top::before,
+  .price .enterprise_top::before {
+    -webkit-transform: translateX(25%);
+        -ms-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .price .expertise_content_item .description_left,
+  .price .research_content_item .description_left,
+  .price .realty_content_item .description_left,
+  .price .autotransport_content_item .description_left,
+  .price .airtransport_content_item .description_left,
+  .price .equipment_content_item .description_left,
+  .price .enterprise_content_item .description_left {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .price .expertise_content_item .description_right,
+  .price .research_content_item .description_right,
+  .price .realty_content_item .description_right,
+  .price .autotransport_content_item .description_right,
+  .price .airtransport_content_item .description_right,
+  .price .equipment_content_item .description_right,
+  .price .enterprise_content_item .description_right {
+    font-size: 10px;
+    line-height: 16px;
+  }
 }
 
 .about {

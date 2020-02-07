@@ -70,7 +70,7 @@
         top: -40px;
         transform: translate(0, 50%);
         right: 0;
-        width: auto;
+        width: max-content;
         height: 15px;
         z-index: 1;
 
@@ -161,6 +161,16 @@
         &::before {
             padding-bottom: 120px;
             width: 65%;
+        }
+
+        .slick-dots {
+            top: -40px;
+            left: 12%;
+            transform: translate(-50%, 50%);
+        }
+
+        .js_slide_from_slides {
+            display: none;
         }
     }
 }

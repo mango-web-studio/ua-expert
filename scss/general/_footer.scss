@@ -54,11 +54,6 @@
             @include font(12px, 24px, 'Montserrat-Regular');
 
             color: $gray_1;
-
-            &.overflow {
-                max-height: 48px;
-                overflow: hidden;
-            }
         }
 
         &_link {
@@ -168,13 +163,6 @@
 @include respond-to(mobile) {
 
     .footer {
-
-        &_paragraph {
-
-            &.overflow {
-                max-height: 56px;
-            }
-        }
         
         &_bottom {
 
