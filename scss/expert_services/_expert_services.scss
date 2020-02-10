@@ -147,6 +147,29 @@
 }
 
 
+// 768px - 1023px
+@include respond-to(tablet) {
+
+    .expert_services {
+
+        &__expertise {
+
+            &_list {
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+            }
+
+            &_description {
+
+                &_title {
+                    max-height: 96px;
+                }
+            }
+        }
+    }
+}
+
+
 // 480px - 767px
 @include respond-to(mobile) {
 
@@ -159,8 +182,7 @@
         &__expertise {
 
             &_list {
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }

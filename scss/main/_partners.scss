@@ -65,12 +65,18 @@
         }
 
         &_list_wrap {
-            overflow-x: scroll;
+            overflow-y: hidden;
         }
 
         &_list {
-            width: 350%;
+            justify-content: flex-start;
             flex-wrap: nowrap;
+            overflow-y: hidden;
+        }
+
+        &_item {
+            width: 65%;
+            flex-shrink: 0;
         }
     }
 }

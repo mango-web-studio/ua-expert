@@ -2,7 +2,7 @@
     @include background(url(../img/separate_service/page_img_bg.png), no-repeat, 0, 70%, 55%);
 
     background-color: $gray_4;
-    overflow-x: hidden;
+    overflow: hidden;
 
     &__head {
         @include background(url('../img/separate_service/head_bg.jpg'));
@@ -267,12 +267,12 @@
             &_list_4 {
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 5.7%;
             }
 
             &_item_4 {
                 position: relative;
                 width: 22.8%;
-                margin-bottom: 5.7%;
 
                 &:last-child .separate_service__section_content_item_4_description {
                     left: unset;
@@ -442,6 +442,146 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+
+// 0 - 479px
+@include respond-to(mobile_small) {
+
+    .separate_service {
+
+        &__head {
+
+            &_content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &_title {
+                margin-bottom: 15px;
+            }
+        }
+
+        &__content {
+            padding: 0;
+            padding-top: 20px;
+        }
+
+        &__section {
+
+            &:nth-child(even) {
+
+                .separate_service__section_head {
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                .separate_service__section_title {
+                    left: 0;
+                }
+            }
+
+            &_head {
+                padding: 15px 10px;
+                background-color: $gray_5;
+
+                &::before {
+                    display: none;
+                }
+
+                &_button {
+                    display: none;
+                }
+            }
+
+            &_title {
+                position: relative;
+                top: 0;
+                right: 0;
+                transform: translateY(0);
+                max-width: 100%;
+                font-size: 20px;
+                line-height: 22px;
+            }
+
+            &_content {
+                padding: 20px 10px;
+                // overflow-x: scroll;
+
+                &_title {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                &_paragraph {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_item_1 {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_item_2 {
+                    width: 100%;
+                    padding-top: 20px;
+                    margin-bottom: 30px;
+                    font-size: 11px;
+                    line-height: 20px;
+
+                    &:nth-child(5n+1) {
+                        width: 100%;
+                    }
+
+                    &:nth-child(5n+2) {
+                        width: 100%;
+                    }
+                }
+
+                &_list_3 {
+                    flex-grow: 1;
+                    overflow-y: hidden;
+                }
+
+                &_item_3 {
+                    max-width: 40%;
+                    flex-shrink: 0;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_list_4 {
+                    margin-bottom: 0;
+                    overflow-y: hidden;
+                }
+
+                &_item_4 {
+                    flex-shrink: 0;
+                    width: auto;
+                    max-width: 60%;
+                    margin-right: 10px;
+                }
+
+                &_button {
+                    display: none;
+                }
+
+                &_list_5 {
+                    display: flex;
+                    overflow-y: hidden;
+                }
+
+                &_item_5 {
+                    flex-shrink: 0;
+                    max-width: 60%;
+                    margin-right: 20px;
                 }
             }
         }

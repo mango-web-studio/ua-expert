@@ -117,11 +117,16 @@
         }
 
         &_footer {
-            overflow-x: scroll;
 
             &_list {
-                width: 200%;
                 padding: 35px $main_horizontal_padding;
+                overflow-x: scroll;
+            }
+
+            &_item {
+                width: 65%;
+                flex-shrink: 0;
+                margin-right: 10px;
             }
 
             &_title {
