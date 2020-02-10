@@ -91,7 +91,7 @@
 
                 &_list {
                     display: grid;
-                    grid-template-columns: 40% 40%;
+                    grid-template-columns: 1fr 1fr;
                     grid-gap: 30px;
                 }
 
@@ -107,7 +107,6 @@
         &_map {
             position: relative;
             grid-area: 2/2/5/3;
-            justify-self: center;
             width: 100%;
 
             &_iframe {
@@ -158,6 +157,118 @@
                 border-radius: 50px;
                 cursor: pointer;
                 transition: 0.2s;
+            }
+        }
+    }
+}
+
+
+// 480 - 767px
+@include respond-to(mobile) {
+
+    .contacts {
+
+        &__content {
+
+            &_call_center {
+
+                .contacts__content_description_list {
+                    grid-template-columns: 1fr;
+                    grid-gap: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+// 0 - 479px
+@include respond-to(mobile_small) {
+
+    .contacts {
+
+        &__inner {
+            padding: 0;
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+            min-height: 100px;
+            padding: 0 10px;
+            margin-bottom: 30px;
+            background-color: $gray_5;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__title {
+            position: relative;
+            transform: translateY(0);
+        }
+
+        &__content {
+            grid-template-columns: 1fr;
+            padding: 0 10px 20px;
+
+            &_photo {
+                display: none;
+            }
+
+            &_map {
+                display: none;
+            }
+
+            &_title {
+                font-size: 12px;
+                line-height: 24px;
+            }
+
+            &_description {
+
+                &_item {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_paragraph {
+                    margin-bottom: 20px;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                &_link {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+            }
+
+            &_call_center {
+
+                .contacts__content_description_list {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 10px;
+                    justify-content: center;
+                }
+            }
+
+            &_form {
+
+                .input {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+
+                .submit {
+                    font-size: 11px;
+                    line-height: 40px;
+                }
             }
         }
     }

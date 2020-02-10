@@ -335,6 +335,7 @@
                     padding: 15px;
                     background-color: $blue_3;
                     transition: 0.2s;
+                    overflow: hidden;
                     opacity: 0;
                     visibility: hidden;
                     pointer-events: none;
@@ -449,8 +450,25 @@
 }
 
 
-// 0 - 479px
-@include respond-to(mobile_small) {
+// 768px - 1024px
+@include respond-to(tablet) {
+
+    .separate_service {
+
+        &__section {
+
+            &_head {
+
+                &_button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// 0 - 767px
+@include respond-to(mobile) {
 
     .separate_service {
 
@@ -488,14 +506,13 @@
             }
 
             &_head {
+                display: flex;
+                align-items: center;
+                min-height: 100px;
                 padding: 15px 10px;
                 background-color: $gray_5;
 
                 &::before {
-                    display: none;
-                }
-
-                &_button {
                     display: none;
                 }
             }
@@ -512,7 +529,6 @@
 
             &_content {
                 padding: 20px 10px;
-                // overflow-x: scroll;
 
                 &_title {
                     font-size: 14px;
