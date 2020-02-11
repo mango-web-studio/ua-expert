@@ -44,6 +44,8 @@
 
     &_paragraph {
         @include font(18px, 24px, 'Montserrat-Regular');
+
+        color: $gray_2;
     }
 
     &_services {
@@ -51,6 +53,7 @@
         &_list {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
         }
 
@@ -70,6 +73,7 @@
             height: 100%;
             width: 100%;
             background: $gray_6;
+            overflow: hidden;
             z-index: 1;
 
             &::before {
@@ -129,6 +133,82 @@
                         display: inline-block;
                         width: 30px;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+// 0 - 767px
+@include respond-to(mobile) {
+
+    .error {
+
+        &_inner {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: unset;
+            background-size: 100%;
+            background-position: 0 25px;
+        }
+
+        &_content {
+            padding: 15px 10px;
+        }
+
+        .logo {
+            width: 46.67%;
+            margin: 60px auto 20px;
+        }
+
+        &_description {
+            margin-bottom: 40px;
+        }
+
+        &_title {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+
+        &_paragraph {
+            font-size: 11px;
+            line-height: 18px;
+        }
+
+        &_services {
+
+            &_list {
+                flex-direction: column;
+            }
+
+            &_item {
+                width: 100%;
+                max-width: 480px;
+                padding-bottom: 25%;
+                margin-bottom: 15px;
+            }
+
+            &_link {
+                display: flex;
+                justify-content: center;
+                padding: 15px 30px;
+
+                &_img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &_title {
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+
+                &_more {
+                    display: none;
                 }
             }
         }
