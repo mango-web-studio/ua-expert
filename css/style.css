@@ -4591,7 +4591,7 @@ label {
   color: #2657D8;
 }
 
-.js_description_open .faq__content_description_title::before {
+.js_description_open .faq__content_description_title::after {
   content: '-';
 }
 
@@ -4666,12 +4666,13 @@ label {
 
 .faq__content_title {
   font: 1.8rem/2.6rem "Montserrat-Bold";
-  padding-right: 15px;
+  width: 25%;
   color: #212121;
 }
 
 .faq__content_description {
-  width: 74.12%;
+  width: -webkit-calc(75% - 15px);
+  width: calc(75% - 15px);
 }
 
 .faq__content_description_item {
@@ -4689,20 +4690,23 @@ label {
 
 .faq__content_description_title {
   font: 1.4rem/2.4rem "Montserrat-Bold";
-  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #212121;
   cursor: pointer;
 }
 
-.faq__content_description_title::before {
+.faq__content_description_title::after {
   content: '+';
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  width: 12px;
   font-size: 20px;
+  text-align: center;
 }
 
 .faq__content_description_bottom {
@@ -4717,6 +4721,72 @@ label {
   font: 1.4rem/2.4rem "Montserrat-Regular";
   padding-bottom: 25px;
   color: #212121;
+}
+
+@media only screen and (max-width: 767px) {
+  .faq__inner {
+    padding: 0;
+  }
+  .faq__top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100px;
+    padding: 25px 10px;
+    margin-bottom: 20px;
+    background-color: #EDEDED;
+  }
+  .faq__top::before {
+    display: none;
+  }
+  .faq__top::after {
+    display: none;
+  }
+  .faq__title {
+    position: relative;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    line-height: 24px;
+  }
+  .faq__content {
+    padding: 0 10px 40px;
+  }
+  .faq__content_section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 40px;
+  }
+  .faq__content_title {
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .faq__content_description {
+    width: 100%;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .faq__content_description_top {
+    margin-bottom: 10px;
+  }
+  .faq__content_description_title {
+    font-size: 11px;
+    line-height: 24px;
+  }
+  .faq__content_description_paragraph {
+    font-size: 11px;
+    line-height: 20px;
+  }
 }
 
 .cases {

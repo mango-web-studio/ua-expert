@@ -5,7 +5,7 @@
         &_title {
             color: $blue_3;
 
-            &::before {
+            &::after {
                 content: '-';
             }
         }
@@ -79,12 +79,12 @@
         &_title {
             @include font(18px, 26px, 'Montserrat-Bold');
 
-            padding-right: 15px;
+            width: 25%;
             color: $gray_10;
         }
 
         &_description {
-            width: 74.12%;
+            width: calc(75% - 15px);
 
             &_item {
                 border-bottom: 1px solid $gray_1;
@@ -102,17 +102,16 @@
             &_title {
                 @include font(14px, 24px, 'Montserrat-Bold');
 
-                position: relative;
+                display: flex;
+                justify-content: space-between;
                 color: $gray_10;
                 cursor: pointer;
 
-                &::before {
+                &::after {
                     content: '+';
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    transform: translateY(-50%);
+                    width: 12px;
                     font-size: 20px;
+                    text-align: center;
                 }
             }
 
@@ -127,6 +126,77 @@
 
                 padding-bottom: 25px;
                 color: $gray_10;
+            }
+        }
+    }
+}
+
+
+// 0 - 767px
+@include respond-to(mobile) {
+
+    .faq {
+
+        &__inner {
+            padding: 0;
+        }
+
+        &__top {
+            display: flex;
+            align-items: center;
+            min-height: 100px;
+            padding: 25px 10px;
+            margin-bottom: 20px;
+            background-color: $gray_5;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__title {
+            position: relative;
+            transform: none;
+            line-height: 24px;
+        }
+
+        &__content {
+            padding: 0 10px 40px;
+
+            &_section {
+                flex-direction: column;
+                padding-bottom: 40px;
+            }
+
+            &_title {
+                width: 100%;
+                margin-bottom: 25px;
+                font-size: 14px;
+                line-height: 26px;
+            }
+
+            &_description {
+                width: 100%;
+                font-size: 14px;
+                line-height: 26px;
+
+                &_top {
+                    margin-bottom: 10px;
+                }
+
+                &_title {
+                    font-size: 11px;
+                    line-height: 24px;
+                }
+
+                &_paragraph {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
             }
         }
     }

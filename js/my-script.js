@@ -231,9 +231,9 @@ window.onload = function() {
 
 
 // FAQ page
-    let faqDescription      = document.querySelectorAll('.faq__content_description_item'),
-        faqDescriptionTitle = document.querySelectorAll('.faq__content_description_title'),
-        faqDescriptionBottom = document.querySelectorAll('.faq__content_description_bottom'),
+    let faqDescription          = document.querySelectorAll('.faq__content_description_item'),
+        faqDescriptionTitle     = document.querySelectorAll('.faq__content_description_title'),
+        faqDescriptionBottom    = document.querySelectorAll('.faq__content_description_bottom'),
         faqDescriptionParagraph = document.querySelectorAll('.faq__content_description_paragraph');
 
     if (faqDescription) {
