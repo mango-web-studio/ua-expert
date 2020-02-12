@@ -132,7 +132,8 @@
     }
 }
 
-// 768px - 1024px
+
+// 0 - 1023px
 @include respond-to(tablet) {
 
     .services {
@@ -146,7 +147,8 @@
     }
 }
 
-// 480px - 767px
+
+// 0 - 767px
 @include respond-to(mobile) {
 
     .services {
@@ -202,7 +204,8 @@
     }
 }
 
-// 320px - 479px
+
+// 0 - 479px
 @include respond-to(mobile_small) {
 
     .services {

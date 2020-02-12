@@ -147,7 +147,7 @@
 }
 
 
-// 768px - 1023px
+// 0 - 1023px
 @include respond-to(tablet) {
 
     .expert_services {
@@ -170,7 +170,7 @@
 }
 
 
-// 480px - 767px
+// 0 - 767px
 @include respond-to(mobile) {
 
     .expert_services {
