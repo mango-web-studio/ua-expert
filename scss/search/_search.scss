@@ -6,26 +6,18 @@
         background-color: $gray_5;
 
         &_inner {
-            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             max-width: $site_width;
-            padding: 0 $main_horizontal_padding;
+            min-height: 200px;
+            padding: 20px $main_horizontal_padding;
             margin: 0 auto;
-
-            &::before {
-                content: '';
-                display: block;
-                width: 100%;
-                padding-bottom: 17.54%;
-            }
         }
 
         &_title {
             @include font(22px, 26px, 'Montserrat-Regular');
 
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
             color: $gray_11;
         }
         
@@ -38,6 +30,11 @@
         max-width: $site_width;
         padding: 0 $main_horizontal_padding;
         margin: 0 auto;
+
+        &_list {
+            padding: 0;
+            margin: 0;
+        }
 
         &_item {
             padding: 4.39% 0;
@@ -113,6 +110,61 @@
             &.active {
                 background-color: $blue_3;
                 color: $white_1;
+            }
+        }
+
+        &_link_more {
+            @include icon(arrow-down, after);
+
+            display: none;
+            padding: 0 10px;
+            text-align: center;
+            color: $gray_1;
+
+            &::after {
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+
+
+// 0 - 767px
+@include respond-to(mobile) {
+
+    .search_request {
+
+        &__head {
+
+            &_inner {
+                min-height: 100px;
+            }
+        }
+
+        &__content {
+
+            &_item {
+                padding: 25px 0;
+
+                &:last-child {
+                    border-bottom: 1px solid $gray_5;
+                }
+            }
+        }
+
+        &__pagination {
+            padding: 0 10px;
+
+            &_list {
+                display: none;
+            }
+
+            &_link_more {
+                display: block;
+                padding: 20px 0;
+                font-size: 10px;
+                line-height: 1;
+                cursor: pointer;
             }
         }
     }

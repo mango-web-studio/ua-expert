@@ -104,7 +104,7 @@ label {
   src: url("../fonts/iconsfont/myfont.eot?#iefix") format("eot"), url("../fonts/iconsfont/myfont.woff2") format("woff2"), url("../fonts/iconsfont/myfont.woff") format("woff"), url("../fonts/iconsfont/myfont.ttf") format("truetype"), url("../fonts/iconsfont/myfont.svg#myfont") format("svg");
 }
 
-.icon-arrow-down:before, .icon-arrow-right-thin:before, .icon-arrow-right:before, .icon-close:before, .icon-info:before, .icon-search:before, .header .service_open_label:before, .header .search_icon:before, .menu_close_label:before, .services__menu_link_span--arrow_right:before, .expert_services__head_top_link:before, .expert_services__expertise_description_more__icon:after, .separate_service__head_path_link:before, .separate_service__section_content_item_5_description_more__icon:after, .separate_news__head_path_link:before, .cases__head .select-selected:after, .cases__pagination_link_more:after, .blog__head .select-selected:after, .blog__pagination_link_more:after {
+.icon-arrow-down:before, .icon-arrow-right-thin:before, .icon-arrow-right:before, .icon-close:before, .icon-info:before, .icon-search:before, .header .service_open_label:before, .header .search_icon:before, .menu_close_label:before, .services__menu_link_span--arrow_right:before, .expert_services__head_top_link:before, .expert_services__expertise_description_more__icon:after, .separate_service__head_path_link:before, .separate_service__section_content_item_5_description_more__icon:after, .separate_news__head_path_link:before, .cases__head .select-selected:after, .cases__pagination_link_more:after, .blog__head .select-selected:after, .blog__pagination_link_more:after, .search_request__pagination_link_more:after {
   font-family: "myfont";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -5849,27 +5849,26 @@ label {
 }
 
 .search_request__head_inner {
-  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 1160px;
-  padding: 0 10px;
+  min-height: 200px;
+  padding: 20px 10px;
   margin: 0 auto;
-}
-
-.search_request__head_inner::before {
-  content: '';
-  display: block;
-  width: 100%;
-  padding-bottom: 17.54%;
 }
 
 .search_request__head_title {
   font: 2.2rem/2.6rem "Montserrat-Regular";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   color: #828282;
 }
 
@@ -5881,6 +5880,11 @@ label {
   max-width: 1160px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.search_request__content_list {
+  padding: 0;
+  margin: 0;
 }
 
 .search_request__content_item {
@@ -5969,6 +5973,46 @@ label {
 .search_request__pagination_link.active {
   background-color: #2657D8;
   color: #fff;
+}
+
+.search_request__pagination_link_more {
+  display: none;
+  padding: 0 10px;
+  text-align: center;
+  color: #ABAEBD;
+}
+
+.search_request__pagination_link_more:after {
+  content: "";
+}
+
+.search_request__pagination_link_more::after {
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width: 767px) {
+  .search_request__head_inner {
+    min-height: 100px;
+  }
+  .search_request__content_item {
+    padding: 25px 0;
+  }
+  .search_request__content_item:last-child {
+    border-bottom: 1px solid #EDEDED;
+  }
+  .search_request__pagination {
+    padding: 0 10px;
+  }
+  .search_request__pagination_list {
+    display: none;
+  }
+  .search_request__pagination_link_more {
+    display: block;
+    padding: 20px 0;
+    font-size: 10px;
+    line-height: 1;
+    cursor: pointer;
+  }
 }
 
 .international_cooperation {
