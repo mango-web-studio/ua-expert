@@ -42,7 +42,7 @@ label {
 @include respond-to(mobile) {
 	
 	html {
-		font-size: 8px;
+		font-size: 9px;
 	}
 }
 
@@ -50,6 +50,6 @@ label {
 @include respond-to(mobile_small) {
 	
 	html {
-		font-size: 6px;
+		font-size: 7px;
 	}
 }

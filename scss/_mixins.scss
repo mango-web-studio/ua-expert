@@ -62,7 +62,7 @@
 			@content;
 		}
 	}
-	// 768 - 1024
+	// 768 - 1023
 	@if $media == tablet {
 		@media only screen and (max-width: $tablet-landscape - 1) {
 			@content;

@@ -179,6 +179,12 @@
             padding: 25px 10px;
         }
 
+        &__description {
+            font-size: 11px;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+
         &__expertise {
 
             &_list {
@@ -194,8 +200,19 @@
 
     .expert_services {
 
-        &__description {
-            margin-bottom: 25px;
+        &__head {
+            padding-bottom: 0;
+
+            &_inner {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                min-height: 100px;
+            }
+
+            &_top {
+                display: none;
+            }
         }
 
         &__expertise {
@@ -210,19 +227,19 @@
                 padding: 15px;
 
                 &_title {
-                    font-size: 12px;
-                    line-height: 18px;
+                    font-size: 13px;
+                    line-height: 20px;
                 }
 
                 &_price {
-                    font-size: 12px;
-                    line-height: 18px;
-                    margin-bottom: 10px;
+                    font-size: 13px;
+                    line-height: 20px;
+                    margin-bottom: 5px;
                 }
 
                 &_more {
-                    font-size: 12px;
-                    line-height: 18px;
+                    font-size: 13px;
+                    line-height: 20px;
                 }
             }
         }
