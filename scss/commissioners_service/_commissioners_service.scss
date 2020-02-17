@@ -1,0 +1,739 @@
+.commissioners_service {
+    background-color: $gray_4;
+
+    &__head {
+        @include background(url(../../img/commissioners_service/head_bg.jpg));
+        padding: 4.43% 0 6%;
+
+        &_inner {
+            width: 100%;
+            max-width: $site_width;
+            padding: 0 $main_horizontal_padding;
+            margin: 0 auto;
+        }
+
+        &_title {
+            @include font(36px, 42px, 'PlayfairDisplay-Bold');
+
+            margin-bottom: 3.5%;
+            color: $white_1;
+        }
+
+        &_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        &_description {
+            @include font(14px, 26px, 'Montserrat-Light');
+
+            max-width: 65.36%;
+            color: $white_1;
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+    }
+
+    &__section {
+        position: relative;
+        width: 100%;
+        max-width: $site_width;
+        padding: 0 $main_horizontal_padding 80px;
+        margin: 0 auto;
+
+        &_title {
+            @include font(40px, 46px, 'PlayfairDisplay-Bold');
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 200px;
+            margin-bottom: 4.82%;
+            color: $black_1;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 1000%;
+                top: 0;
+                z-index: -1;
+            }
+
+            &--white {
+
+                &::before {
+                    right: 0;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+
+            &.commissioners_service__section {
+
+                &--gray {
+                    
+                    .commissioners_service__section_title {
+                        padding-right: 47%;
+
+                        &::before {
+                            right: 43%;
+                            background-color: $gray_5;
+                        }
+                    }
+
+                    .commissioners_service__section_photo {
+                        position: absolute;
+                        top: 0;
+                        left: 57%;
+                        z-index: 1;
+                    }
+                }
+
+                &--white {
+
+                    .commissioners_service__section_title {
+                        justify-content: flex-end;
+                        padding-right: 26.3%;
+
+                        &::before {
+                            right: 17.54%;
+                            background-color: $white_1;
+                        }
+                    }
+
+                    .commissioners_service__section_photo {
+                        position: absolute;
+                        top: 0;
+                        left: 81.5%;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+
+            &.commissioners_service__section {
+
+                &--gray {
+
+                    .commissioners_service__section_title {
+                        padding-left: 47%;
+
+                        &::before {
+                            left: 43%;
+                            background-color: $gray_5;
+                        }
+                    }
+
+                    .commissioners_service__section_photo {
+                        position: absolute;
+                        top: 0;
+                        right: 57%;
+                        z-index: 1;
+                    }
+                }
+
+                &--white {
+
+                    .commissioners_service__section_title {
+                        padding-left: 26.3%;
+
+                        &::before {
+                            left: 17.54%;
+                            background-color: $white_1;
+                        }
+                    }
+
+                    .commissioners_service__section_photo {
+                        position: absolute;
+                        top: 0;
+                        right: 81.5%;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+
+        &_description {
+
+            &_item {
+                margin-bottom: 57%;
+                margin-bottom: 4.39%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &_paragraph {
+                @include font(14px, 26px, 'Montserrat-Regular');
+
+                color: $gray_10;
+
+                &--align-left {
+                    width: 57%;
+                    padding-right: 8.3%;
+                }
+
+                &--align-right {
+                    width: 57%;
+                    margin-left: auto;
+                }
+
+                &--bordbott {
+                    padding-bottom: 5.26%;
+                    border-bottom: 1px solid $gray_12;
+                    margin-bottom: 7%;
+                }
+            }
+        }
+
+        &_img {
+            max-width: unset;
+        }
+
+        &_law {
+            display: flex;
+            margin-bottom: 8.33%;
+
+            &_title {
+                @include font(14px, 26px, 'Montserrat-Bold');
+                @include background(url('../img/commissioners_service/law-quote/balance.png'), no-repeat, calc(100% + 55px), 50%, auto, $blue_3);
+
+                display: flex;
+                align-items: center;
+                width: 23.25%;
+                padding: 3.07%;
+                color: $white_1;
+            }
+
+            &_description {
+                @include font(14px, 26px, 'Montserrat-Regular');
+
+                display: flex;
+                align-items: center;
+                width: 76.75%;
+                padding: 4.39%;
+                color: $gray_10;
+                background-color: $white_1;
+            }
+        }
+
+        &_decree {
+            display: flex;
+            justify-content: space-between;
+
+            &_title {
+                @include font(18px, 28px, 'Montserrat-Bold');
+                @include background(url('../img/commissioners_service/decree/decree_title_bg.png'), no-repeat, 20%, 10%, auto, $white_1);
+
+                position: relative;
+                width: 31.58%;
+                padding: 8.77% 3.51% 3.51% 5.26%;
+                border-left: 4px solid $blue_3;
+                color: $black_1;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    top: 50%;
+                    left: 100%;
+                    transform: translateY(-50%);
+                    border: 30px solid transparent;
+                    border-left-color: $white_1;
+                    border-right: 0;
+                }
+            }
+
+            &_description {
+                width: 57.02%;
+
+                &_title {
+                    @include font(14px, 26px, 'Montserrat-Bold');
+
+                    margin-bottom: 6.92%;
+                    color: $black_1;
+                }
+
+                &_list {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &_item {
+                    @include font(14px, 26px, 'Montserrat-Regular');
+
+                    width: 25.39%;
+                    color: $gray_10;
+                }
+            }
+        }
+
+        &_note {
+
+            &_title {
+                @include font(20px, 26px, 'Montserrat-Bold');
+
+                width: 55%;
+                margin-bottom: 6.58%;
+                color: $gray_10;
+            }
+
+            &--bordbott {
+                padding-bottom: 5.7%;
+                border-bottom: 1px solid $gray_12;
+                margin-bottom: 5.7%;
+            }
+
+            &_list {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &_item {
+                width: 20%;
+            }
+
+            &_image {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 35px;
+            }
+
+            &_description {
+                @include font(14px, 26px, 'Montserrat-Regular');
+
+                color: $gray_10;
+            }
+        }
+
+        &_training {
+            display: grid;
+            grid-template-columns: 1fr 1.65fr;
+            grid-gap: 50px 100px;
+            width: 73.7%;
+            margin-left: auto;
+
+            &_paragraph {
+                @include font(14px, 26px, 'Montserrat-Regular');
+
+                color: $gray_10;
+
+                &--bold {
+                    @include font(20px, 26px, 'Montserrat-Bold');
+                }
+            }
+
+            &_span {
+
+                &--blue {
+                    color: $blue_3;
+                }
+            }
+        }
+
+        &_certificate {
+
+            &_photo {
+                grid-row: 1 / 3;
+            }
+        }
+    }
+}
+
+
+// 0 - 1023px
+@include respond-to(tablet) {
+
+    .commissioners_service {
+
+        &__section {
+            padding: 0 $main_horizontal_padding 7.8%;
+
+            &_description {
+
+                &_paragraph {
+
+                    &--align-left {
+                        width: 100%;
+                        padding-right: 0;
+                    }
+
+                    &--align-right {
+                        width: 100%; 
+                    }
+                }
+            }
+
+            &_photo {
+                height: 200px;
+            }
+
+            &_img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &_note {
+
+                &_title {
+                    width: 100%;
+                }
+            }
+            
+            &_training {
+                grid-gap: 20px 50px;
+
+                &_paragraph {
+                    line-height: 20px;
+                    color: $gray_10;
+
+                    &--bold {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 0 - 767px
+@include respond-to(mobile) {
+
+    .commissioners_service {
+
+        &__section {
+            padding: 0 $main_horizontal_padding 50px;
+        }
+
+        &__head {
+            padding: 40px 0 70px;
+
+            &_title {
+                margin-bottom: 25px;
+                font-size: 28px;
+                line-height: 1;
+            }
+
+            &_content {
+                flex-direction: column;
+            }
+
+            &_description {
+                max-width: 100%;
+                margin-bottom: 40px;
+                font-size: 10px;
+                line-height: 18px;
+            }
+
+            &_link {
+                font-size: 12px;
+                line-height: 60px;
+            }
+        }
+
+        &__content {
+
+            &_inner {
+                width: 100%;
+                max-width: $site_width;
+                padding: 4.17% $main_horizontal_padding;
+                margin: 0 auto;
+            }
+        }
+
+        &__section {
+
+            &_title {
+                min-height: 100px;
+                margin-bottom: 25px;
+                font-size: 24px;
+                line-height: 1;
+            }
+
+            &_description {
+
+                &_item {
+                    margin-bottom: 20px;
+                }
+
+                &_paragraph {
+
+                    &--bordbott {
+                        padding-bottom: 0;
+                        border-bottom: 0;
+                        margin-bottom: 45px;
+                    }
+                }
+            }
+
+            &_photo {
+                left: unset;
+                right: 0;
+                height: 100px;
+            }
+
+            &_img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &_law {
+                flex-direction: column;
+                margin-bottom: 30px;
+
+                &_title {
+                    width: 100%;
+                    min-height: 90px;
+                    padding: 20px 15px;
+                    font-size: 14px;
+                    line-height: 26px;
+                }
+
+                &_description {
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+            }
+
+            &_decree {
+                flex-direction: column;
+
+                &_title {
+                    width: 100%;
+                    padding: 100px 15px 35px;
+                    border-left: 0;
+                    border-top: 4px solid $blue_3;
+                    margin-bottom: 40px;
+                    background-position: 15px 30px;
+                    font-size: 16px;
+                    line-height: 26px;
+
+                    &::before {
+                        top: 100%;
+                        left: 50%;
+                        transform: translateY(-25%) translateX(-50%) rotate(90deg);
+                    }
+                }
+
+                &_description {
+                    width: 100%;
+
+                    &_title {
+                        margin-bottom: 35px;
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+
+                    &_item {
+                        width: 30%;
+                        font-size: 11px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            &_note {
+                padding-top: 35px;
+                border-top: 1px solid $gray_12;
+                margin-top: 45px;
+
+                &--bordbott {
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                &_title {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+// 0 - 479px
+@include respond-to(mobile_small) {
+
+    .commissioners_service {
+
+        &__section {
+
+            &:nth-child(odd) {
+
+                &.commissioners_service__section {
+
+                    &--gray {
+
+                        .commissioners_service__section_title {
+                            padding-left: 0;
+                            padding-right: 100px;
+
+                            &::before {
+                                left: -25%;
+                            }
+                        }
+
+                        .commissioners_service__section_photo {
+                            left: unset;
+                            right: 0;
+                            width: 100px;
+                        }
+                    }
+
+                    &--white {
+
+                        .commissioners_service__section_title {
+                            padding-left: 0;
+                            margin-bottom: 125px;
+
+                            &::before {
+                                left: -25%;
+                            }
+                        }
+
+                        .commissioners_service__section_photo {
+                            left: 0;
+                            right: 0;
+                            top: 100px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+
+                &.commissioners_service__section {
+
+                    &--gray {
+
+                        .commissioners_service__section_title {
+                            padding-left: 0;
+                            padding-right: 100px;
+
+                            &::before {
+                                left: -25%;
+                            }
+                        }
+
+                        .commissioners_service__section_photo {
+                            left: unset;
+                            right: 0;
+                            width: 100px;
+                        }
+                    }
+
+                    &--white {
+
+                        .commissioners_service__section_title {
+                            padding-left: 0;
+                            margin-bottom: 125px;
+
+                            &::before {
+                                left: -25%;
+                            }
+                        }
+
+                        .commissioners_service__section_photo {
+                            left: 0;
+                            right: 0;
+                            top: 100px;
+                        }
+                    }
+                }
+            }
+
+            &_description {
+
+                &_list {
+                    display: flex;
+                    overflow-y: hidden;
+                }
+
+                &_item {
+                    margin-bottom: 0;
+                    width: 83.33%;
+                    flex-shrink: 0;
+                    padding-right: 15px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            &_decree {
+
+                &_description {
+
+                    &_list {
+                        display: flex;
+                        overflow-y: hidden;
+                    }
+
+                    &_item {
+                        margin-bottom: 0;
+                        width: 83.33%;
+                        flex-shrink: 0;
+                        padding-right: 15px;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 10px;
+                            height: 2px;
+                            margin-bottom: 5px;
+                            background-color: $blue_3;
+                        }
+
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+
+            &_note {
+
+                &_list {
+                    overflow-y: hidden;
+                }
+
+                &_item {
+                    flex-shrink: 0;
+                    width: 45%;
+                    padding-right: 30px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+                
+                &_title {
+                    font-size: 12px;
+                }
+
+                &_description {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

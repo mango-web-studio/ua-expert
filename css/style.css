@@ -86,7 +86,7 @@ label {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1023px) {
   html {
     font-size: 9px;
   }
@@ -7077,5 +7077,657 @@ label {
 @media only screen and (max-width: 479px) {
   .international_cooperation__content_list {
     grid-template-columns: 1fr;
+  }
+}
+
+.commissioners_service {
+  background-color: #F8F8F8;
+}
+
+.commissioners_service__head {
+  background-image: url(../../img/commissioners_service/head_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  background-color: transparent;
+  padding: 4.43% 0 6%;
+}
+
+.commissioners_service__head_inner {
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.commissioners_service__head_title {
+  font: 3.6rem/4.2rem "PlayfairDisplay-Bold";
+  margin-bottom: 3.5%;
+  color: #fff;
+}
+
+.commissioners_service__head_content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.commissioners_service__head_description {
+  font: 1.4rem/2.6rem "Montserrat-Light";
+  max-width: 65.36%;
+  color: #fff;
+}
+
+.commissioners_service__content {
+  overflow: hidden;
+}
+
+.commissioners_service__section {
+  position: relative;
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 10px 80px;
+  margin: 0 auto;
+}
+
+.commissioners_service__section_title {
+  font: 4rem/4.6rem "PlayfairDisplay-Bold";
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 200px;
+  margin-bottom: 4.82%;
+  color: #000;
+  z-index: 1;
+}
+
+.commissioners_service__section_title::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1000%;
+  top: 0;
+  z-index: -1;
+}
+
+.commissioners_service__section_title--white::before {
+  right: 0;
+}
+
+.commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title {
+  padding-right: 47%;
+}
+
+.commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title::before {
+  right: 43%;
+  background-color: #EDEDED;
+}
+
+.commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_photo {
+  position: absolute;
+  top: 0;
+  left: 57%;
+  z-index: 1;
+}
+
+.commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 26.3%;
+}
+
+.commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title::before {
+  right: 17.54%;
+  background-color: #fff;
+}
+
+.commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_photo {
+  position: absolute;
+  top: 0;
+  left: 81.5%;
+  z-index: 1;
+}
+
+.commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title {
+  padding-left: 47%;
+}
+
+.commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title::before {
+  left: 43%;
+  background-color: #EDEDED;
+}
+
+.commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_photo {
+  position: absolute;
+  top: 0;
+  right: 57%;
+  z-index: 1;
+}
+
+.commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title {
+  padding-left: 26.3%;
+}
+
+.commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title::before {
+  left: 17.54%;
+  background-color: #fff;
+}
+
+.commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_photo {
+  position: absolute;
+  top: 0;
+  right: 81.5%;
+  z-index: 1;
+}
+
+.commissioners_service__section_description_item {
+  margin-bottom: 57%;
+  margin-bottom: 4.39%;
+}
+
+.commissioners_service__section_description_item:last-child {
+  margin-bottom: 0;
+}
+
+.commissioners_service__section_description_paragraph {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  color: #212121;
+}
+
+.commissioners_service__section_description_paragraph--align-left {
+  width: 57%;
+  padding-right: 8.3%;
+}
+
+.commissioners_service__section_description_paragraph--align-right {
+  width: 57%;
+  margin-left: auto;
+}
+
+.commissioners_service__section_description_paragraph--bordbott {
+  padding-bottom: 5.26%;
+  border-bottom: 1px solid #C9C9C9;
+  margin-bottom: 7%;
+}
+
+.commissioners_service__section_img {
+  max-width: unset;
+}
+
+.commissioners_service__section_law {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8.33%;
+}
+
+.commissioners_service__section_law_title {
+  font: 1.4rem/2.6rem "Montserrat-Bold";
+  background-image: url("../img/commissioners_service/law-quote/balance.png");
+  background-repeat: no-repeat;
+  background-position: -webkit-calc(100% + 55px) 50%;
+  background-position: calc(100% + 55px) 50%;
+  background-size: auto;
+  background-color: #2657D8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 23.25%;
+  padding: 3.07%;
+  color: #fff;
+}
+
+.commissioners_service__section_law_description {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 76.75%;
+  padding: 4.39%;
+  color: #212121;
+  background-color: #fff;
+}
+
+.commissioners_service__section_decree {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.commissioners_service__section_decree_title {
+  font: 1.8rem/2.8rem "Montserrat-Bold";
+  background-image: url("../img/commissioners_service/decree/decree_title_bg.png");
+  background-repeat: no-repeat;
+  background-position: 20% 10%;
+  background-size: auto;
+  background-color: #fff;
+  position: relative;
+  width: 31.58%;
+  padding: 8.77% 3.51% 3.51% 5.26%;
+  border-left: 4px solid #2657D8;
+  color: #000;
+}
+
+.commissioners_service__section_decree_title::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 30px solid transparent;
+  border-left-color: #fff;
+  border-right: 0;
+}
+
+.commissioners_service__section_decree_description {
+  width: 57.02%;
+}
+
+.commissioners_service__section_decree_description_title {
+  font: 1.4rem/2.6rem "Montserrat-Bold";
+  margin-bottom: 6.92%;
+  color: #000;
+}
+
+.commissioners_service__section_decree_description_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.commissioners_service__section_decree_description_item {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  width: 25.39%;
+  color: #212121;
+}
+
+.commissioners_service__section_note_title {
+  font: 2rem/2.6rem "Montserrat-Bold";
+  width: 55%;
+  margin-bottom: 6.58%;
+  color: #212121;
+}
+
+.commissioners_service__section_note--bordbott {
+  padding-bottom: 5.7%;
+  border-bottom: 1px solid #C9C9C9;
+  margin-bottom: 5.7%;
+}
+
+.commissioners_service__section_note_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.commissioners_service__section_note_item {
+  width: 20%;
+}
+
+.commissioners_service__section_note_image {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 35px;
+}
+
+.commissioners_service__section_note_description {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  color: #212121;
+}
+
+.commissioners_service__section_training {
+  display: grid;
+  grid-template-columns: 1fr 1.65fr;
+  grid-gap: 50px 100px;
+  width: 73.7%;
+  margin-left: auto;
+}
+
+.commissioners_service__section_training_paragraph {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  color: #212121;
+}
+
+.commissioners_service__section_training_paragraph--bold {
+  font: 2rem/2.6rem "Montserrat-Bold";
+}
+
+.commissioners_service__section_training_span--blue {
+  color: #2657D8;
+}
+
+.commissioners_service__section_certificate_photo {
+  grid-row: 1 / 3;
+}
+
+@media only screen and (max-width: 1023px) {
+  .commissioners_service__section {
+    padding: 0 10px 7.8%;
+  }
+  .commissioners_service__section_description_paragraph--align-left {
+    width: 100%;
+    padding-right: 0;
+  }
+  .commissioners_service__section_description_paragraph--align-right {
+    width: 100%;
+  }
+  .commissioners_service__section_photo {
+    height: 200px;
+  }
+  .commissioners_service__section_img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .commissioners_service__section_note_title {
+    width: 100%;
+  }
+  .commissioners_service__section_training {
+    grid-gap: 20px 50px;
+  }
+  .commissioners_service__section_training_paragraph {
+    line-height: 20px;
+    color: #212121;
+  }
+  .commissioners_service__section_training_paragraph--bold {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .commissioners_service__section {
+    padding: 0 10px 50px;
+  }
+  .commissioners_service__head {
+    padding: 40px 0 70px;
+  }
+  .commissioners_service__head_title {
+    margin-bottom: 25px;
+    font-size: 28px;
+    line-height: 1;
+  }
+  .commissioners_service__head_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .commissioners_service__head_description {
+    max-width: 100%;
+    margin-bottom: 40px;
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .commissioners_service__head_link {
+    font-size: 12px;
+    line-height: 60px;
+  }
+  .commissioners_service__content_inner {
+    width: 100%;
+    max-width: 1160px;
+    padding: 4.17% 10px;
+    margin: 0 auto;
+  }
+  .commissioners_service__section_title {
+    min-height: 100px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .commissioners_service__section_description_item {
+    margin-bottom: 20px;
+  }
+  .commissioners_service__section_description_paragraph--bordbott {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 45px;
+  }
+  .commissioners_service__section_photo {
+    left: unset;
+    right: 0;
+    height: 100px;
+  }
+  .commissioners_service__section_img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .commissioners_service__section_law {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .commissioners_service__section_law_title {
+    width: 100%;
+    min-height: 90px;
+    padding: 20px 15px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .commissioners_service__section_law_description {
+    width: 100%;
+    padding: 15px;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_decree {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .commissioners_service__section_decree_title {
+    width: 100%;
+    padding: 100px 15px 35px;
+    border-left: 0;
+    border-top: 4px solid #2657D8;
+    margin-bottom: 40px;
+    background-position: 15px 30px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .commissioners_service__section_decree_title::before {
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateY(-25%) translateX(-50%) rotate(90deg);
+        -ms-transform: translateY(-25%) translateX(-50%) rotate(90deg);
+            transform: translateY(-25%) translateX(-50%) rotate(90deg);
+  }
+  .commissioners_service__section_decree_description {
+    width: 100%;
+  }
+  .commissioners_service__section_decree_description_title {
+    margin-bottom: 35px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_decree_description_item {
+    width: 30%;
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_note {
+    padding-top: 35px;
+    border-top: 1px solid #C9C9C9;
+    margin-top: 45px;
+  }
+  .commissioners_service__section_note--bordbott {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  .commissioners_service__section_note_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title {
+    padding-left: 0;
+    padding-right: 100px;
+  }
+  .commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title::before {
+    left: -25%;
+  }
+  .commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_photo {
+    left: unset;
+    right: 0;
+    width: 100px;
+  }
+  .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title {
+    padding-left: 0;
+    margin-bottom: 125px;
+  }
+  .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title::before {
+    left: -25%;
+  }
+  .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_photo {
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+  .commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title {
+    padding-left: 0;
+    padding-right: 100px;
+  }
+  .commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title::before {
+    left: -25%;
+  }
+  .commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_photo {
+    left: unset;
+    right: 0;
+    width: 100px;
+  }
+  .commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title {
+    padding-left: 0;
+    margin-bottom: 125px;
+  }
+  .commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title::before {
+    left: -25%;
+  }
+  .commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_photo {
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+  .commissioners_service__section_description_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y: hidden;
+  }
+  .commissioners_service__section_description_item {
+    margin-bottom: 0;
+    width: 83.33%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    padding-right: 15px;
+  }
+  .commissioners_service__section_description_item:last-child {
+    padding-right: 0;
+  }
+  .commissioners_service__section_decree_description_list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y: hidden;
+  }
+  .commissioners_service__section_decree_description_item {
+    margin-bottom: 0;
+    width: 83.33%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    padding-right: 15px;
+  }
+  .commissioners_service__section_decree_description_item::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    margin-bottom: 5px;
+    background-color: #2657D8;
+  }
+  .commissioners_service__section_decree_description_item:last-child {
+    padding-right: 0;
+  }
+  .commissioners_service__section_note_list {
+    overflow-y: hidden;
+  }
+  .commissioners_service__section_note_item {
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    width: 45%;
+    padding-right: 30px;
+  }
+  .commissioners_service__section_note_item:last-child {
+    padding-right: 0;
+  }
+  .commissioners_service__section_note_title {
+    font-size: 12px;
+  }
+  .commissioners_service__section_note_description {
+    font-size: 11px;
+    line-height: 20px;
   }
 }

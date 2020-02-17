@@ -38,8 +38,8 @@ label {
 	cursor: pointer;
 }
 
-// 480px - 767px
-@include respond-to(mobile) {
+// 480px - 1023px
+@include respond-to(tablet) {
 	
 	html {
 		font-size: 9px;
