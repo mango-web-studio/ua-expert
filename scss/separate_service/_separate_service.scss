@@ -1,5 +1,5 @@
 .separate_service {
-    @include background(url(../img/separate_service/page_img_bg.png), no-repeat, 0, 70%, 55%);
+    @include background(url("../img/separate_service/page_img_bg.png"), no-repeat, 0, 70%, 55%);
 
     background-color: $gray_4;
     overflow: hidden;
@@ -75,7 +75,7 @@
     &__section {
 
         &:first-child {
-            @include background(url(../img/separate_service/section_1_bg.png), no-repeat, 192%, 133%, 78%);
+            @include background(url("../img/separate_service/section_1_bg.png"), no-repeat, 192%, 133%, 78%);
         }
 
         &:nth-child(even) {

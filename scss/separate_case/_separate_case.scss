@@ -2,7 +2,7 @@
     background-color: $gray_4;
 
     &__head {
-        @include background(url(../../img/separate_case/head_bg.jpg));
+        @include background(url("../img/separate_case/head_bg.jpg"));
         padding: 1.05% 0 5.21%;
 
         &_inner {

@@ -98,7 +98,7 @@
             content: '';
             display: block;
             height: 20px;
-            background-image: url(../img/svg/main/slider-left-arrow-button.svg);
+            background-image: url("../img/svg/main/slider-left-arrow-button.svg");
             background-size: contain;
             opacity: 0.5;
         }
@@ -114,7 +114,7 @@
             content: '';
             display: block;
             height: 20px;
-            background-image: url(../img/svg/main/slider-right-arrow-button.svg);
+            background-image: url("../img/svg/main/slider-right-arrow-button.svg");
             background-size: contain;
             opacity: 0.5;
         }

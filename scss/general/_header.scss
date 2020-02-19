@@ -166,7 +166,7 @@
 
                 &:first-child::before {
                     content: "";
-                    background-image: url(../img/general/header/ua-flag.png);
+                    background-image: url("../img/general/header/ua-flag.png");
                     background-size: cover;
                     position: absolute;
                     right: 7px;
@@ -178,7 +178,7 @@
 
                 &:nth-child(2)::before {
                     content: "";
-                    background-image: url(../img/general/header/uk-flag.png);
+                    background-image: url("../img/general/header/uk-flag.png");
                     background-size: cover;
                     position: absolute;
                     right: 7px;
@@ -190,7 +190,7 @@
 
                 &:last-child::before {
                     content: "";
-                    background-image: url(../img/general/header/rus-flag.png);
+                    background-image: url("../img/general/header/rus-flag.png");
                     background-size: cover;
                     position: absolute;
                     right: 7px;
@@ -208,7 +208,7 @@
 
     &::before {
         content: "";
-        background-image: url(../img/general/header/ua-flag.png);
+        background-image: url("../img/general/header/ua-flag.png");
         background-size: cover;
         position: absolute;
         right: 7px;
@@ -223,7 +223,7 @@
 
     &::before {
         content: "";
-        background-image: url(../img/general/header/uk-flag.png);
+        background-image: url("../img/general/header/uk-flag.png");
         background-size: cover;
         position: absolute;
         right: 7px;
@@ -238,7 +238,7 @@
 
     &::before {
         content: "";
-        background-image: url(../img/general/header/rus-flag.png);
+        background-image: url("../img/general/header/rus-flag.png");
         background-size: cover;
         position: absolute;
         right: 7px;

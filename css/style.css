@@ -435,7 +435,7 @@ label {
 
 .header .select-items div:first-child::before {
   content: "";
-  background-image: url(../img/general/header/ua-flag.png);
+  background-image: url("../img/general/header/ua-flag.png");
   background-size: cover;
   position: absolute;
   right: 7px;
@@ -449,7 +449,7 @@ label {
 
 .header .select-items div:nth-child(2)::before {
   content: "";
-  background-image: url(../img/general/header/uk-flag.png);
+  background-image: url("../img/general/header/uk-flag.png");
   background-size: cover;
   position: absolute;
   right: 7px;
@@ -463,7 +463,7 @@ label {
 
 .header .select-items div:last-child::before {
   content: "";
-  background-image: url(../img/general/header/rus-flag.png);
+  background-image: url("../img/general/header/rus-flag.png");
   background-size: cover;
   position: absolute;
   right: 7px;
@@ -477,7 +477,7 @@ label {
 
 .ua::before {
   content: "";
-  background-image: url(../img/general/header/ua-flag.png);
+  background-image: url("../img/general/header/ua-flag.png");
   background-size: cover;
   position: absolute;
   right: 7px;
@@ -491,7 +491,7 @@ label {
 
 .uk::before {
   content: "";
-  background-image: url(../img/general/header/uk-flag.png);
+  background-image: url("../img/general/header/uk-flag.png");
   background-size: cover;
   position: absolute;
   right: 7px;
@@ -505,7 +505,7 @@ label {
 
 .ru::before {
   content: "";
-  background-image: url(../img/general/header/rus-flag.png);
+  background-image: url("../img/general/header/rus-flag.png");
   background-size: cover;
   position: absolute;
   right: 7px;
@@ -2383,7 +2383,7 @@ label {
   content: '';
   display: block;
   height: 20px;
-  background-image: url(../img/svg/main/slider-left-arrow-button.svg);
+  background-image: url("../img/svg/main/slider-left-arrow-button.svg");
   background-size: contain;
   opacity: 0.5;
 }
@@ -2401,7 +2401,7 @@ label {
   content: '';
   display: block;
   height: 20px;
-  background-image: url(../img/svg/main/slider-right-arrow-button.svg);
+  background-image: url("../img/svg/main/slider-right-arrow-button.svg");
   background-size: contain;
   opacity: 0.5;
 }
@@ -3155,7 +3155,7 @@ label {
 }
 
 .expert_services__head {
-  background-image: url(../img/expert_services/expert_services__head_bg.jpg);
+  background-image: url("../img/expert_services/expert_services__head_bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -3381,7 +3381,7 @@ label {
 }
 
 .separate_service {
-  background-image: url(../img/separate_service/page_img_bg.png);
+  background-image: url("../img/separate_service/page_img_bg.png");
   background-repeat: no-repeat;
   background-position: 0 70%;
   background-size: 55%;
@@ -3477,7 +3477,7 @@ label {
 }
 
 .separate_service__section:first-child {
-  background-image: url(../img/separate_service/section_1_bg.png);
+  background-image: url("../img/separate_service/section_1_bg.png");
   background-repeat: no-repeat;
   background-position: 192% 133%;
   background-size: 78%;
@@ -3997,7 +3997,7 @@ label {
 }
 
 .separate_news__head {
-  background-image: url(../../img/separate_news/head_bg.jpg);
+  background-image: url("../img/separate_news/head_bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -4586,7 +4586,7 @@ label {
 }
 
 .separate_case__head {
-  background-image: url(../../img/separate_case/head_bg.jpg);
+  background-image: url("../img/separate_case/head_bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -7085,7 +7085,7 @@ label {
 }
 
 .commissioners_service__head {
-  background-image: url(../../img/commissioners_service/head_bg.jpg);
+  background-image: url("../img/commissioners_service/head_bg.jpg");
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -7267,6 +7267,17 @@ label {
   margin-bottom: 7%;
 }
 
+.commissioners_service__section_photo {
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.commissioners_service__section_photo--position {
+  left: auto !important;
+  right: 57.9%;
+  top: 200px !important;
+}
+
 .commissioners_service__section_img {
   max-width: unset;
 }
@@ -7383,6 +7394,12 @@ label {
   color: #212121;
 }
 
+.commissioners_service__section_note--bordbott {
+  padding-bottom: 5.7%;
+  border-bottom: 1px solid #C9C9C9;
+  margin-bottom: 5.7%;
+}
+
 .commissioners_service__section_note_title {
   font: 2rem/2.6rem "Montserrat-Bold";
   width: 55%;
@@ -7390,10 +7407,11 @@ label {
   color: #212121;
 }
 
-.commissioners_service__section_note--bordbott {
-  padding-bottom: 5.7%;
-  border-bottom: 1px solid #C9C9C9;
-  margin-bottom: 5.7%;
+.commissioners_service__section_note_subtitle {
+  font: 1.4rem/2.6rem "Montserrat-Bold";
+  min-height: 52px;
+  margin-bottom: 6.58%;
+  color: #212121;
 }
 
 .commissioners_service__section_note_list {
@@ -7411,6 +7429,10 @@ label {
   width: 20%;
 }
 
+.commissioners_service__section_note_item--col5 {
+  width: 17.1%;
+}
+
 .commissioners_service__section_note_image {
   width: 50px;
   height: 50px;
@@ -7422,7 +7444,16 @@ label {
   color: #212121;
 }
 
-.commissioners_service__section_training {
+.commissioners_service__section_note_description_list {
+  margin-top: 15px;
+}
+
+.commissioners_service__section_note_description_item {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  color: #212121;
+}
+
+.commissioners_service__section_certificate {
   display: grid;
   grid-template-columns: 1fr 1.65fr;
   grid-gap: 50px 100px;
@@ -7430,21 +7461,88 @@ label {
   margin-left: auto;
 }
 
-.commissioners_service__section_training_paragraph {
+.commissioners_service__section_certificate_paragraph {
   font: 1.4rem/2.6rem "Montserrat-Regular";
   color: #212121;
 }
 
-.commissioners_service__section_training_paragraph--bold {
+.commissioners_service__section_certificate_paragraph--bold {
   font: 2rem/2.6rem "Montserrat-Bold";
 }
 
-.commissioners_service__section_training_span--blue {
+.commissioners_service__section_certificate_span--blue {
   color: #2657D8;
 }
 
 .commissioners_service__section_certificate_photo {
   grid-row: 1 / 3;
+}
+
+.commissioners_service__section_learning_paragraph {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  width: 48.68%;
+  padding-bottom: 180px;
+  border-bottom: 1px solid #C9C9C9;
+  margin: 196px 0 8.77% auto;
+  color: #212121;
+}
+
+.commissioners_service__section_learning_paragraph--bold {
+  font: 2rem/2.6rem "Montserrat-Bold";
+}
+
+.commissioners_service__section_learning_span--blue {
+  color: #2657D8;
+}
+
+.commissioners_service__section_commissioner_title {
+  font: 2rem/2.6rem "Montserrat-Bold";
+  margin-bottom: 7%;
+  color: #212121;
+}
+
+.commissioners_service__section_commissioner_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 6.14%;
+}
+
+.commissioners_service__section_commissioner_item {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  width: 22.81%;
+  color: #212121;
+}
+
+.commissioners_service__section_commissioner_item:last-child {
+  width: 45.62%;
+}
+
+.commissioners_service__section_commissioner_item::before {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin-bottom: 12px;
+  background-color: #2657D8;
+}
+
+.commissioners_service__section_info_description {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  background-image: url("../img/svg/commissioners_service/info/info.svg");
+  background-repeat: no-repeat;
+  background-position: 4.39% center;
+  background-size: 8.8%;
+  background-color: #fff;
+  padding: 4.39% 8.77% 4.39% 17.54%;
+  border-left: 4px solid #2657D8;
+  margin-bottom: 5.26%;
+  color: #212121;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -7470,16 +7568,20 @@ label {
   .commissioners_service__section_note_title {
     width: 100%;
   }
-  .commissioners_service__section_training {
+  .commissioners_service__section_certificate {
+    width: 100%;
     grid-gap: 20px 50px;
   }
-  .commissioners_service__section_training_paragraph {
+  .commissioners_service__section_certificate_paragraph {
     line-height: 20px;
-    color: #212121;
   }
-  .commissioners_service__section_training_paragraph--bold {
+  .commissioners_service__section_certificate_paragraph--bold {
     font-size: 16px;
     line-height: 20px;
+  }
+  .commissioners_service__section_learning_paragraph {
+    padding-bottom: 80px;
+    margin: 51px 0 8.77% auto;
   }
 }
 
@@ -7537,11 +7639,45 @@ label {
     right: 0;
     height: 100px;
   }
+  .commissioners_service__section_photo--position {
+    left: 81.5% !important;
+    top: 0 !important;
+  }
   .commissioners_service__section_img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .commissioners_service__section_note--bordtop {
+    padding-top: 35px;
+    border-top: 1px solid #C9C9C9;
+    margin-top: 45px;
+  }
+  .commissioners_service__section_note--bordbott {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+  .commissioners_service__section_note_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_note_list--col5 {
+    overflow-y: hidden;
+  }
+  .commissioners_service__section_note_item {
+    width: 20%;
+  }
+  .commissioners_service__section_note_item--col5 {
+    width: 70%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    margin-right: 20px;
+  }
+  .commissioners_service__section_note_item--col5:last-child {
+    margin-right: 0;
   }
   .commissioners_service__section_law {
     -webkit-box-orient: vertical;
@@ -7601,19 +7737,34 @@ label {
     font-size: 11px;
     line-height: 20px;
   }
-  .commissioners_service__section_note {
-    padding-top: 35px;
-    border-top: 1px solid #C9C9C9;
-    margin-top: 45px;
+  .commissioners_service__section_certificate {
+    grid-gap: 20px;
   }
-  .commissioners_service__section_note--bordbott {
-    padding-bottom: 0;
-    border-bottom: 0;
-    margin-bottom: 0;
-  }
-  .commissioners_service__section_note_title {
+  .commissioners_service__section_learning_paragraph {
+    width: 100%;
+    padding-bottom: 30px;
+    margin: 0 0 30px 0;
     font-size: 16px;
     line-height: 20px;
+  }
+  .commissioners_service__section_commissioner_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_commissioner_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .commissioners_service__section_commissioner_item {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+  .commissioners_service__section_commissioner_item:last-child {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -7631,7 +7782,11 @@ label {
     width: 100px;
   }
   .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title {
-    padding-left: 0;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-right: 0;
     margin-bottom: 125px;
   }
   .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title::before {
@@ -7665,6 +7820,13 @@ label {
     left: 0;
     right: 0;
     top: 100px;
+  }
+  .commissioners_service__section_title--margbott {
+    margin-bottom: 25px !important;
+  }
+  .commissioners_service__section_photo--position {
+    left: 0 !important;
+    top: 100px !important;
   }
   .commissioners_service__section_description_list {
     display: -webkit-box;
@@ -7710,6 +7872,18 @@ label {
   .commissioners_service__section_decree_description_item:last-child {
     padding-right: 0;
   }
+  .commissioners_service__section_note_title {
+    font-size: 12px;
+  }
+  .commissioners_service__section_note_subtitle {
+    font-size: 12px;
+    line-height: 20px;
+    min-height: 40px;
+  }
+  .commissioners_service__section_note_description {
+    font-size: 11px;
+    line-height: 20px;
+  }
   .commissioners_service__section_note_list {
     overflow-y: hidden;
   }
@@ -7717,17 +7891,56 @@ label {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    width: 45%;
-    padding-right: 30px;
+    width: 35%;
+    margin-right: 30px;
   }
   .commissioners_service__section_note_item:last-child {
-    padding-right: 0;
+    margin-right: 0;
   }
-  .commissioners_service__section_note_title {
-    font-size: 12px;
+  .commissioners_service__section_note_item--col5 {
+    width: 70%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    margin-right: 20px;
   }
-  .commissioners_service__section_note_description {
+  .commissioners_service__section_certificate_paragraph {
     font-size: 11px;
     line-height: 20px;
+  }
+  .commissioners_service__section_certificate_paragraph:last-child {
+    grid-column: 1 / 3;
+  }
+  .commissioners_service__section_certificate_paragraph--bold {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_certificate_photo {
+    grid-row: auto;
+  }
+  .commissioners_service__section_learning_paragraph {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_commissioner_title {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_commissioner_item {
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_commissioner_item::before {
+    width: 10px;
+    height: 2px;
+    margin-bottom: 5px;
+  }
+  .commissioners_service__section_info_description {
+    padding: 100px 15px 30px;
+    border-left: 0;
+    border-top: 4px solid #2657D8;
+    margin-bottom: 20px;
+    background-position: 15px 30px;
+    background-size: 40px;
   }
 }
