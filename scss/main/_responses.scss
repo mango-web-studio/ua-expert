@@ -46,7 +46,7 @@
         }
     }
 
-    .js_slide_from_slides {
+    .slide_count {
         @include font(40px, 40px, 'Montserrat-Bold');
 
         position: absolute;
@@ -168,10 +168,6 @@
             left: 12%;
             transform: translate(-50%, 50%);
         }
-
-        .js_slide_from_slides {
-            display: none;
-        }
     }
 }
 
@@ -220,7 +216,7 @@
             top: 5px;
         }
 
-        .js_slide_from_slides {
+        .slide_count {
             top: 0;
         }
 

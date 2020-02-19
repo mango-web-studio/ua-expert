@@ -122,11 +122,40 @@ window.onload = function() {
 
 // HOMEPAGE
 	// Slick slider settings
+    if ($('.banner_slider')) {
+        $('.banner_slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            autoplay: true,
+            fade: true,
+            speed: 2000,
+        });
+    }
+
+    // To display the number of slides of slider (on the homepage)
+    const $status = $('.slide_count');
+    const $slickElement = $('.responses_slider');
+    const slidesTo = 3;
+
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        
+        if(Math.max(document.body.clientWidth, document.documentElement.clientWidth) > 480) {
+            let i = currentSlide ? currentSlide : 1;
+            $status.text(Math.round(i / slidesTo + 1) + '/' + (slick.$dots[0].children.length))
+        } else {
+            let i = currentSlide ? (currentSlide + 1) : 1;
+            $status.text(i + '/' + slick.slideCount)
+        }
+    });
+    
     if ($('.responses_slider')) {
         $('.responses_slider').slick({
+            slide: '.responses_slide',
             infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: slidesTo,
+            slidesToScroll: slidesTo,
             dots: true,
             responsive: [
                 {
@@ -134,78 +163,11 @@ window.onload = function() {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        // arrows: false,
                         dots: false
                     }
                 }
             ]
         });
-    }
-
-    // To display the number of slides of slider (on the homepage)
-    let slickSlider = document.querySelector('.responses_slider');
-    if (slickSlider) {
-        let collectionSlides  = document.querySelectorAll('.slick-slide'),
-            slickActiveSlides = document.querySelectorAll('.slick-slide.slick-active'),
-            slickClonedSlides = document.querySelectorAll('.slick-cloned'),
-            hiddenSlides      = Math.ceil((collectionSlides.length - slickClonedSlides.length) / 3),
-            leftArrow         = document.querySelector('.slick-prev'),
-            rightArrow        = document.querySelector('.slick-next'),
-            slideFromSlides   = document.createElement('p');
-
-        slideFromSlides.className = 'js_slide_from_slides';
-
-        if (document.documentElement.clientWidth < 480) {
-            let visibleSlides = slickActiveSlides.length;
-
-            slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
-            slickSlider.append(slideFromSlides);
-
-            leftArrow.addEventListener('click', function () {
-                visibleSlides--;
-                if ( visibleSlides >= 1 ) {
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
-                } else {
-                    visibleSlides = collectionSlides.length - slickClonedSlides.length;
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
-                }
-            });
-            rightArrow.addEventListener('click', function () {
-                visibleSlides++;
-                if ( visibleSlides <= collectionSlides.length - slickClonedSlides.length ) {
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
-                } else {
-                    visibleSlides = 1;
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${collectionSlides.length - slickClonedSlides.length}`;
-                }
-            });
-        }
-
-        if (document.documentElement.clientWidth >= 480) {
-            let visibleSlides = slickActiveSlides.length / 3;
-
-            slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-            slickSlider.append(slideFromSlides);
-
-            leftArrow.addEventListener('click', function () {
-                visibleSlides--;
-                if ( visibleSlides >= 1 ) {
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-                } else {
-                    visibleSlides = hiddenSlides;
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-                }
-            });
-            rightArrow.addEventListener('click', function () {
-                visibleSlides++;
-                if ( visibleSlides <= hiddenSlides ) {
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-                } else {
-                    visibleSlides = 1;
-                    slideFromSlides.innerHTML = `<span>${visibleSlides}</span>/${hiddenSlides}`;
-                }
-            });
-        }
     }
 
 

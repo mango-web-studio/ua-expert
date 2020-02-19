@@ -1,31 +1,58 @@
 .banner {
-    @include background(url("../img/main/banner/bg_banner.png"), no-repeat, top, right, contain);
-
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     width: 100%;
-    padding-top: 4.7vw;
     background-color: $blue_1;
 
-    &_inner {
-        width: 100%;
-        max-width: 1160px;
-        margin: auto;
-        padding: 6% $main_horizontal_padding 7.3%;
+    &_slide {
+        position: relative;
+
+        &_photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $blue_11;
+            }
+        }
+
+        &_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 50vh;
+            width: 100%;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 2.5% $main_horizontal_padding;
+        }
     }
 
     &_title {
         @include font(40px, 45px, 'PlayfairDisplay-Bold');
 
-        margin-bottom: 3.88%;
+        margin-bottom: 3.5%;
         color: $white_1;
     }
 
     &_description {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     &_paragraph {
@@ -33,10 +60,6 @@
 
         max-width: 750px;
         color: $gray_1;
-    }
-
-    &_label {
-        align-self: flex-end;
     }
 
     &_footer {
@@ -76,8 +99,9 @@
         }
 
         &_description {
-            @include font(12px, 21px, 'Montserrat-Light');
+            @include font(12px, 20px, 'Montserrat-Light');
 
+            max-height: 40px;
             overflow: hidden;
             color: $gray_2;
             transition: 0.2s;
@@ -86,13 +110,47 @@
 }
 
 
+// 0 - 767px
+@include respond-to(mobile) {
+
+    .banner {
+
+        &_description {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &_paragraph {
+            margin-bottom: 40px;
+        }
+
+        &_footer {
+
+            &_description {
+                font-size: 11px;
+                line-height: 18px;
+                max-height: 36px;
+                overflow: hidden;
+            }
+
+            &_list {
+                padding: 20px $main_horizontal_padding;
+            }
+        }
+    }
+}
+
 // 0 - 479px
 @include respond-to(mobile_small) {
 
     .banner {
-        height: calc(100vh - 55px);
-        background-size: cover;
-        background-position: top center;
+
+        &_slide {
+
+            &_content {
+                min-height: calc(100vh - 160px);
+            }
+        }
 
         &_title {
             font-size: 28px;
@@ -119,7 +177,6 @@
         &_footer {
 
             &_list {
-                padding: 35px $main_horizontal_padding;
                 overflow-x: scroll;
             }
 
@@ -137,6 +194,8 @@
             &_description {
                 font-size: 10px;
                 line-height: 18px;
+                max-height: 36px;
+                overflow: hidden;
             }
         }
     }

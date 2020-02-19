@@ -254,6 +254,7 @@
 @include respond-to(mobile) {
 
     .header {
+        padding: 5px 0;
 
         &_list {
             display: grid;
@@ -293,7 +294,6 @@
 @include respond-to(mobile_small) {
 
     .header {
-        padding: 5px 0;
 
         .menu_open_label {
             .header_label_svg_wrap {

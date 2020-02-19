@@ -518,6 +518,9 @@ label {
 }
 
 @media only screen and (max-width: 767px) {
+  .header {
+    padding: 5px 0;
+  }
   .header_list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -543,9 +546,6 @@ label {
 }
 
 @media only screen and (max-width: 479px) {
-  .header {
-    padding: 5px 0;
-  }
   .header .menu_open_label .header_label_svg_wrap {
     width: 20px;
   }
@@ -1566,40 +1566,64 @@ label {
 }
 
 .banner {
-  background-image: url("../img/main/banner/bg_banner.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
-  background-color: transparent;
+  width: 100%;
+  background-color: #00020E;
+}
+
+.banner_slide {
   position: relative;
+}
+
+.banner_slide_photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.banner_slide_photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 2, 14, 0.85);
+}
+
+.banner_slide_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner_slide_content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  padding-top: 4.7vw;
-  background-color: #00020E;
-}
-
-.banner_inner {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 50vh;
   width: 100%;
   max-width: 1160px;
-  margin: auto;
-  padding: 6% 10px 7.3%;
+  margin: 0 auto;
+  padding: 2.5% 10px;
 }
 
 .banner_title {
   font: 4rem/4.5rem "PlayfairDisplay-Bold";
-  margin-bottom: 3.88%;
+  margin-bottom: 3.5%;
   color: #fff;
 }
 
@@ -1612,18 +1636,16 @@ label {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .banner_paragraph {
   font: 1.4rem/2.7rem "Montserrat-Light";
   max-width: 750px;
   color: #ABAEBD;
-}
-
-.banner_label {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
 }
 
 .banner_footer {
@@ -1670,7 +1692,8 @@ label {
 }
 
 .banner_footer_description {
-  font: 1.2rem/2.1rem "Montserrat-Light";
+  font: 1.2rem/2rem "Montserrat-Light";
+  max-height: 40px;
   overflow: hidden;
   color: #5D5F6B;
   -webkit-transition: 0.2s;
@@ -1678,12 +1701,36 @@ label {
   transition: 0.2s;
 }
 
+@media only screen and (max-width: 767px) {
+  .banner_description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .banner_paragraph {
+    margin-bottom: 40px;
+  }
+  .banner_footer_description {
+    font-size: 11px;
+    line-height: 18px;
+    max-height: 36px;
+    overflow: hidden;
+  }
+  .banner_footer_list {
+    padding: 20px 10px;
+  }
+}
+
 @media only screen and (max-width: 479px) {
-  .banner {
-    height: -webkit-calc(100vh - 55px);
-    height: calc(100vh - 55px);
-    background-size: cover;
-    background-position: top center;
+  .banner_slide_content {
+    min-height: -webkit-calc(100vh - 160px);
+    min-height: calc(100vh - 160px);
   }
   .banner_title {
     font-size: 28px;
@@ -1713,7 +1760,6 @@ label {
     line-height: 60px;
   }
   .banner_footer_list {
-    padding: 35px 10px;
     overflow-x: scroll;
   }
   .banner_footer_item {
@@ -1730,6 +1776,8 @@ label {
   .banner_footer_description {
     font-size: 10px;
     line-height: 18px;
+    max-height: 36px;
+    overflow: hidden;
   }
 }
 
@@ -2327,7 +2375,7 @@ label {
   padding: 0 5px;
 }
 
-.responses .js_slide_from_slides {
+.responses .slide_count {
   font: 4rem/4rem "Montserrat-Bold";
   position: absolute;
   top: -40px;
@@ -2335,7 +2383,7 @@ label {
   color: #C9C9C9;
 }
 
-.responses .js_slide_from_slides span {
+.responses .slide_count span {
   color: #000;
 }
 
@@ -2443,9 +2491,6 @@ label {
         -ms-transform: translate(-50%, 50%);
             transform: translate(-50%, 50%);
   }
-  .responses .js_slide_from_slides {
-    display: none;
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -2481,7 +2526,7 @@ label {
   .responses .slick-dots {
     top: 5px;
   }
-  .responses .js_slide_from_slides {
+  .responses .slide_count {
     top: 0;
   }
   .responses_description .title {
@@ -3947,10 +3992,6 @@ label {
     width: 100%;
   }
   .separate_service__section_content_list_3 {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     overflow-y: hidden;
   }
   .separate_service__section_content_item_3 {
@@ -7165,27 +7206,53 @@ label {
   z-index: -1;
 }
 
-.commissioners_service__section_title--white::before {
-  right: 0;
+.commissioners_service__section_subtitle {
+  font: 4rem/4.6rem "PlayfairDisplay-Bold";
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+  margin: 6.14% 0;
 }
 
-.commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title {
+.commissioners_service__section--gray:nth-child(odd) .commissioners_service__section_title {
   padding-right: 47%;
 }
 
-.commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title::before {
+.commissioners_service__section--gray:nth-child(odd) .commissioners_service__section_title::before {
   right: 43%;
   background-color: #EDEDED;
 }
 
-.commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_photo {
+.commissioners_service__section--gray:nth-child(odd) .commissioners_service__section_photo {
   position: absolute;
   top: 0;
   left: 57%;
   z-index: 1;
 }
 
-.commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title {
+.commissioners_service__section--gray:nth-child(even) .commissioners_service__section_title {
+  padding-left: 47%;
+}
+
+.commissioners_service__section--gray:nth-child(even) .commissioners_service__section_title::before {
+  left: 43%;
+  background-color: #EDEDED;
+}
+
+.commissioners_service__section--gray:nth-child(even) .commissioners_service__section_photo {
+  position: absolute;
+  top: 0;
+  right: 57%;
+  z-index: 1;
+}
+
+.commissioners_service__section--white:nth-child(odd) .commissioners_service__section_title {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -7193,44 +7260,28 @@ label {
   padding-right: 26.3%;
 }
 
-.commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title::before {
+.commissioners_service__section--white:nth-child(odd) .commissioners_service__section_title::before {
   right: 17.54%;
   background-color: #fff;
 }
 
-.commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_photo {
+.commissioners_service__section--white:nth-child(odd) .commissioners_service__section_photo {
   position: absolute;
   top: 0;
   left: 81.5%;
   z-index: 1;
 }
 
-.commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title {
-  padding-left: 47%;
-}
-
-.commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title::before {
-  left: 43%;
-  background-color: #EDEDED;
-}
-
-.commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_photo {
-  position: absolute;
-  top: 0;
-  right: 57%;
-  z-index: 1;
-}
-
-.commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title {
+.commissioners_service__section--white:nth-child(even) .commissioners_service__section_title {
   padding-left: 26.3%;
 }
 
-.commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title::before {
+.commissioners_service__section--white:nth-child(even) .commissioners_service__section_title::before {
   left: 17.54%;
   background-color: #fff;
 }
 
-.commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_photo {
+.commissioners_service__section--white:nth-child(even) .commissioners_service__section_photo {
   position: absolute;
   top: 0;
   right: 81.5%;
@@ -7265,6 +7316,10 @@ label {
   padding-bottom: 5.26%;
   border-bottom: 1px solid #C9C9C9;
   margin-bottom: 7%;
+}
+
+.commissioners_service__section_description_paragraph--width-s {
+  width: 45%;
 }
 
 .commissioners_service__section_photo {
@@ -7433,6 +7488,42 @@ label {
   width: 17.1%;
 }
 
+.commissioners_service__section_note_list_1 {
+  counter-reset: order-item;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  min-height: 250px;
+}
+
+.commissioners_service__section_note_item_1 {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  counter-increment: order-item;
+  color: #212121;
+  text-align: center;
+  max-width: 250px;
+}
+
+.commissioners_service__section_note_item_1:nth-child(even) {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+.commissioners_service__section_note_item_1::before {
+  font: 2.2rem/2.6rem "Montserrat-Bold";
+  content: counter(order-item);
+  display: block;
+  width: 60px;
+  margin: 0 auto 20px;
+  line-height: 56px;
+  border: 2px solid #2657D8;
+  border-radius: 50%;
+}
+
 .commissioners_service__section_note_image {
   width: 50px;
   height: 50px;
@@ -7545,6 +7636,73 @@ label {
   color: #212121;
 }
 
+.commissioners_service__section_info_description--margbott {
+  margin-bottom: 0;
+}
+
+.commissioners_service__section_cooperation {
+  margin-bottom: 20px;
+}
+
+.commissioners_service__section_cooperation_title {
+  font: 2rem/2.6rem "Montserrat-Bold";
+  margin-bottom: 5.7%;
+  color: #212121;
+}
+
+.commissioners_service__section_cooperation_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  counter-reset: order-item;
+}
+
+.commissioners_service__section_cooperation_item {
+  position: relative;
+  width: 24.12%;
+  counter-increment: order-item;
+  padding-left: 5.7%;
+  z-index: 1;
+}
+
+.commissioners_service__section_cooperation_item::before {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #2657D8;
+}
+
+.commissioners_service__section_cooperation_item::after {
+  font: 10rem/7rem "Montserrat-Bold";
+  content: counter(order-item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #EDEDED;
+  z-index: -1;
+}
+
+.commissioners_service__section_cooperation_item--width-m {
+  width: 67.98%;
+}
+
+.commissioners_service__section_cooperation_item_title {
+  font: 1.4rem/2.6rem "Montserrat-Bold";
+  margin: 12px 0 25px;
+  color: #212121;
+}
+
+.commissioners_service__section_cooperation_item_description {
+  font: 1.4rem/2.6rem "Montserrat-Regular";
+  color: #212121;
+}
+
 @media only screen and (max-width: 1023px) {
   .commissioners_service__section {
     padding: 0 10px 7.8%;
@@ -7555,6 +7713,10 @@ label {
   }
   .commissioners_service__section_description_paragraph--align-right {
     width: 100%;
+  }
+  .commissioners_service__section_description_paragraph--bordbott {
+    padding-bottom: 4%;
+    margin-bottom: 4%;
   }
   .commissioners_service__section_photo {
     height: 200px;
@@ -7582,6 +7744,9 @@ label {
   .commissioners_service__section_learning_paragraph {
     padding-bottom: 80px;
     margin: 51px 0 8.77% auto;
+  }
+  .commissioners_service__section_cooperation_item {
+    padding-left: 6.5%;
   }
 }
 
@@ -7628,6 +7793,10 @@ label {
   }
   .commissioners_service__section_description_item {
     margin-bottom: 20px;
+  }
+  .commissioners_service__section_description_paragraph {
+    font-size: 11px;
+    line-height: 20px;
   }
   .commissioners_service__section_description_paragraph--bordbott {
     padding-bottom: 0;
@@ -7678,6 +7847,15 @@ label {
   }
   .commissioners_service__section_note_item--col5:last-child {
     margin-right: 0;
+  }
+  .commissioners_service__section_note_list_1 {
+    overflow-y: hidden;
+  }
+  .commissioners_service__section_note_item_1 {
+    max-width: 45%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
   }
   .commissioners_service__section_law {
     -webkit-box-orient: vertical;
@@ -7766,22 +7944,44 @@ label {
     width: 100%;
     margin-bottom: 0;
   }
+  .commissioners_service__section_cooperation_item {
+    width: 30%;
+  }
+  .commissioners_service__section_cooperation_item::after {
+    font-size: 50px;
+    line-height: 40px;
+  }
+  .commissioners_service__section_cooperation_item--width-m {
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 479px) {
-  .commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title {
+  .commissioners_service__section--gray:nth-child(odd) .commissioners_service__section_title {
     padding-left: 0;
     padding-right: 100px;
   }
-  .commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_title::before {
+  .commissioners_service__section--gray:nth-child(odd) .commissioners_service__section_title::before {
     left: -25%;
   }
-  .commissioners_service__section:nth-child(odd).commissioners_service__section--gray .commissioners_service__section_photo {
+  .commissioners_service__section--gray:nth-child(odd) .commissioners_service__section_photo {
     left: unset;
     right: 0;
     width: 100px;
   }
-  .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title {
+  .commissioners_service__section--gray:nth-child(even) .commissioners_service__section_title {
+    padding-left: 0;
+    padding-right: 100px;
+  }
+  .commissioners_service__section--gray:nth-child(even) .commissioners_service__section_title::before {
+    left: -25%;
+  }
+  .commissioners_service__section--gray:nth-child(even) .commissioners_service__section_photo {
+    left: unset;
+    right: 0;
+    width: 100px;
+  }
+  .commissioners_service__section--white:nth-child(odd) .commissioners_service__section_title {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
@@ -7789,34 +7989,22 @@ label {
     padding-right: 0;
     margin-bottom: 125px;
   }
-  .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_title::before {
+  .commissioners_service__section--white:nth-child(odd) .commissioners_service__section_title::before {
     left: -25%;
   }
-  .commissioners_service__section:nth-child(odd).commissioners_service__section--white .commissioners_service__section_photo {
+  .commissioners_service__section--white:nth-child(odd) .commissioners_service__section_photo {
     left: 0;
     right: 0;
     top: 100px;
   }
-  .commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title {
-    padding-left: 0;
-    padding-right: 100px;
-  }
-  .commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_title::before {
-    left: -25%;
-  }
-  .commissioners_service__section:nth-child(even).commissioners_service__section--gray .commissioners_service__section_photo {
-    left: unset;
-    right: 0;
-    width: 100px;
-  }
-  .commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title {
+  .commissioners_service__section--white:nth-child(even) .commissioners_service__section_title {
     padding-left: 0;
     margin-bottom: 125px;
   }
-  .commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_title::before {
+  .commissioners_service__section--white:nth-child(even) .commissioners_service__section_title::before {
     left: -25%;
   }
-  .commissioners_service__section:nth-child(even).commissioners_service__section--white .commissioners_service__section_photo {
+  .commissioners_service__section--white:nth-child(even) .commissioners_service__section_photo {
     left: 0;
     right: 0;
     top: 100px;
@@ -7827,6 +8015,11 @@ label {
   .commissioners_service__section_photo--position {
     left: 0 !important;
     top: 100px !important;
+  }
+  .commissioners_service__section_description_paragraph {
+    margin-bottom: 20px;
+    font-size: 11px;
+    line-height: 20px;
   }
   .commissioners_service__section_description_list {
     display: -webkit-box;
@@ -7904,6 +8097,11 @@ label {
             flex-shrink: 0;
     margin-right: 20px;
   }
+  .commissioners_service__section_note_item_1 {
+    max-width: 40%;
+    font-size: 11px;
+    line-height: 20px;
+  }
   .commissioners_service__section_certificate_paragraph {
     font-size: 11px;
     line-height: 20px;
@@ -7942,5 +8140,36 @@ label {
     margin-bottom: 20px;
     background-position: 15px 30px;
     background-size: 40px;
+  }
+  .commissioners_service__section_cooperation_title {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_cooperation_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .commissioners_service__section_cooperation_item {
+    width: 100%;
+    padding-left: 35px;
+    margin-bottom: 35px;
+  }
+  .commissioners_service__section_cooperation_item:last-child {
+    margin-bottom: 0;
+  }
+  .commissioners_service__section_cooperation_item::after {
+    font-size: 100px;
+    line-height: 70px;
+  }
+  .commissioners_service__section_cooperation_item_title {
+    font-size: 11px;
+    line-height: 20px;
+  }
+  .commissioners_service__section_cooperation_item_description {
+    font-size: 11px;
+    line-height: 20px;
   }
 }

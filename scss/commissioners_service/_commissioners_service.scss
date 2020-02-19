@@ -63,100 +63,96 @@
                 top: 0;
                 z-index: -1;
             }
+        }
 
-            &--white {
+        &_subtitle {
+            @include font(40px, 46px, 'PlayfairDisplay-Bold');
 
-                &::before {
-                    right: 0;
+            display: flex;
+            align-items: center;
+            min-height: 100px;
+            margin: 6.14% 0;
+        }
+        
+        &--gray {
+
+            &:nth-child(odd) {
+                
+                .commissioners_service__section_title {
+                    padding-right: 47%;
+
+                    &::before {
+                        right: 43%;
+                        background-color: $gray_5;
+                    }
+                }
+
+                .commissioners_service__section_photo {
+                    position: absolute;
+                    top: 0;
+                    left: 57%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(even) {
+
+                .commissioners_service__section_title {
+                    padding-left: 47%;
+
+                    &::before {
+                        left: 43%;
+                        background-color: $gray_5;
+                    }
+                }
+
+                .commissioners_service__section_photo {
+                    position: absolute;
+                    top: 0;
+                    right: 57%;
+                    z-index: 1;
                 }
             }
         }
 
-        &:nth-child(odd) {
+        &--white {
 
-            &.commissioners_service__section {
+            &:nth-child(odd) {
 
-                &--gray {
-                    
-                    .commissioners_service__section_title {
-                        padding-right: 47%;
+                .commissioners_service__section_title {
+                    justify-content: flex-end;
+                    padding-right: 26.3%;
 
-                        &::before {
-                            right: 43%;
-                            background-color: $gray_5;
-                        }
-                    }
-
-                    .commissioners_service__section_photo {
-                        position: absolute;
-                        top: 0;
-                        left: 57%;
-                        z-index: 1;
+                    &::before {
+                        right: 17.54%;
+                        background-color: $white_1;
                     }
                 }
 
-                &--white {
-
-                    .commissioners_service__section_title {
-                        justify-content: flex-end;
-                        padding-right: 26.3%;
-
-                        &::before {
-                            right: 17.54%;
-                            background-color: $white_1;
-                        }
-                    }
-
-                    .commissioners_service__section_photo {
-                        position: absolute;
-                        top: 0;
-                        left: 81.5%;
-                        z-index: 1;
-                    }
+                .commissioners_service__section_photo {
+                    position: absolute;
+                    top: 0;
+                    left: 81.5%;
+                    z-index: 1;
                 }
             }
-        }
 
-        &:nth-child(even) {
+            &:nth-child(even) {
 
-            &.commissioners_service__section {
+                .commissioners_service__section_title {
+                    padding-left: 26.3%;
 
-                &--gray {
-
-                    .commissioners_service__section_title {
-                        padding-left: 47%;
-
-                        &::before {
-                            left: 43%;
-                            background-color: $gray_5;
-                        }
-                    }
-
-                    .commissioners_service__section_photo {
-                        position: absolute;
-                        top: 0;
-                        right: 57%;
-                        z-index: 1;
+                    &::before {
+                        left: 17.54%;
+                        background-color: $white_1;
                     }
                 }
 
-                &--white {
-
-                    .commissioners_service__section_title {
-                        padding-left: 26.3%;
-
-                        &::before {
-                            left: 17.54%;
-                            background-color: $white_1;
-                        }
-                    }
-
-                    .commissioners_service__section_photo {
-                        position: absolute;
-                        top: 0;
-                        right: 81.5%;
-                        z-index: 1;
-                    }
+                .commissioners_service__section_photo {
+                    position: absolute;
+                    top: 0;
+                    right: 81.5%;
+                    z-index: 1;
                 }
             }
         }
@@ -191,6 +187,10 @@
                     padding-bottom: 5.26%;
                     border-bottom: 1px solid $gray_12;
                     margin-bottom: 7%;
+                }
+
+                &--width-s {
+                    width: 45%;
                 }
             }
         }
@@ -326,6 +326,39 @@
                 }
             }
 
+            &_list_1 {
+                counter-reset: order-item;
+                display: flex;
+                padding-left: 0;
+                margin: 0;
+                min-height: 250px;
+            }
+
+            &_item_1 {
+                @include font(14px, 26px, 'Montserrat-Regular');
+
+                counter-increment: order-item;
+                color: $gray_10;
+                text-align: center;
+                max-width: 250px;
+
+                &:nth-child(even) {
+                    align-self: flex-end;
+                }
+
+                &::before {
+                    @include font(22px, 26px, 'Montserrat-Bold');
+
+                    content: counter(order-item);
+                    display: block;
+                    width: 60px;
+                    margin: 0 auto 20px;
+                    line-height: 56px;
+                    border: 2px solid $blue_3;
+                    border-radius: 50%;
+                }
+            }
+
             &_image {
                 width: 50px;
                 height: 50px;
@@ -448,6 +481,71 @@
                 border-left: 4px solid $blue_3;
                 margin-bottom: 5.26%;
                 color: $gray_10;
+
+                &--margbott {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &_cooperation {
+            margin-bottom: 20px;
+
+            &_title {
+                @include font(20px, 26px, 'Montserrat-Bold');
+
+                margin-bottom: 5.7%;
+                color: $gray_10;
+            }
+
+            &_list {
+                display: flex;
+                justify-content: space-between;
+                counter-reset: order-item;
+            }
+
+            &_item {
+                position: relative;
+                width: 24.12%;
+                counter-increment: order-item;
+                padding-left: 5.7%;
+                z-index: 1;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 26px;
+                    height: 3px;
+                    background-color: $blue_3;
+                }
+
+                &::after {
+                    @include font(100px, 70px, 'Montserrat-Bold');
+
+                    content: counter(order-item);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: $gray_5;
+                    z-index: -1;
+                }
+
+                &--width-m {
+                    width: 67.98%;
+                }
+
+                &_title {
+                    @include font(14px, 26px, 'Montserrat-Bold');
+
+                    margin: 12px 0 25px;
+                    color: $gray_10;
+                }
+
+                &_description {
+                    @include font(14px, 26px, 'Montserrat-Regular');
+
+                    color: $gray_10;
+                }
             }
         }
     }
@@ -473,6 +571,11 @@
 
                     &--align-right {
                         width: 100%; 
+                    }
+
+                    &--bordbott {
+                        padding-bottom: 4%;
+                        margin-bottom: 4%;
                     }
                 }
             }
@@ -513,6 +616,13 @@
                 &_paragraph {
                     padding-bottom: 80px;
                     margin: 51px 0 8.77% auto;
+                }
+            }
+
+            &_cooperation {
+
+                &_item {
+                    padding-left: 6.5%;
                 }
             }
         }
@@ -580,6 +690,8 @@
                 }
 
                 &_paragraph {
+                    font-size: 11px;
+                    line-height: 20px;
 
                     &--bordbott {
                         padding-bottom: 0;
@@ -644,6 +756,15 @@
                             margin-right: 0;
                         }
                     }
+                }
+
+                &_list_1 {
+                    overflow-y: hidden;
+                }
+
+                &_item_1 {
+                    max-width: 45%;
+                    flex-shrink: 0;
                 }
             }
 
@@ -740,6 +861,22 @@
                     }
                 }
             }
+
+            &_cooperation {
+
+                &_item {
+                    width: 30%;
+
+                    &::after {
+                        font-size: 50px;
+                        line-height: 40px;
+                    }
+
+                    &--width-m {
+                        width: 70%;
+                    }
+                }
+            }
         }
     }
 }
@@ -752,87 +889,81 @@
 
         &__section {
 
-            &:nth-child(odd) {
+            &--gray {
 
-                &.commissioners_service__section {
+                &:nth-child(odd) {
 
-                    &--gray {
+                    .commissioners_service__section_title {
+                        padding-left: 0;
+                        padding-right: 100px;
 
-                        .commissioners_service__section_title {
-                            padding-left: 0;
-                            padding-right: 100px;
-
-                            &::before {
-                                left: -25%;
-                            }
-                        }
-
-                        .commissioners_service__section_photo {
-                            left: unset;
-                            right: 0;
-                            width: 100px;
+                        &::before {
+                            left: -25%;
                         }
                     }
 
-                    &--white {
+                    .commissioners_service__section_photo {
+                        left: unset;
+                        right: 0;
+                        width: 100px;
+                    }
+                }
 
-                        .commissioners_service__section_title {
-                            justify-content: flex-start;
-                            padding-right: 0;
-                            margin-bottom: 125px;
+                &:nth-child(even) {
 
-                            &::before {
-                                left: -25%;
-                            }
+                    .commissioners_service__section_title {
+                        padding-left: 0;
+                        padding-right: 100px;
+
+                        &::before {
+                            left: -25%;
                         }
+                    }
 
-                        .commissioners_service__section_photo {
-                            left: 0;
-                            right: 0;
-                            top: 100px;
-                        }
+                    .commissioners_service__section_photo {
+                        left: unset;
+                        right: 0;
+                        width: 100px;
                     }
                 }
             }
 
-            &:nth-child(even) {
+            &--white {
 
-                &.commissioners_service__section {
+                &:nth-child(odd) {
 
-                    &--gray {
+                    .commissioners_service__section_title {
+                        justify-content: flex-start;
+                        padding-right: 0;
+                        margin-bottom: 125px;
 
-                        .commissioners_service__section_title {
-                            padding-left: 0;
-                            padding-right: 100px;
-
-                            &::before {
-                                left: -25%;
-                            }
-                        }
-
-                        .commissioners_service__section_photo {
-                            left: unset;
-                            right: 0;
-                            width: 100px;
+                        &::before {
+                            left: -25%;
                         }
                     }
 
-                    &--white {
+                    .commissioners_service__section_photo {
+                        left: 0;
+                        right: 0;
+                        top: 100px;
+                    }
+                }
 
-                        .commissioners_service__section_title {
-                            padding-left: 0;
-                            margin-bottom: 125px;
+                &:nth-child(even) {
 
-                            &::before {
-                                left: -25%;
-                            }
+                    .commissioners_service__section_title {
+                        padding-left: 0;
+                        margin-bottom: 125px;
+
+                        &::before {
+                            left: -25%;
                         }
+                    }
 
-                        .commissioners_service__section_photo {
-                            left: 0;
-                            right: 0;
-                            top: 100px;
-                        }
+                    .commissioners_service__section_photo {
+                        left: 0;
+                        right: 0;
+                        top: 100px;
                     }
                 }
             }
@@ -853,6 +984,12 @@
             }
 
             &_description {
+
+                &_paragraph {
+                    margin-bottom: 20px;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
 
                 &_list {
                     display: flex;
@@ -938,6 +1075,12 @@
                         margin-right: 20px;
                     }
                 }
+
+                &_item_1 {
+                    max-width: 40%;
+                    font-size: 11px;
+                    line-height: 20px;
+                }
             }
 
             &_certificate {
@@ -997,6 +1140,43 @@
                     margin-bottom: 20px;
                     background-position: 15px 30px;
                     background-size: 40px;
+                }
+            }
+
+            &_cooperation {
+
+                &_title {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+                &_list {
+                    flex-direction: column;
+                }
+
+                &_item {
+                    width: 100%;
+                    padding-left: 35px;
+                    margin-bottom: 35px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &::after {
+                        font-size: 100px;
+                        line-height: 70px;
+                    }
+
+                    &_title {
+                        font-size: 11px;
+                        line-height: 20px;
+                    }
+
+                    &_description {
+                        font-size: 11px;
+                        line-height: 20px;
+                    }
                 }
             }
         }
