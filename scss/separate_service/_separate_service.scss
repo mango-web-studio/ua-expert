@@ -351,6 +351,8 @@
                     &_paragraph {
                         @include font(14px, 24px, 'Montserrat-Regular');
 
+                        max-height: 84%;
+                        overflow: hidden;
                         color: $white_1;
                     }
                 }
@@ -583,6 +585,13 @@
                     width: auto;
                     max-width: 60%;
                     margin-right: 10px;
+
+                    &_description {
+
+                        &_paragraph {
+                            max-height: 90%;
+                        }
+                    }
                 }
 
                 &_button {
@@ -601,5 +610,14 @@
                 }
             }
         }
+    }
+}
+
+
+// 0 - 767px
+@include respond-to(mobile) {
+
+    .separate_service {
+        background-position: 0 78%;
     }
 }
