@@ -2484,12 +2484,17 @@ label {
     padding-bottom: 120px;
     width: 65%;
   }
+  .responses .slide_count {
+    top: -35px;
+  }
+  .responses .slick-next {
+    top: -25px;
+  }
+  .responses .slick-prev {
+    top: -25px;
+  }
   .responses .slick-dots {
-    top: -40px;
-    left: 12%;
-    -webkit-transform: translate(-50%, 50%);
-        -ms-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
+    top: -25px;
   }
 }
 
