@@ -197,7 +197,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 100%;
+                min-height: 100%;
                 width: 170%;
                 padding: 15px;
                 background-color: $blue_3;
@@ -323,15 +323,15 @@
                 line-height: 24px;
             }
 
-            &__list_wrap {
+            &__list {
                 overflow-x: scroll;
             }
 
-            &__list {
-                width: 270%;
-            }
-
             &__item {
+                flex-shrink: 0;
+                width: auto;
+                max-width: 260px;
+                margin-right: 20px;
 
                 &_title {
                     font-size: 20px;
@@ -339,6 +339,10 @@
                 }
 
                 &_description {
+                    width: calc(170% - 20px);
+                    height: 100%;
+                    overflow-y: scroll;
+                    pointer-events: unset;
 
                     &_title {
                         font-size: 18px;
@@ -385,9 +389,6 @@
         
         .equipment {
 
-            &__list {
-                overflow: hidden;
-            }
             &__item {
 
                 &_title {
@@ -396,6 +397,7 @@
                 }
 
                 &_description {
+                    width: 100%;
 
                     &_title {
                         font-size: 16px;
